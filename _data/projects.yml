@@ -1,0 +1,7 @@
+# Used to control academic display names, emails, and optional profile links/photos.
+# Key by display name used in projects.yml → supervisor: <name>
+
+Eduardo Pignatelli:
+  email: e.pignatelli@ucl.ac.uk
+  profile_url: https://www.ucl.ac.uk/
+  photo: "" # optional path if you add assets/img
