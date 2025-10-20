@@ -5,125 +5,69 @@ title: UCL EEE MSc Project Offers
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>{{ page.title }}</title>
+<link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 style="margin:0 0 0.5rem">{{ site.title }}</h1>
-      <p class="small" style="margin:0">{{ site.description }}</p>
-      <div class="controls" style="margin-top:0.75rem">
-        <input id="q" type="search" placeholder="Search projects… (title, prerequisites, description)" />
-        <select id="programme">
-          <option value="">All programmes</option>
-          {% for p in site.data.programmes %}
-            <option value="{{ p }}">{{ p }}</option>
-          {% endfor %}
-        </select>
-        <label class="small"><input id="availableOnly" type="checkbox" checked /> Available only</label>
-      </div>
-    </div>
-  </header>
+<!-- UCL-style banner -->
+<div class="site-banner">
+<div class="container">
+<div class="lockup">
+<div class="block" aria-hidden="true"></div>
+<div class="dept">
+<a href="https://www.ucl.ac.uk/engineering/electronic-electrical-engineering" target="_blank" rel="noopener">
+UCL Electronic & Electrical Engineering
+</a>
+</div>
+</div>
+</div>
+</div>
 
-  <main class="container" id="app">
-    {% assign grouped = site.data.projects | group_by: "supervisor" %}
-    {% assign academics = site.data.academics %}
 
-    {% for group in grouped %}
-      {% assign sup = group.name %}
-      <section class="academic" data-supervisor="{{ sup }}">
-        <h2>{{ sup }}</h2>
-        {% assign meta = academics[sup] %}
-        {% if meta and meta.email %}
-          <div class="small">Contact: <a href="mailto:{{ meta.email }}">{{ meta.email }}</a></div>
-        {% endif %}
-        <div class="grid">
-          {% for project in group.items %}
-          <article class="card"
-                   data-title="{{ project.title | downcase }}"
-                   data-desc="{{ project.description | downcase }}"
-                   data-prereq="{{ project.prerequisites | downcase }}"
-                   data-programmes="{{ project.programmes | join: "," | downcase }}"
-                   data-available="{{ project.available | default: true }}">
-            <h3>{{ project.title }}</h3>
+<!-- Page header with title + filters -->
+<header class="page">
+<div class="container">
+<h1 style="margin:0 0 0.25rem">{{ site.title }}</h1>
+<p class="small" style="margin:0 0 0.75rem">{{ site.description }}</p>
+<div class="controls">
+<input id="q" type="search" placeholder="Search projects… (title, prerequisites, description)" />
+<select id="programme">
+<option value="">All programmes</option>
+{% for p in site.data.programmes %}
+<option value="{{ p }}">{{ p }}</option>
+{% endfor %}
+</select>
+<label class="small"><input id="availableOnly" type="checkbox" checked /> Available only</label>
+</div>
+</div>
+</header>
 
-            <div class="badges">
-              {% for prog in project.programmes %}
-                <span class="badge" title="Programme">{{ prog }}</span>
-              {% endfor %}
-              {% if project.industry_led %}
-                <span class="badge" title="Industry-led">Industry-led</span>
-              {% endif %}
-              <span class="badge" title="Second marker">2nd: {{ project.second_marker }}</span>
-            </div>
 
-            {% if project.prerequisites %}
-              <div class="prereq"><strong>Prerequisites:</strong> {{ project.prerequisites }}</div>
-            {% endif %}
+<main class="container" id="app">
+{% assign grouped = site.data.projects | group_by: "supervisor" %}
+{% assign academics = site.data.academics %}
 
-            <p class="desc">{{ project.description }}</p>
 
-            {% if project.apply_url and project.apply_url != "" %}
-              {% if project.available %}
-                <a class="btn apply" href="{{ project.apply_url }}" target="_blank" rel="noopener">Apply</a>
-              {% else %}
-                <a class="btn disabled" aria-disabled="true" tabindex="-1">Not available</a>
-              {% endif %}
-            {% else %}
-              <a class="btn disabled" aria-disabled="true" tabindex="-1">Applications closed</a>
-            {% endif %}
+{% for group in grouped %}
+{% assign sup = group.name %}
+<section class="academic" data-supervisor="{{ sup }}">
+<h2>{{ sup }}</h2>
+{% assign meta = academics[sup] %}
+{% if meta and meta.email %}
+<div class="small">Contact: <a href="mailto:{{ meta.email }}">{{ meta.email }}</a></div>
+{% endif %}
+<div class="grid">
+{% for project in group.items %}
+<article class="card"
+data-title="{{ project.title | downcase }}"
+data-desc="{{ project.description | downcase }}"
+data-prereq="{{ project.prerequisites | downcase }}"
+data-programmes="{{ project.programmes | join: "," | downcase }}"
+data-available="{{ project.available | default: true }}">
+<h3>{{ project.title }}</h3>
 
-            <div class="small" style="margin-top:0.75rem;color:#777">Project ID: <code>{{ project.id }}</code></div>
-          </article>
-          {% endfor %}
-        </div>
-      </section>
-    {% endfor %}
-  </main>
 
-  <footer class="container">
-    <p>For questions, contact the module lead.</p>
-  </footer>
-
-  <script>
-  (function(){
-    const q = document.getElementById('q');
-    const programme = document.getElementById('programme');
-    const availableOnly = document.getElementById('availableOnly');
-
-    function matches(card){
-      const term = (q.value || '').trim().toLowerCase();
-      const prog = (programme.value || '').toLowerCase();
-      const onlyAvail = availableOnly.checked;
-      const inText = (card.dataset.title + ' ' + card.dataset.prereq + ' ' + card.dataset.desc).includes(term);
-      const inProg = !prog || (card.dataset.programmes || '').split(',').includes(prog);
-      const avail = card.dataset.available === 'true' || card.dataset.available === 'True';
-      return inText && inProg && (!onlyAvail || avail);
-    }
-
-    function applyFilters(){
-      const cards = document.querySelectorAll('article.card');
-      let anyVisibleSections = false;
-      document.querySelectorAll('section.academic').forEach(sec => {
-        let visibleCount = 0;
-        sec.querySelectorAll('article.card').forEach(card => {
-          const ok = matches(card);
-          card.style.display = ok ? '' : 'none';
-          if(ok) visibleCount++;
-        });
-        sec.style.display = visibleCount ? '' : 'none';
-        if(visibleCount) anyVisibleSections = true;
-      });
-    }
-
-    q.addEventListener('input', applyFilters);
-    programme.addEventListener('change', applyFilters);
-    availableOnly.addEventListener('change', applyFilters);
-    document.addEventListener('DOMContentLoaded', applyFilters);
-  })();
-  </script>
-</body>
+<div class="badges">
 </html>
