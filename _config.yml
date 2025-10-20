@@ -1,0 +1,10 @@
+title: UCL ELEC0054 MSc Project Offers
+description: Research project offers for ELEC0054
+url: "" # set your site URL if you have a custom domain
+baseurl: ""
+theme: just-the-docs
+markdown: kramdown
+plugins: []
+
+# Ensure GitHub Pages-compatible Jekyll config (no unsupported plugins)
+permalink: pretty
