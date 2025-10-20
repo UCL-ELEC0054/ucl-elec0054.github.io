@@ -8,3 +8,16 @@
     Build and evaluate RL pipelines for targeted molecule generation with docking proxies.
   available: false
   apply_url: https://forms.gle/EXAMPLE?entry.123=pignatelli-rl-drug-design-001
+
+
+- title: Self supervised learning
+  supervisor: Fake academic
+  second_marker: Eduardo Pignatelli
+  programmes: [Integrated Machine Learning Systems]
+  industry_led: true
+  prerequisites: "Python, probability, basic chemoinformatics helpful"
+  description: >-
+    Build and evaluate RL pipelines for targeted molecule generation with docking proxies.
+  available: false
+  apply_url: https://forms.gle/EXAMPLE?entry.123=pignatelli-rl-drug-design-001
+
