@@ -5,69 +5,215 @@ title: UCL EEE MSc Project Offers
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>{{ page.title }}</title>
-<link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 <body>
-<!-- UCL-style banner -->
-<div class="site-banner">
-<div class="container">
-<div class="lockup">
-<div class="block" aria-hidden="true"></div>
-<div class="dept">
-<a href="https://www.ucl.ac.uk/engineering/electronic-electrical-engineering" target="_blank" rel="noopener">
-UCL Electronic & Electrical Engineering
-</a>
-</div>
-</div>
-</div>
-</div>
+  {% assign academics = site.data.academics %}
+  {% assign programmes = site.data.programmes %}
+  {% assign research_areas = site.data.research_areas %}
+  {% assign grouped = site.data.projects | group_by: "supervisor" %}
 
+  <div class="site-banner">
+    <div class="container">
+      <div class="lockup">
+        <div class="block" aria-hidden="true"></div>
+        <div class="dept">
+          <a href="https://www.ucl.ac.uk/engineering/electronic-electrical-engineering" target="_blank" rel="noopener">
+            UCL Electronic &amp; Electrical Engineering
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<!-- Page header with title + filters -->
-<header class="page">
-<div class="container">
-<h1 style="margin:0 0 0.25rem">{{ site.title }}</h1>
-<p class="small" style="margin:0 0 0.75rem">{{ site.description }}</p>
-<div class="controls">
-<input id="q" type="search" placeholder="Search projects… (title, prerequisites, description)" />
-<select id="programme">
-<option value="">All programmes</option>
-{% for p in site.data.programmes %}
-<option value="{{ p }}">{{ p }}</option>
-{% endfor %}
-</select>
-<label class="small"><input id="availableOnly" type="checkbox" checked /> Available only</label>
-</div>
-</div>
-</header>
+  <header class="page">
+    <div class="container">
+      <h1 style="margin:0 0 0.25rem">{{ site.title }}</h1>
+      <p class="small" style="margin:0 0 0.75rem">{{ site.description }}</p>
 
+      <div class="controls">
+        <input id="q" type="search" placeholder="Search projects… (title, supervisor, description, prerequisites)" />
 
-<main class="container" id="app">
-{% assign grouped = site.data.projects | group_by: "supervisor" %}
-{% assign academics = site.data.academics %}
+        <select id="programme">
+          <option value="">All programmes</option>
+          {% for programme_entry in programmes %}
+            {% assign programme_slug = programme_entry[0] %}
+            {% assign programme = programme_entry[1] %}
+            <option value="{{ programme_slug }}">{{ programme.label }}</option>
+          {% endfor %}
+        </select>
 
+        <select id="researchArea">
+          <option value="">All research areas</option>
+          {% for area_entry in research_areas %}
+            {% assign area_slug = area_entry[0] %}
+            {% assign area = area_entry[1] %}
+            <option value="{{ area_slug }}">{{ area.label }}</option>
+          {% endfor %}
+        </select>
 
-{% for group in grouped %}
-{% assign sup = group.name %}
-<section class="academic" data-supervisor="{{ sup }}">
-<h2>{{ sup }}</h2>
-{% assign meta = academics[sup] %}
-{% if meta and meta.email %}
-<div class="small">Contact: <a href="mailto:{{ meta.email }}">{{ meta.email }}</a></div>
-{% endif %}
-<div class="grid">
-{% for project in group.items %}
-<article class="card"
-data-title="{{ project.title | downcase }}"
-data-desc="{{ project.description | downcase }}"
-data-prereq="{{ project.prerequisites | downcase }}"
-data-programmes="{{ project.programmes | join: "," | downcase }}"
-data-available="{{ project.available | default: true }}">
-<h3>{{ project.title }}</h3>
+        <label class="small"><input id="availableOnly" type="checkbox" checked /> Available only</label>
+      </div>
+    </div>
+  </header>
 
+  <main class="container" id="app">
+    {% for group in grouped %}
+      {% assign sup = group.name %}
+      {% assign meta = academics[sup] %}
+      {% assign area_slugs = meta.research_areas | default: empty %}
 
-<div class="badges">
+      <section
+        class="academic"
+        data-supervisor="{{ sup | downcase | escape }}"
+        data-position="{{ meta.position | default: '' | downcase | escape }}"
+        data-research-areas="{{ area_slugs | join: ',' | downcase | escape }}"
+      >
+        <div class="academic-header">
+          <div>
+            {% if meta and meta.profile_url != blank %}
+              <h2><a href="{{ meta.profile_url }}" target="_blank" rel="noopener">{{ sup }}</a></h2>
+            {% else %}
+              <h2>{{ sup }}</h2>
+            {% endif %}
+
+            {% if meta and meta.position %}
+              <div class="small">{{ meta.position }}</div>
+            {% endif %}
+
+            {% if meta and meta.email %}
+              <div class="small">Contact: <a href="mailto:{{ meta.email }}">{{ meta.email }}</a></div>
+            {% endif %}
+          </div>
+
+          {% if meta and meta.photo != blank %}
+            <img class="academic-photo" src="{{ meta.photo | relative_url }}" alt="Photo of {{ sup }}" />
+          {% endif %}
+        </div>
+
+        {% if area_slugs.size > 0 %}
+          <div class="badges badges--meta">
+            {% for area_slug in area_slugs %}
+              {% assign area = research_areas[area_slug] %}
+              {% if area %}
+                <span class="badge badge--area" title="{{ area.description }}">{{ area.label }}</span>
+              {% else %}
+                <span class="badge badge--area">{{ area_slug }}</span>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <div class="grid">
+          {% for project in group.items %}
+            {% assign available = project.available | default: true %}
+            {% assign project_programmes = project.programmes | default: empty %}
+
+            <article
+              class="card"
+              data-title="{{ project.title | default: '' | downcase | escape }}"
+              data-desc="{{ project.description | default: '' | strip_html | downcase | escape }}"
+              data-prereq="{{ project.prerequisites | default: '' | strip_html | downcase | escape }}"
+              data-programmes="{{ project_programmes | join: ',' | downcase | escape }}"
+              data-available="{{ available }}"
+            >
+              <h3>{{ project.title }}</h3>
+
+              <div class="badges">
+                {% for programme_slug in project_programmes %}
+                  {% assign programme = programmes[programme_slug] %}
+                  {% if programme %}
+                    <span class="badge badge--programme" title="{{ programme.description }}">{{ programme.label }}</span>
+                  {% else %}
+                    <span class="badge badge--programme">{{ programme_slug }}</span>
+                  {% endif %}
+                {% endfor %}
+
+                {% if available %}
+                  <span class="badge badge--available">Available</span>
+                {% else %}
+                  <span class="badge badge--unavailable">Unavailable</span>
+                {% endif %}
+              </div>
+
+              {% if project.description %}
+                <p>{{ project.description }}</p>
+              {% endif %}
+
+              {% if project.prerequisites %}
+                <p class="small"><strong>Prerequisites:</strong> {{ project.prerequisites }}</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  </main>
+
+  <script>
+    (() => {
+      const q = document.getElementById('q');
+      const programme = document.getElementById('programme');
+      const researchArea = document.getElementById('researchArea');
+      const availableOnly = document.getElementById('availableOnly');
+      const sections = Array.from(document.querySelectorAll('.academic'));
+
+      function matchesProject(card, term, selectedProgramme, availabilityRequired) {
+        const haystack = [
+          card.dataset.title || '',
+          card.dataset.desc || '',
+          card.dataset.prereq || ''
+        ].join(' ');
+
+        const projectProgrammes = (card.dataset.programmes || '').split(',').filter(Boolean);
+        const isAvailable = String(card.dataset.available) !== 'false';
+
+        const matchesTerm = !term || haystack.includes(term);
+        const matchesProgramme = !selectedProgramme || projectProgrammes.includes(selectedProgramme);
+        const matchesAvailability = !availabilityRequired || isAvailable;
+
+        return matchesTerm && matchesProgramme && matchesAvailability;
+      }
+
+      function applyFilters() {
+        const term = (q.value || '').trim().toLowerCase();
+        const selectedProgramme = programme.value;
+        const selectedResearchArea = researchArea.value;
+        const availabilityRequired = availableOnly.checked;
+
+        sections.forEach(section => {
+          const sectionText = [
+            section.dataset.supervisor || '',
+            section.dataset.position || ''
+          ].join(' ');
+          const sectionAreas = (section.dataset.researchAreas || '').split(',').filter(Boolean);
+          const cards = Array.from(section.querySelectorAll('.card'));
+
+          const visibleCards = cards.filter(card => {
+            const projectMatches = matchesProject(card, term, selectedProgramme, availabilityRequired);
+            const supervisorMatches = !term || sectionText.includes(term);
+            return projectMatches || supervisorMatches;
+          });
+
+          cards.forEach(card => {
+            card.hidden = !visibleCards.includes(card);
+          });
+
+          const matchesResearchArea = !selectedResearchArea || sectionAreas.includes(selectedResearchArea);
+          section.hidden = visibleCards.length === 0 || !matchesResearchArea;
+        });
+      }
+
+      [q, programme, researchArea, availableOnly].forEach(el => {
+        el.addEventListener('input', applyFilters);
+        el.addEventListener('change', applyFilters);
+      });
+
+      applyFilters();
+    })();
+  </script>
+</body>
 </html>
