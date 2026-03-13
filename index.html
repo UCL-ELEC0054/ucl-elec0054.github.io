@@ -169,74 +169,72 @@ title: UCL EEE MSc Project Offers
         .replace(/^-+|-+$/g, '');
     }
 
-    function parseProgrammes(value) {
+    function parseList(value) {
       return String(value || '')
         .split(/[;,]/)
         .map(item => toSlug(item))
         .filter(Boolean);
     }
 
-    function matchesProject(card, term, selectedProgramme, availabilityRequired) {
-      const haystack = [
-        card.dataset.title || '',
-        card.dataset.desc || '',
-        card.dataset.prereq || ''
-      ].join(' ');
-
-      const projectProgrammes = parseProgrammes(card.dataset.programmes);
-      const selectedProgrammeSlug = toSlug(selectedProgramme);
-      const isAvailable = String(card.dataset.available) !== 'false';
-
-      const matchesTerm = !term || haystack.includes(term);
-      const matchesProgramme =
-        !selectedProgrammeSlug || projectProgrammes.includes(selectedProgrammeSlug);
-      const matchesAvailability = !availabilityRequired || isAvailable;
-
-      return matchesTerm && matchesProgramme && matchesAvailability;
-    }
-
     function applyFilters() {
       const term = (q.value || '').trim().toLowerCase();
-      const selectedProgramme = programme.value;
-      const selectedResearchArea = researchArea.value;
+      const selectedProgramme = toSlug(programme.value);
+      const selectedResearchArea = toSlug(researchArea.value);
       const availabilityRequired = availableOnly.checked;
 
       sections.forEach(section => {
         const sectionText = [
           section.dataset.supervisor || '',
           section.dataset.position || ''
-        ].join(' ');
+        ]
+          .join(' ')
+          .toLowerCase();
 
-        const sectionAreas = (section.dataset.researchAreas || '')
-          .split(',')
-          .map(item => item.trim())
-          .filter(Boolean);
-
+        const sectionAreas = parseList(section.dataset.researchAreas || '');
         const cards = Array.from(section.querySelectorAll('.card'));
 
-        const visibleCards = cards.filter(card => {
-          const projectMatches = matchesProject(
-            card,
-            term,
-            selectedProgramme,
-            availabilityRequired
-          );
-          const supervisorMatches = !term || sectionText.includes(term);
-          return projectMatches || supervisorMatches;
-        });
+        let anyVisible = false;
 
         cards.forEach(card => {
-          card.hidden = !visibleCards.includes(card);
+          const cardText = [
+            card.dataset.title || '',
+            card.dataset.desc || '',
+            card.dataset.prereq || ''
+          ]
+            .join(' ')
+            .toLowerCase();
+
+          const cardProgrammes = parseList(card.dataset.programmes || '');
+          const isAvailable = String(card.dataset.available) !== 'false';
+
+          const matchesSearch =
+            !term || cardText.includes(term) || sectionText.includes(term);
+
+          const matchesProgramme =
+            !selectedProgramme || cardProgrammes.includes(selectedProgramme);
+
+          const matchesAvailability =
+            !availabilityRequired || isAvailable;
+
+          const matchesCard =
+            matchesSearch && matchesProgramme && matchesAvailability;
+
+          card.hidden = !matchesCard;
+
+          if (matchesCard) {
+            anyVisible = true;
+          }
         });
 
         const matchesResearchArea =
           !selectedResearchArea || sectionAreas.includes(selectedResearchArea);
 
-        section.hidden = visibleCards.length === 0 || !matchesResearchArea;
+        section.hidden = !anyVisible || !matchesResearchArea;
       });
     }
 
     [q, programme, researchArea, availableOnly].forEach(el => {
+      if (!el) return;
       el.addEventListener('input', applyFilters);
       el.addEventListener('change', applyFilters);
     });
