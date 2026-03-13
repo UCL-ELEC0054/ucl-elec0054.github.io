@@ -1,33 +1,49 @@
-- title: RL for Drug-like Molecule Generation
-  supervisor: Eduardo Pignatelli
-  second_marker: Eduardo Pignatelli
-  programmes: [Integrated Machine Learning Systems, Internet Engineering, Telecommunications, Wireless and Optical Communications]
-  industry_led: true
-  prerequisites: "Python, probability, basic chemoinformatics helpful"
-  description: >-
-    Build and evaluate RL pipelines for targeted molecule generation with docking proxies.
-  available: false
-  apply_url: https://forms.gle/EXAMPLE?entry.123=pignatelli-rl-drug-design-001
+- id: proj-001
+  title: "Learning World Models for Efficient Reinforcement Learning"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors: []
+  programmes:
+    - integrated-machine-learning-systems
+  description: >
+    This project investigates world models for reinforcement learning, with a focus on
+    sample efficiency, latent dynamics, and generalisation across environments.
+  prerequisites: >
+    Familiarity with Python and machine learning. Experience with reinforcement learning,
+    PyTorch, or JAX is desirable.
+  research_areas:
+    - machine-learning-ai
+    - reinforcement-learning
+  available: true
 
+- id: proj-002
+  title: "Privacy Measurement in Consumer IoT Devices"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors: []
+  programmes:
+    - internet-engineering
+  description: >
+    This project explores methods for analysing the network behaviour of IoT devices,
+    with particular attention to privacy leakage, security risks, and internet measurement.
+  prerequisites: >
+    Familiarity with Python and basic networking concepts is desirable.
+  research_areas:
+    - networking-security-iot
+  available: true
 
-- title: Self supervised learning
-  supervisor: Fake academic
-  second_marker: Eduardo Pignatelli
-  programmes: [Integrated Machine Learning Systems]
-  industry_led: true
-  prerequisites: "Python, probability, basic chemoinformatics helpful"
-  description: >-
-    Build and evaluate RL pipelines for targeted molecule generation with docking proxies.
+- id: proj-003
+  title: "Massive MIMO Signal Design for 6G Systems"
+  supervisor: "Christos Masouros"
+  co_supervisors:
+    - "Tongyang Xu"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  description: >
+    This project studies signal design and optimisation methods for next-generation
+    wireless systems, with applications to massive MIMO and 6G communications.
+  prerequisites: >
+    Background in communications engineering, linear algebra, and signal processing.
+  research_areas:
+    - wireless-communications
+    - signal-processing
   available: false
-  apply_url: https://forms.gle/EXAMPLE?entry.123=pignatelli-rl-drug-design-001
-
-- title: LLM for RL
-  supervisor: Eduardo Pignatelli
-  second_marker: Eduardo Pignatelli
-  programmes: [Wireless and Optical Communications]
-  industry_led: true
-  prerequisites: "Python, probability, basic chemoinformatics helpful"
-  description: >-
-    Build and evaluate RL pipelines for targeted molecule generation with docking proxies.
-  available: false
-  apply_url: https://forms.gle/EXAMPLE?entry.123=pignatelli-rl-drug-design-001
