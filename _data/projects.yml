@@ -1,49 +1,1609 @@
 - id: proj-001
-  title: "Learning World Models for Efficient Reinforcement Learning"
-  supervisor: "Eduardo Pignatelli"
-  co_supervisors: []
+  title: "Remote data logger using RF/LoRa link"
+  supervisor: "Paul Brennan"
+  co_supervisors:
+    - "Lai Bun Lok"
   programmes:
-    - integrated-machine-learning-systems
-  description: >
-    This project investigates world models for reinforcement learning, with a focus on
-    sample efficiency, latent dynamics, and generalisation across environments.
-  prerequisites: >
-    Familiarity with Python and machine learning. Experience with reinforcement learning,
-    PyTorch, or JAX is desirable.
+    - wireless-and-optical-communications
   research_areas:
-    - machine-learning-ai
-    - reinforcement-learning
-  available: true
+    - wireless-communications
+    - microwave-rf-thz
+    - integrated-circuits-microelectronics
+  description: >
+    Design, build, and test a multi-channel sensor data logger that streams data over RF/LoRa
+    from a transmitter PCB to a receiver/host system for storage and monitoring.
+  prerequisites: >
+    Interest in RF communications, MCU programming (e.g. Arduino), circuit design, and PCB manufacture.
+  available: false
 
 - id: proj-002
-  title: "Privacy Measurement in Consumer IoT Devices"
-  supervisor: "Anna Maria Mandalari"
-  co_supervisors: []
+  title: "FPGA-accelerated Physics-informed Neural Networks for Optical Fibre Communications"
+  supervisor: "Filipe Ferreira"
+  co_supervisors:
+    - "Alfonso Ruocco"
   programmes:
+    - integrated-machine-learning-systems
+    - wireless-and-optical-communications
+    - telecommunications
     - internet-engineering
-  description: >
-    This project explores methods for analysing the network behaviour of IoT devices,
-    with particular attention to privacy leakage, security risks, and internet measurement.
-  prerequisites: >
-    Familiarity with Python and basic networking concepts is desirable.
   research_areas:
-    - networking-security-iot
-  available: true
+    - machine-learning-ai
+    - optical-communications
+    - integrated-circuits-microelectronics
+  description: >
+    Develop and deploy physics-informed neural networks on FPGA hardware to model nonlinear optical
+    fibre propagation efficiently for communications applications.
+  prerequisites: "Python."
+  available: false
 
 - id: proj-003
-  title: "Massive MIMO Signal Design for 6G Systems"
+  title: "Smart Insole for Enhanced Gait Analysis"
+  supervisor: "Yu Wu"
+  co_supervisors:
+    - "Dai Jiang"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - biomedical-electronics
+    - machine-learning-ai
+    - sensing-imaging
+  description: >
+    Build an intelligent insole system for gait analysis using sensor data and machine learning,
+    with applications in rehabilitation, sport, fall-risk monitoring, and gaming.
+  prerequisites: "Hardware knowledge, Python, and machine learning."
+  available: false
+
+- id: proj-004
+  title: "LabSense"
+  supervisor: "Yu Wu"
+  co_supervisors:
+    - "Dai Jiang"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - machine-learning-ai
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+  description: >
+    Develop an AI-enabled smart lab system using cameras, sensors, robotics, and voice assistants
+    to monitor bench usage, hygiene, occupancy, and equipment scheduling.
+  prerequisites: "Hardware, computer vision, Python, and machine learning."
+  available: false
+
+- id: proj-005
+  title: "SleepWave"
+  supervisor: "Yu Wu"
+  co_supervisors:
+    - "Dai Jiang"
+  programmes:
+    - integrated-machine-learning-systems
+    - telecommunications
+    - internet-engineering
+    - wireless-and-optical-communications
+  research_areas:
+    - biomedical-electronics
+    - machine-learning-ai
+    - sensing-imaging
+  description: >
+    Develop an EEG-based smart sleep system that infers sleep stages and adapts lighting,
+    temperature, and sound in real time to improve sleep quality and wake-up behaviour.
+  prerequisites: "Hardware, Embedded C, Python, and machine learning."
+  available: false
+
+- id: proj-006
+  title: "Secure ISAC with Fluid Antenna System"
+  supervisor: "Kit Wong"
+  co_supervisors:
+    - "Christos Masouros"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+    - integrated-machine-learning-systems
+  research_areas:
+    - wireless-communications
+    - sensing-imaging
+    - signal-processing
+  description: >
+    Investigate how fluid antenna systems can improve security in integrated sensing and communication systems.
+  prerequisites: "ELEC0086 Communications Systems Modelling."
+  available: false
+
+- id: proj-007
+  title: "Multifunctional Fluid RIS Systems"
+  supervisor: "Kit Wong"
+  co_supervisors:
+    - "Christos Masouros"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+    - integrated-machine-learning-systems
+  research_areas:
+    - wireless-communications
+    - sensing-imaging
+    - signal-processing
+  description: >
+    Explore reconfigurable intelligent surfaces with fluid-like element reconfigurability for sensing
+    and contextual understanding.
+  prerequisites: "ELEC0086 Communications Systems Modelling."
+  available: false
+
+- id: proj-008
+  title: "Physical Layer Anonymous Communications"
   supervisor: "Christos Masouros"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - wireless-and-optical-communications
+    - telecommunications
+    - internet-engineering
+    - integrated-machine-learning-systems
+  research_areas:
+    - wireless-communications
+    - signal-processing
+    - networking-security-iot
+  description: >
+    Design precoding methods for anonymous physical-layer communications so that data can be decoded
+    reliably while concealing the sender's identity.
+  prerequisites: >
+    Good knowledge of wireless communications and MATLAB programming for advanced communication-system simulation.
+  available: false
+
+- id: proj-009
+  title: "Dual-Functional Communications and Radar Transmission for 6G"
+  supervisor: "Christos Masouros"
+  co_supervisors:
+    - "Izzat Darwazeh"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - wireless-communications
+    - signal-processing
+    - sensing-imaging
+  description: >
+    Develop signal-processing solutions for systems that jointly support communications and radar sensing
+    in future 6G spectrum-sharing scenarios.
+  prerequisites: >
+    Good knowledge of wireless communications and MATLAB programming for advanced communication-system simulation.
+  available: false
+
+- id: proj-010
+  title: "Exploiting Known Interference for Physical Layer Security"
+  supervisor: "Christos Masouros"
+  co_supervisors:
+    - "Izzat Darwazeh"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - wireless-communications
+    - signal-processing
+    - networking-security-iot
+  description: >
+    Study constructive and destructive interference techniques for improving legitimate-user performance
+    while degrading eavesdropper reception in MIMO systems.
+  prerequisites: >
+    Good knowledge of wireless communications and MATLAB programming.
+  available: false
+
+- id: proj-011
+  title: "Project Morpho-Sight: High-Bandwidth Flexible Camera Array"
+  supervisor: "Yu Wu"
+  co_supervisors:
+    - "Dai Jiang"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+    - machine-learning-ai
+  description: >
+    Build a flexible multi-camera and IMU sensing system with FPGA aggregation for applications such as
+    medical robotics and industrial snake-like inspection.
+  prerequisites: "Hardware and software, FPGA, and PCB design."
+  available: false
+
+- id: proj-012
+  title: "Robotic-assisted device"
+  supervisor: "Yu Wu"
+  co_supervisors:
+    - "Dai Jiang"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - biomedical-electronics
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+  description: >
+    Develop a robotic system for automated and precise electrode insertion into the ear canal using
+    sensing, imaging, and control for medical applications.
+  prerequisites: "Hardware, software, system design, Python, and Embedded C."
+  available: false
+
+- id: proj-013
+  title: "Forecast-Aware Energy Management for Residential Solar-Battery Systems"
+  supervisor: "Boli Chen"
+  co_supervisors:
+    - "Francesca Boem"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - control-systems
+    - machine-learning-ai
+    - signal-processing
+  description: >
+    Combine short-term PV forecasting with optimisation of battery operation and inverter control
+    for smarter residential solar-battery energy management.
+  prerequisites: >
+    Strong Python or MATLAB programming, familiarity with machine learning, and interest in optimisation,
+    energy systems, or control.
+  available: true
+
+- id: proj-014
+  title: "Data-driven control for modern cyber–physical systems"
+  supervisor: "Boli Chen"
+  co_supervisors:
+    - "Sarah Spurgeon"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - control-systems
+    - machine-learning-ai
+    - signal-processing
+  description: >
+    Explore data-driven control methods for cyber-physical systems, with possible applications in
+    autonomous vehicles, intelligent transport, and sensor networks.
+  prerequisites: >
+    Basic control and optimisation theory, understanding of machine learning, and programming in Python or MATLAB.
+  available: false
+
+- id: proj-015
+  title: "Forecast-Aware Energy Management for Residential Solar-Battery Systems"
+  supervisor: "Boli Chen"
+  co_supervisors:
+    - "Francesca Boem"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - control-systems
+    - machine-learning-ai
+    - signal-processing
+  description: >
+    Combine short-term PV forecasting with optimisation of battery operation and inverter control
+    for smarter residential solar-battery energy management.
+  prerequisites: >
+    Strong Python or MATLAB programming, familiarity with machine learning, and interest in optimisation,
+    energy systems, or control.
+  available: true
+
+- id: proj-016
+  title: "Electromagnetic pulse synchroniser for inertial sensors"
+  supervisor: "Thomas Gilbert"
+  co_supervisors:
+    - "Sally Day"
+  programmes:
+    - wireless-and-optical-communications
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+    - microwave-rf-thz
+  description: >
+    Design a hardware-based electromagnetic synchronisation system for wearable IMUs, scaling
+    magnetometer-based synchronisation from short-range setups to metre-scale capture volumes.
+  prerequisites: "Knowledge of embedded design and electromagnetic principles."
+  available: false
+
+- id: proj-017
+  title: "Intelligent Wireless Sensing for Smart Grid"
+  supervisor: "Tongyang Xu"
+  co_supervisors:
+    - "Boli Chen"
+  programmes:
+    - telecommunications
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - wireless-and-optical-communications
+  research_areas:
+    - wireless-communications
+    - sensing-imaging
+    - machine-learning-ai
+  description: >
+    Model and simulate AI-assisted wireless sensing systems for smart grids, including joint sensing,
+    communication, and waveform design.
+  prerequisites: >
+    Background in signal processing, communications, sensing, or power systems, plus Python, MATLAB, or C/C++.
+  available: false
+
+- id: proj-018
+  title: "Intelligent Wired Sensing for Smart Grid"
+  supervisor: "Tongyang Xu"
+  co_supervisors:
+    - "Boli Chen"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - sensing-imaging
+    - signal-processing
+    - machine-learning-ai
+  description: >
+    Study intelligent wired sensing for smart grids using PLC, fibre, or Ethernet with AI-assisted
+    signal design and communication strategies.
+  prerequisites: >
+    Background in signal processing, communications, sensing, or power systems, plus Python, MATLAB, or C/C++.
+  available: false
+
+- id: proj-019
+  title: "Semantic based Intelligent Sensing"
+  supervisor: "Tongyang Xu"
+  co_supervisors:
+    - "Yu Wu"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - machine-learning-ai
+    - sensing-imaging
+    - signal-processing
+  description: >
+    Investigate semantic sensing systems that extract and transmit task-relevant information rather
+    than raw data, combining AI, sensing, and communications.
+  prerequisites: >
+    Knowledge of machine learning, sensing systems, signal processing, communications, and MATLAB or Python.
+  available: false
+
+- id: proj-020
+  title: "Designing a DNS Centric Infrastructure for IoT Compromise Detection"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - telecommunications
+    - internet-engineering
+  research_areas:
+    - networking-security-iot
+    - machine-learning-ai
+  description: >
+    Build a DNS-centric monitoring infrastructure for IoT environments to detect compromised behaviour
+    under realistic network churn and address changes.
+  prerequisites: "Python and network fundamentals."
+  available: false
+
+- id: proj-021
+  title: "Designing Robust DNS Threat Intelligence Systems for Accurate Internet Blocking"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+    - machine-learning-ai
+  description: >
+    Redesign DNS threat-intelligence systems to improve blocking accuracy and reduce false positives
+    using longitudinal analysis and ML-assisted classification.
+  prerequisites: "Python, networking fundamentals, and machine learning."
+  available: false
+
+- id: proj-022
+  title: "Modelling Adversary Persistence and Attack Evolution in Network Environments"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+    - machine-learning-ai
+  description: >
+    Model how network adversaries evolve over time using DNS telemetry, honeypot observations,
+    drift detection, and adversarial machine learning.
+  prerequisites: "Python and machine learning."
+  available: false
+
+- id: proj-023
+  title: "Exploring Consumer IoT Device Behaviour During Large-Scale Cloud Outages"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - telecommunications
+    - internet-engineering
+  research_areas:
+    - networking-security-iot
+    - machine-learning-ai
+  description: >
+    Analyse IoT device behaviour during major cloud outages, using network measurements and
+    ML/statistical techniques to classify resilience and dependency patterns.
+  prerequisites: >
+    Python, basic machine learning, and familiarity with networking concepts.
+  available: false
+
+- id: proj-024
+  title: "Analysis of IoT Battery Depletion Caused by Malicious Network Activity"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+  description: >
+    Quantify and analyse how malicious traffic patterns accelerate battery depletion in low-power IoT devices.
+  prerequisites: "Python and networking."
+  available: false
+
+- id: proj-025
+  title: "Enhancing a Wearable Medical Device Communication Prototype Using Galvanic Coupling"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - biomedical-electronics
+    - networking-security-iot
+    - integrated-circuits-microelectronics
+  description: >
+    Extend an existing wearable-device communication prototype to support galvanic coupling and
+    evaluate reliability and communication quality experimentally.
+  prerequisites: >
+    Python, C, C++, and preferably basic embedded-systems knowledge.
+  available: false
+
+- id: proj-026
+  title: "Cybersecurity Evaluation of Bluetooth Low Energy (BLE) for Wearable Devices"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+    - biomedical-electronics
+    - wireless-communications
+  description: >
+    Perform a controlled cybersecurity assessment of BLE for wearables using passive and active
+    attacks in a safe laboratory environment.
+  prerequisites: >
+    Python, C, C++, and familiarity with networking concepts preferred.
+  available: false
+
+- id: proj-027
+  title: "FPGA-accelerated Physics-informed Neural Networks for Optical Fibre Communications"
+  supervisor: "Filipe Ferreira"
+  co_supervisors:
+    - "Fabio Aparacido"
+  programmes:
+    - integrated-machine-learning-systems
+    - telecommunications
+    - wireless-and-optical-communications
+    - internet-engineering
+  research_areas:
+    - machine-learning-ai
+    - optical-communications
+    - integrated-circuits-microelectronics
+  description: >
+    Develop FPGA-accelerated PINN models for nonlinear optical-fibre propagation to improve
+    modelling speed for fibre communications.
+  prerequisites: "Programming experience; Python, MATLAB, Vivado, or Verilog."
+  available: false
+
+- id: proj-028
+  title: "FPGA-based Real-time Digital Signal Processing for Optical Fibre Communications"
+  supervisor: "Filipe Ferreira"
+  co_supervisors:
+    - "Fabio Aparacido"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - optical-communications
+    - signal-processing
+    - integrated-circuits-microelectronics
+  description: >
+    Design and benchmark FPGA implementations of coherent optical receiver DSP algorithms such as
+    phase recovery and equalisation.
+  prerequisites: "Programming experience; Python, MATLAB, Verilog, or Vivado."
+  available: false
+
+- id: proj-029
+  title: "A flexible bit-rate controller for beyond 5G high-speed digital fronthaul"
+  supervisor: "Nathan Gomes"
+  co_supervisors:
+    - "Martyn Fice"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - optical-communications
+    - wireless-communications
+    - signal-processing
+  description: >
+    Investigate flexible multiplexing and variable bit-rate physical-layer transport streams for
+    next-generation digital fronthaul systems.
+  prerequisites: >
+    Good MATLAB skills or strong willingness to learn, plus knowledge of OFDM/IFFT-based digital
+    communications and optical communications.
+  available: false
+
+- id: proj-030
+  title: "Machine learning for nonlinear equalisation of subcarrier multiplexed analogue optical links"
+  supervisor: "Nathan Gomes"
+  co_supervisors:
+    - "Filipe Ferreira"
+  programmes:
+    - integrated-machine-learning-systems
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - machine-learning-ai
+    - optical-communications
+    - signal-processing
+  description: >
+    Use machine learning to compensate nonlinear distortion in analogue optical fronthaul links
+    for 5G and beyond.
+  prerequisites: >
+    Good MATLAB or Python skills, interest in machine learning, and preferably knowledge of
+    digital communications, RF/microwave, and optical communications.
+  available: false
+
+- id: proj-031
+  title: "5G and beyond open fronthaul virtualisation using hardware offloading"
+  supervisor: "Nathan Gomes"
+  co_supervisors:
+    - "Chin-Pang Liu"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - optical-communications
+    - integrated-circuits-microelectronics
+    - signal-processing
+  description: >
+    Extend FPGA-based open-fronthaul signal processing for 5G and beyond using hardware offloading,
+    multiplexing, and experimental validation.
+  prerequisites: >
+    Good MATLAB/Simulink skills, strong interest in FPGA programming, and preferably knowledge of
+    OFDM, RF/microwave, and optical communications.
+  available: false
+
+- id: proj-032
+  title: "Neural network based digital predistortion (DPD) for the high efficient radio frequency (RF) power amplifier"
+  supervisor: "Bo Tan"
+  co_supervisors:
+    - "Christos Masouros"
+  programmes:
+    - wireless-and-optical-communications
+  research_areas:
+    - machine-learning-ai
+    - microwave-rf-thz
+    - signal-processing
+  description: >
+    Develop lightweight neural-network-based digital predistortion and crest-factor reduction methods
+    for more energy-efficient RF power amplifiers.
+  prerequisites: >
+    Good MATLAB or Python, signal processing, essential machine learning knowledge, and basic RF analogue-front-end knowledge.
+  available: false
+
+- id: proj-033
+  title: "Interplay of distributed machine learning (AI) and wireless network"
+  supervisor: "Bo Tan"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - telecommunications
+  research_areas:
+    - machine-learning-ai
+    - wireless-communications
+    - networking-security-iot
+  description: >
+    Study adaptive resource allocation, robust aggregation, and privacy-preserving strategies
+    for distributed machine learning over wireless networks.
+  prerequisites: >
+    Experience with NS-3, MATLAB, or Python, and basic knowledge of machine learning, distributed systems,
+    and wireless networks.
+  available: false
+
+- id: proj-034
+  title: "Simulation Evaluation of Hybrid RF/FSO Transmission"
+  supervisor: "Bo Tan"
+  co_supervisors:
+    - "Izzat Darwazeh"
+  programmes:
+    - wireless-and-optical-communications
+  research_areas:
+    - wireless-communications
+    - optical-communications
+    - signal-processing
+  description: >
+    Develop a simulation framework to evaluate hybrid RF/free-space optical links under realistic
+    channel impairments for future communication systems.
+  prerequisites: >
+    Good MATLAB or Python, wireless-communications modelling, and signal processing.
+  available: false
+
+- id: proj-035
+  title: "Combining computer vision and electro-optical actuators to enable whole-brain functional imaging in freely moving animals"
+  supervisor: "Dai Jiang"
+  co_supervisors:
+    - "Yu Wu"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - biomedical-electronics
+    - sensing-imaging
+    - control-systems
+  description: >
+    Build a moving-microscope prototype that combines computer vision, electro-optic actuation,
+    and predictive control for imaging neural activity in freely moving animals.
+  prerequisites: "N/A."
+  available: false
+
+- id: proj-036
+  title: "Electrical impedance-based sensing and imaging for personalised cell therapy"
+  supervisor: "Dai Jiang"
+  co_supervisors:
+    - "Yu Wu"
+  programmes:
+    - wireless-and-optical-communications
+    - integrated-machine-learning-systems
+  research_areas:
+    - biomedical-electronics
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+  description: >
+    Advance a miniaturised bioreactor platform with multi-frequency impedance sensing for
+    continuous monitoring and imaging in personalised cell therapy manufacturing.
+  prerequisites: "MATLAB/Python; FPGA programming desirable but not essential."
+  available: false
+
+- id: proj-037
+  title: "Self-powered Smart Insoles for Walking Gait and Mobility Monitoring Using Multi-Channel Piezoelectric Nano-Yarn Fibre Sensors and Energy Harvesters"
+  supervisor: "Dai Jiang"
+  co_supervisors:
+    - "Yu Wu"
+  programmes:
+    - integrated-machine-learning-systems
+    - telecommunications
+  research_areas:
+    - biomedical-electronics
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+  description: >
+    Develop self-powered smart insoles with piezoelectric textile sensors and machine learning
+    for continuous gait and mobility monitoring.
+  prerequisites: "Analogue electronic circuits and micro-controller experience."
+  available: false
+
+- id: proj-038
+  title: "Multi-Impedance Sensing Cell Culture Platform for Real-Time Assessment of Engineered T-Cell Cytotoxicity Against Solid Tumour Cells"
+  supervisor: "Dai Jiang"
+  co_supervisors:
+    - "Andreas Demosthenous"
+  programmes:
+    - wireless-and-optical-communications
+    - internet-engineering
+  research_areas:
+    - biomedical-electronics
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+  description: >
+    Develop a multi-site impedance-sensing platform for real-time, label-free monitoring of
+    engineered T-cell killing of solid tumour cells in vitro.
+  prerequisites: "Electronic circuits."
+  available: false
+
+- id: proj-039
+  title: "Multiplexed Sensing Platform for Real-Time Monitoring Metabolic Activity in Live Muscle Models"
+  supervisor: "Dai Jiang"
+  co_supervisors:
+    - "Andreas Demosthenous"
+  programmes:
+    - wireless-and-optical-communications
+  research_areas:
+    - biomedical-electronics
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+  description: >
+    Build a multiplexed electrochemical glucose-sensing platform for continuous monitoring of
+    metabolism in live muscle cell cultures.
+  prerequisites: "Electronic circuits."
+  available: false
+
+- id: proj-040
+  title: "Kinetic Control of the Non-Inductive Fusion Plasma Current"
+  supervisor: "Francesca Boem"
+  co_supervisors:
+    - "Sarah Spurgeon"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - control-systems
+    - signal-processing
+  description: >
+    Design a multi-objective MIMO controller for non-inductive current ramp-up in fusion plasmas
+    using RAPTOR simulations in collaboration with UKAEA.
+  prerequisites: "Background in control engineering, optimisation, and MATLAB."
+  available: true
+
+- id: proj-041
+  title: "Fusion Plasma State Estimation"
+  supervisor: "Francesca Boem"
+  co_supervisors:
+    - "Sarah Spurgeon"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - control-systems
+    - signal-processing
+  description: >
+    Develop state-estimation methods for fusion plasmas with limited measurements using RAPTOR
+    and JINTRAC/JETTO simulation tools.
+  prerequisites: "Background and expertise in control engineering and MATLAB."
+  available: true
+
+- id: proj-042
+  title: "Machine Learning Surrogate of MHD Equilibria for Control-Oriented Tokamak Simulations"
+  supervisor: "Francesca Boem"
+  co_supervisors:
+    - "Sarah Spurgeon"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - control-systems
+    - machine-learning-ai
+  description: >
+    Build a machine-learning surrogate of CHEASE equilibrium calculations for fast
+    control-oriented tokamak simulation with RAPTOR.
+  prerequisites: "Background and expertise in control engineering."
+  available: true
+
+- id: proj-043
+  title: "Quantum Key Distribution for Terahertz Communications Systems"
+  supervisor: "Michael Wale"
+  co_supervisors:
+    - "Martyn Fice"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - nanoelectronics-quantum
+    - microwave-rf-thz
+    - optical-communications
+  description: >
+    Explore practical routes to quantum key distribution for photonics-enabled THz communication systems.
+  prerequisites: >
+    Interest in photonics, high-frequency engineering, device technology, and communications systems.
+  available: false
+
+- id: proj-044
+  title: "Limits to speed and efficiency in electro-optic modulation for communications"
+  supervisor: "Michael Wale"
+  co_supervisors:
+    - "Lalitha Ponnampalam"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - photonics-optics
+    - optical-communications
+    - semiconductors-materials-devices
+  description: >
+    Study physical limits and design trade-offs in ultra-high-speed electro-optic modulators
+    and photonic integrated circuits for next-generation optical communications.
+  prerequisites: >
+    Interest in optical devices, photonic integration, modelling, communications systems,
+    and preferably device physics.
+  available: false
+
+- id: proj-045
+  title: "Novel Electronic-Photonic Co-Design Approaches for High Efficiency, High Capacity Optical Communications"
+  supervisor: "Michael Wale"
+  co_supervisors:
+    - "Lalitha Ponnampalam"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - photonics-optics
+    - optical-communications
+    - semiconductors-materials-devices
+  description: >
+    Investigate co-designed electronic-photonic transmitter architectures to improve efficiency,
+    linearity, and bandwidth in coherent optical communications.
+  prerequisites: "Interest in photonics, electronics, and communications systems."
+  available: false
+
+- id: proj-046
+  title: "Case Law Intelligence: An LLM-Enabled Pipeline for Monitoring, Extracting, and Structuring UK Judicial Decisions"
+  supervisor: "Miguel Rodrigues"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: >
+    Build an end-to-end pipeline for monitoring UK case law, extracting issues and rulings with LLMs,
+    and structuring them into evidence-linked stakeholder-facing outputs.
+  prerequisites: >
+    Strong Python and data-pipeline skills, practical NLP/LLM experience, and solid engineering discipline.
+  available: false
+
+- id: proj-047
+  title: "The AI Lawyer: Transforming Contract Negotiation with Intelligent Agentic Systems"
+  supervisor: "Miguel Rodrigues"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: >
+    Design and evaluate a multi-agent generative-AI system for autonomous contract negotiation,
+    with a focus on loan agreements.
+  prerequisites: >
+    Strong Python plus machine learning, generative AI, and NLP skills.
+  available: false
+
+- id: proj-048
+  title: "Graph-Grounded LLM Reasoning: Combining Knowledge Graphs and LLMs for More Reliable, Auditable Answer"
+  supervisor: "Miguel Rodrigues"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: >
+    Build and evaluate a hybrid LLM + knowledge-graph system for auditable, evidence-linked reasoning
+    over structured domains such as UK procurement data.
+  prerequisites: >
+    Strong Python and data-engineering skills, LLM orchestration experience, and interest in knowledge representation.
+  available: false
+
+- id: proj-049
+  title: "Certifying Vision–Language Foundation Models: Scalable, Trustworthy Evaluation for Multimodal Safety and Reliability"
+  supervisor: "Miguel Rodrigues"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - sensing-imaging
+  description: >
+    Develop a scalable certification and reporting workflow for evaluating safety, reliability,
+    and robustness of vision-language models.
+  prerequisites: >
+    Strong Python, familiarity with LLM/VLM prompting and benchmarking, and interest in responsible AI.
+  available: false
+
+- id: proj-050
+  title: "Scientific Policy Intel: Building an LLM-Enabled Monitoring & Insight Pipeline for Science Policy and Scientific Diplomacy"
+  supervisor: "Miguel Rodrigues"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: >
+    Build a policy-monitoring and intelligence pipeline that uses LLMs to extract structured signals
+    from heterogeneous science-policy sources.
+  prerequisites: >
+    Strong Python, NLP/LLM experience, and a practical ML-engineering mindset.
+  available: false
+
+- id: proj-051
+  title: "Partial Packet Forwarding"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - telecommunications
+    - internet-engineering
+  research_areas:
+    - networking-security-iot
+    - signal-processing
+  description: >
+    Research router support and encoding strategies for partial packet forwarding so that early packet
+    bits carry the most informative content under congestion.
+  prerequisites: "None."
+  available: false
+
+- id: proj-052
+  title: "Multi-agent Reinforcement Learning for Network Routing"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - reinforcement-learning
+    - networking-security-iot
+    - machine-learning-ai
+  description: >
+    Study multi-agent reinforcement learning for decentralised routing where routers learn policies
+    from QoE- and cost-based rewards.
+  prerequisites: "Python."
+  available: false
+
+- id: proj-053
+  title: "Default-off Routing"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+  description: >
+    Research a default-off internet routing paradigm with new BGP attributes and packet filtering
+    to reduce denial-of-service exposure.
+  prerequisites: "None."
+  available: false
+
+- id: proj-054
+  title: "Implementation of DNS++"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+  description: >
+    Implement DNS++, a proposed upgrade to DNS with dynamic updates, locality-aware dissemination,
+    and homomorphic-encrypted queries.
+  prerequisites: "None."
+  available: false
+
+- id: proj-055
+  title: "PocketDNS"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+  description: >
+    Investigate the feasibility of sending all DNS data to end devices and analyse implications
+    for privacy and response time.
+  prerequisites: "None."
+  available: false
+
+- id: proj-056
+  title: "Sentinel"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+    - machine-learning-ai
+  description: >
+    Implement the Sentinel content-rating system, including components such as a browser extension,
+    mobile app, and storage backend.
+  prerequisites: "None."
+  available: false
+
+- id: proj-057
+  title: "Session migration"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+  description: >
+    Implement a transparent session-migration system that moves service computation between machines
+    while preserving client state.
+  prerequisites: "None."
+  available: false
+
+- id: proj-058
+  title: "QoE app and ML"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+    - machine-learning-ai
+  description: >
+    Build an application for active collection of real-world QoE data to support open-source
+    machine-learning research for networking.
+  prerequisites: "None."
+  available: false
+
+- id: proj-059
+  title: "Web based network simulator"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+  description: >
+    Develop a web-based network simulator with visual topology design, router login/configuration,
+    protocol simulation, and live link-failure testing.
+  prerequisites: "None."
+  available: false
+
+- id: proj-060
+  title: "Coding schemes for mitigation of turbulent fading in free-space optical links"
+  supervisor: "Martyn Fice"
+  co_supervisors:
+    - "Nathan Gomes"
+  programmes:
+    - telecommunications
+    - internet-engineering
+    - wireless-and-optical-communications
+  research_areas:
+    - optical-communications
+    - wireless-communications
+    - signal-processing
+  description: >
+    Investigate coding techniques for mitigating atmospheric fading in free-space optical links
+    through simulation and possibly laboratory testing.
+  prerequisites: "None."
+  available: false
+
+- id: proj-061
+  title: "External cavity laser based on thin-film lithium niobate PIC"
+  supervisor: "Martyn Fice"
+  co_supervisors:
+    - "Alfonso Ruocco"
+  programmes:
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - photonics-optics
+    - semiconductors-materials-devices
+    - optical-communications
+  description: >
+    Characterise and model a hybrid thin-film lithium-niobate external-cavity laser to support
+    improved PIC laser design.
+  prerequisites: "Interest in developing practical experimental skills."
+  available: true
+
+- id: proj-062
+  title: "Modelling optical injection locking"
+  supervisor: "Martyn Fice"
+  co_supervisors:
+    - "Michael Wale"
+  programmes:
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - photonics-optics
+    - optical-communications
+    - semiconductors-materials-devices
+  description: >
+    Model optical injection locking for comb-line filtering and analyse phase-error behaviour under
+    different operating conditions.
+  prerequisites: "Interest in semiconductor laser modelling."
+  available: false
+
+- id: proj-063
+  title: "EEG based human/patient monitoring"
+  supervisor: "Arsam Nasrollahy Shiraz"
+  co_supervisors:
+    - "Dai Jiang"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - biomedical-electronics
+    - machine-learning-ai
+    - sensing-imaging
+  description: >
+    Develop software for EEG-based monitoring of mental state or pathology, such as seizure
+    detection or driver drowsiness detection.
+  prerequisites: "Fundamentals of machine learning and its implementation."
+  available: false
+
+- id: proj-064
+  title: "Brain computer interfaces for silent/imagined speech"
+  supervisor: "Arsam Nasrollahy Shiraz"
+  co_supervisors:
+    - "Dai Jiang"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - biomedical-electronics
+    - machine-learning-ai
+  description: >
+    Investigate machine-learning methods for decoding imagined speech from EEG and building a
+    silent-speech communication system.
+  prerequisites: "Fundamentals of machine learning and its implementation."
+  available: false
+
+- id: proj-065
+  title: "Computer vision based heart monitoring"
+  supervisor: "Arsam Nasrollahy Shiraz"
+  co_supervisors:
+    - "Yu Wu"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - biomedical-electronics
+    - machine-learning-ai
+    - sensing-imaging
+  description: >
+    Develop video-based heart-monitoring software using rPPG-style methods and machine learning.
+  prerequisites: "Fundamentals of machine learning and its implementation."
+  available: false
+
+- id: proj-066
+  title: "Hardware-in-the-Loop and Bench Validation of RL-Based Active EMI Filtering"
+  supervisor: "Boli Chen"
+  co_supervisors:
+    - "Yukun Hu"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - integrated-circuits-microelectronics
+    - signal-processing
+  description: >
+    Design and experimentally validate an RL-based active EMI filtering prototype for automotive
+    power-electronic applications.
+  prerequisites: >
+    Electronics lab skills, MATLAB or Python, and basic understanding of signals, machine learning, and control systems.
+  available: false
+
+- id: proj-067
+  title: "Modelling liquid crystals in photonic devices (2 projects)"
+  supervisor: "Sally Day"
+  co_supervisors:
+    - "David Selviah"
+    - "Martyn Fice"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - photonics-optics
+    - semiconductors-materials-devices
+  description: >
+    Model Fabry–Perot and cholesteric liquid-crystal photonic devices using electromagnetic-wave
+    simulations to study tuning, polarisation, and off-axis behaviour.
+  prerequisites: "Interest in modelling optics; no specific prior liquid-crystal knowledge required."
+  available: false
+
+- id: proj-068
+  title: "Adaptive Data Rate and Duty-Cycle Optimisation in LoRaWAN-Based Agricultural IoT Networks"
+  supervisor: "Temitope Odedeyi"
   co_supervisors:
     - "Tongyang Xu"
   programmes:
     - telecommunications
     - wireless-and-optical-communications
-  description: >
-    This project studies signal design and optimisation methods for next-generation
-    wireless systems, with applications to massive MIMO and 6G communications.
-  prerequisites: >
-    Background in communications engineering, linear algebra, and signal processing.
+    - integrated-machine-learning-systems
+    - internet-engineering
   research_areas:
+    - networking-security-iot
     - wireless-communications
+    - machine-learning-ai
+  description: >
+    Study predictive adaptive data-rate and duty-cycle strategies for improving scalability,
+    reliability, and energy efficiency in agricultural LoRaWAN deployments.
+  prerequisites: >
+    Strong programming skills in Python/C++ and interest in machine learning and networking.
+  available: false
+
+- id: proj-069
+  title: "Techno-Economic and Performance Analysis of Non-Terrestrial Networks for Agricultural IoT Applications"
+  supervisor: "Temitope Odedeyi"
+  co_supervisors:
+    - "Clive Poole"
+  programmes:
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+    - wireless-communications
+  description: >
+    Compare LEO satellite IoT, terrestrial LPWAN, and hybrid NTN architectures for agricultural
+    monitoring under realistic traffic, coverage, and cost assumptions.
+  prerequisites: >
+    Strong analytical skills, basic Python, networking fundamentals, and willingness to learn LoRaSim and ns-3.
+  available: false
+
+- id: proj-070
+  title: "Digital Twin using AI for network simulation"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - machine-learning-ai
+    - networking-security-iot
+  description: >
+    Develop an AI-driven digital-twin platform for network simulation using Docker containers and
+    generative AI for realistic scenario generation.
+  prerequisites: "None."
+  available: false
+
+- id: proj-071
+  title: "Post-training of LLMs for online therapy"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: >
+    Post-train an open-source LLM for online therapy applications, with particular focus on safety
+    guardrails and controlled behaviour.
+  prerequisites: "Knowledge of LLMs."
+  available: false
+
+- id: proj-072
+  title: "Proving that Options Can Address Temporal Credit Assignment"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  description: >
+    Test whether hand-designed options improve temporal credit assignment in long-horizon reinforcement
+    learning, using NetHack as the benchmark.
+  prerequisites: >
+    Excellent RL theory, solid deep learning foundations, prior deep-RL implementation experience,
+    and excellent coding skills.
+  available: false
+
+- id: proj-073
+  title: "Future-conditional Large Language Models"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: >
+    Learn token embeddings conditioned on both past and future context to study whether future-aware
+    representations improve language modelling and planning-like behaviour.
+  prerequisites: >
+    Excellent deep learning theory, good understanding of LLMs/Transformers, prior implementation
+    of at least one deep learning model, and excellent coding skills.
+  available: false
+
+- id: proj-074
+  title: "Unsupervised options discovery in Reinforcement Learning"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  description: >
+    Learn latent action or option spaces from actionless demonstrations and test whether they transfer
+    to reinforcement-learning control.
+  prerequisites: >
+    Excellent RL theory, solid deep learning foundations, prior deep-RL implementation experience,
+    and excellent coding skills.
+  available: false
+
+- id: proj-075
+  title: "Learning jumpy world models: taking many actions at once"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  description: >
+    Study world models that predict many-step outcomes directly, with adaptive jump lengths,
+    for long-horizon sparse-reward reinforcement learning.
+  prerequisites: >
+    Excellent RL theory, solid deep learning foundations, prior deep-RL implementation experience,
+    and excellent coding skills.
+  available: false
+
+- id: proj-076
+  title: "Learning jumpy policies: taking many actions at once"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  description: >
+    Explore policies that emit variable-length action sequences from a single observation to improve
+    long-horizon RL under sparse and delayed rewards.
+  prerequisites: >
+    Excellent RL theory, solid deep learning foundations, prior deep-RL implementation experience,
+    and excellent coding skills.
+  available: false
+
+- id: proj-077
+  title: "Unsupervised goal discovery via relative advantage"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  description: >
+    Detect decision bottlenecks from critic-derived advantage gaps and test whether they serve as
+    useful unsupervised goals for exploration or hierarchy.
+  prerequisites: >
+    Excellent RL theory, solid deep learning foundations, prior deep-RL implementation experience,
+    and excellent coding skills.
+  available: false
+
+- id: proj-078
+  title: "earning Easy Optimal Policies"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  description: >
+    Learn robust optimal policies by encouraging low within-state advantage variance, so that agents
+    succeed without relying on brittle action choices.
+  prerequisites: >
+    Excellent RL theory, solid deep learning foundations, prior deep-RL implementation experience,
+    and excellent coding skills.
+  available: false
+
+- id: proj-079
+  title: "Latent Action Modelling for 3D Molecule Generation"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - reinforcement-learning
+  description: >
+    Learn discrete latent structural transformations for 3D molecule generation and optimise them
+    with RL-style objectives.
+  prerequisites: >
+    Solid deep learning foundations, excellent RL knowledge, prior deep-RL implementation experience,
+    and excellent coding skills.
+  available: false
+
+- id: proj-080
+  title: "Energy Optimization for future mobile networks using RAN Digital Twins"
+  supervisor: "Christos Masouros"
+  co_supervisors:
+    - "nishita.hathi@uclmail.net"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - machine-learning-ai
+    - wireless-communications
+  description: >
+    Use NVIDIA Aerial Omniverse digital twins to develop and evaluate AI-driven energy-optimisation
+    strategies for future mobile radio access networks.
+  prerequisites: >
+    Will require learning NVIDIA Aerial Omniverse and access to departmental GPUs.
+  available: false
+
+- id: proj-081
+  title: "Diffusion Models for Autonomous Game Agents"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Cedric Goubard (Sony AI)"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - reinforcement-learning
+  description: >
+    Adapt diffusion-based action-generation models to control video-game characters from RGB input
+    and compare against imitation-learning baselines.
+  prerequisites: >
+    Strong coding skills, strong deep-learning knowledge, and understanding of diffusion models.
+  available: true
+
+- id: proj-082
+  title: "Language-Augmented Game Understanding with Vision-Language Models and Knowledge Retrieval"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Dafni Antotsiou"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - sensing-imaging
+  description: >
+    Combine vision-language models with retrieval-augmented generation to improve semantic
+    understanding and reasoning in video-game environments.
+  prerequisites: >
+    Strong coding skills, strong deep-learning knowledge, and understanding of diffusion models.
+  available: true
+
+- id: proj-083
+  title: "Diversity-Driven Exploration for Post-Training Large Language Models"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - reinforcement-learning
+  description: >
+    Adapt intrinsic-motivation and exploration methods to LLM post-training to study how diversity
+    affects learning, capabilities, and sample efficiency.
+  prerequisites: "Excellent Python programming skills and very solid deep-learning foundations."
+  available: false
+
+- id: proj-084
+  title: "Understanding Attention Perturbations in Graph Diffusion Models"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: >
+    Probe and control structural inductive biases in graph diffusion models by perturbing
+    transformer attention during sampling.
+  prerequisites: >
+    Excellent Python, solid deep-learning foundations, knowledge of graph transformers,
+    and familiarity with diffusion or flow-based generative models.
+  available: false
+
+- id: proj-085
+  title: "Transfer Learning for Pharmacodynamic Parameter Extraction from Scientific Literature"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Academic from School of Pharmacy"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - biomedical-electronics
+  description: >
+    Extend an NLP pipeline for biomedical literature to extract pharmacodynamic parameters using
+    transfer learning and transformer-based relation extraction.
+  prerequisites: >
+    Strong coding skills and strong knowledge of deep learning and generative models.
+  available: false
+
+- id: proj-086
+  title: "Causal Inference and Generative Models in Dynamic Processes to Analyze and Enhance Resilience in Complex Networks"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Francesca Boem"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: >
+    Explore causal inference and generative modelling on networked dynamical systems to analyse
+    resilience and simulate interventions in infrastructure-like settings.
+  prerequisites: >
+    Strong coding skills, strong deep-learning knowledge, and understanding of diffusion models
+    and statistical learning.
+  available: false
+
+- id: proj-087
+  title: "An Autonomous Reasoning Agent for Black-Box Optimization"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - reinforcement-learning
+  description: >
+    Investigate reasoning-driven black-box optimisation agents that build surrogate or world models
+    of unknown objective functions.
+  prerequisites: >
+    Strong coding skills, strong knowledge of deep learning and RL, and initial understanding of agents.
+  available: true
+
+- id: proj-090
+  title: "Peak-to-Average-Power Ratio (PAPR) Reduction Technique for Multicarrier Signal over Fibre Transmission"
+  supervisor: "Chin-Pang Liu"
+  co_supervisors: []
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - optical-communications
     - signal-processing
+    - microwave-rf-thz
+  description: >
+    Investigate and experimentally validate a PAPR-reduction technique for multicarrier radio-over-fibre
+    signals that preserves only out-of-band distortion.
+  prerequisites: ""
+  available: false
+
+- id: proj-091
+  title: "Digitised RF over fibre"
+  supervisor: "Chin-Pang Liu"
+  co_supervisors: []
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - optical-communications
+    - signal-processing
+    - microwave-rf-thz
+  description: >
+    Simulate the effects of ADC/DAC imperfections, jitter, quantisation noise, and nonlinearity
+    on digitised RF-over-fibre transmission quality.
+  prerequisites: ""
   available: false
