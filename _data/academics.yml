@@ -1,12 +1,419 @@
-# Used to control academic display names, emails, and optional profile links/photos.
-# Key by display name used in projects.yml → supervisor: <name>
+Francesca Boem:
+  email: f.boem@ucl.ac.uk
+  position: "Associate Professor & Director of MSc in Integrated Machine Learning Systems"
+  research_areas:
+    - control-systems
+    - signal-processing
+  profile_url: "https://profiles.ucl.ac.uk/65682"
+  photo: ""
+
+Paul Brennan:
+  email: p.brennan@ucl.ac.uk
+  position: "Professor of Microwave Electronics"
+  research_areas:
+    - microwave-rf-thz
+    - sensing-imaging
+  profile_url: "https://profiles.ucl.ac.uk/809"
+  photo: ""
+
+Boli Chen:
+  email: boli.chen@ucl.ac.uk
+  position: "Lecturer in Electronic Engineering"
+  research_areas:
+    - control-systems
+    - signal-processing
+  profile_url: "https://profiles.ucl.ac.uk/72618"
+  photo: ""
+
+Izzat Darwazeh:
+  email: i.darwazeh@ucl.ac.uk
+  position: "Professor of Communications Engineering"
+  research_areas:
+    - wireless-communications
+    - signal-processing
+    - microwave-rf-thz
+    - machine-learning-ai
+  profile_url: "https://profiles.ucl.ac.uk/2126"
+  photo: ""
+
+Sally Day:
+  email: sally.day@ucl.ac.uk
+  position: "Professor of Photonics"
+  research_areas:
+    - photonics-optics
+    - biomedical-electronics
+  profile_url: "https://profiles.ucl.ac.uk/270"
+  photo: ""
+
+Andreas Demosthenous:
+  email: a.demosthenous@ucl.ac.uk
+  position: "Professor of Analogue and Biomedical Electronics"
+  research_areas:
+    - biomedical-electronics
+    - integrated-circuits-microelectronics
+  profile_url: "https://profiles.ucl.ac.uk/10892"
+  photo: ""
+
+Anibal Fernandez:
+  email: a.fernandez@ucl.ac.uk
+  position: "Professor of Computational Electromagnetics"
+  research_areas:
+    - photonics-optics
+    - semiconductors-materials-devices
+  profile_url: "https://profiles.ucl.ac.uk/10881"
+  photo: ""
+
+Filipe Ferreira:
+  email: f.ferreira@ucl.ac.uk
+  position: "UKRI Future Leaders Fellow / Proleptic Lecturer"
+  research_areas:
+    - optical-communications
+    - photonics-optics
+    - machine-learning-ai
+  profile_url: "https://profiles.ucl.ac.uk/74709"
+  photo: ""
+
+Martyn Fice:
+  email: m.fice@ucl.ac.uk
+  position: "Associate Professor"
+  research_areas:
+    - microwave-rf-thz
+    - photonics-optics
+    - optical-communications
+  profile_url: "https://profiles.ucl.ac.uk/8392"
+  photo: ""
+
+Thomas Gilbert:
+  email: thomas.j.gilbert@ucl.ac.uk
+  position: "Lecturer (Teaching) & Departmental Undergraduate Tutor"
+  research_areas:
+    - control-systems
+  profile_url: "https://profiles.ucl.ac.uk/55190"
+  photo: ""
+
+Nathan Gomes:
+  email: n.j.gomes@ucl.ac.uk
+  position: "Professor in Communications"
+  research_areas:
+    - wireless-communications
+    - optical-communications
+  profile_url: "https://profiles.ucl.ac.uk/80318"
+  photo: ""
+
+Oliver Hadeler:
+  email: o.hadeler@ucl.ac.uk
+  position: "Lecturer (Teaching) in Electronic Engineering"
+  research_areas:
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+  profile_url: "https://profiles.ucl.ac.uk/83320-oliver-hadeler"
+  photo: ""
+
+Dai Jiang:
+  email: d.jiang@ucl.ac.uk
+  position: "Lecturer"
+  research_areas:
+    - integrated-circuits-microelectronics
+    - biomedical-electronics
+  profile_url: "https://profiles.ucl.ac.uk/5102"
+  photo: ""
+
+Robert Killey:
+  email: r.killey@ucl.ac.uk
+  position: "Professor of Optical Communications"
+  research_areas:
+    - optical-communications
+    - signal-processing
+  profile_url: "https://profiles.ucl.ac.uk/9210"
+  photo: ""
+
+Hide Kurebayashi:
+  email: h.kurebayashi@ucl.ac.uk
+  position: "Professor of Condensed Matter Physics & Nanoelectronics"
+  research_areas:
+    - nanoelectronics-quantum
+    - semiconductors-materials-devices
+  profile_url: "https://profiles.ucl.ac.uk/42974"
+  photo: ""
+
+John Labram:
+  email: j.labram@ucl.ac.uk
+  position: "Associate Professor"
+  research_areas:
+    - sensing-imaging
+    - photonics-optics
+    - semiconductors-materials-devices
+  profile_url: "https://profiles.ucl.ac.uk/87371"
+  photo: ""
+
+Chin-Pang Liu:
+  email: chin.liu@ucl.ac.uk
+  position: "Associate Professor"
+  research_areas:
+    - photonics-optics
+    - microwave-rf-thz
+    - signal-processing
+  profile_url: "https://profiles.ucl.ac.uk/3950"
+  photo: ""
+
+Huiyun Liu:
+  email: huiyun.liu@ucl.ac.uk
+  position: "Professor of Semiconductor Photonics"
+  research_areas:
+    - photonics-optics
+    - semiconductors-materials-devices
+  profile_url: "https://profiles.ucl.ac.uk/727"
+  photo: ""
+
+Zhixin Liu:
+  email: zhixin.liu@ucl.ac.uk
+  position: "Professor of Optical Signal Processing and Communications"
+  research_areas:
+    - optical-communications
+    - microwave-rf-thz
+    - signal-processing
+  profile_url: "https://profiles.ucl.ac.uk/59674"
+  photo: ""
+
+Lai Bun Lok:
+  email: l.lok@ucl.ac.uk
+  position: "Royal Society University Research Fellow and Lecturer in Electronic Engineering"
+  research_areas:
+    - sensing-imaging
+    - microwave-rf-thz
+  profile_url: "https://profiles.ucl.ac.uk/30819"
+  photo: ""
+
+Anna Maria Mandalari:
+  email: a.mandalari@ucl.ac.uk
+  position: "Lecturer in Communications & Networking"
+  research_areas:
+    - networking-security-iot
+  profile_url: "https://profiles.ucl.ac.uk/89052"
+  photo: ""
+
+Christos Masouros:
+  email: c.masouros@ucl.ac.uk
+  position: "Professor of Signal Processing and Wireless Communications"
+  research_areas:
+    - wireless-communications
+    - signal-processing
+  profile_url: "https://profiles.ucl.ac.uk/35340"
+  photo: ""
+
+Adnan Mehonic:
+  email: adnan.mehonic.09@ucl.ac.uk
+  position: "Associate Professor / Royal Academy of Engineering Fellow"
+  research_areas:
+    - neuromorphic-computing
+    - nanoelectronics-quantum
+    - machine-learning-ai
+  profile_url: "https://profiles.ucl.ac.uk/29074"
+  photo: ""
+
+John Mitchell:
+  email: j.mitchell@ucl.ac.uk
+  position: "Head of Department; Professor of Communications Systems Engineering"
+  research_areas:
+    - wireless-communications
+  profile_url: "https://profiles.ucl.ac.uk/4338"
+  photo: ""
+
+Oleg Mitrofanov:
+  email: o.mitrofanov@ucl.ac.uk
+  position: "Professor of Terahertz Photonics"
+  research_areas:
+    - photonics-optics
+    - microwave-rf-thz
+    - sensing-imaging
+  profile_url: "https://profiles.ucl.ac.uk/542"
+  photo: ""
+
+Arsam Nasrollahy Shiraz:
+  email: a.shiraz@ucl.ac.uk
+  position: "Associate Professor (Teaching)"
+  research_areas:
+    - biomedical-electronics
+  profile_url: "https://profiles.ucl.ac.uk/33001-arsam-nasrollahy-shiraz"
+  photo: ""
+
+Temitope Odedeyi:
+  email: t.odedeyi@ucl.ac.uk
+  position: "Royal Academy of Engineering Research Fellow"
+  research_areas:
+    - microwave-rf-thz
+    - integrated-circuits-microelectronics
+  profile_url: "https://profiles.ucl.ac.uk/56271-temitope-odedeyi"
+  photo: ""
+
+Nicolae Panoiu:
+  email: n.panoiu@ucl.ac.uk
+  position: "Professor of Nanophotonics"
+  research_areas:
+    - photonics-optics
+    - semiconductors-materials-devices
+  profile_url: "https://profiles.ucl.ac.uk/6234"
+  photo: ""
 
 Eduardo Pignatelli:
   email: e.pignatelli@ucl.ac.uk
-  profile_url: https://www.ucl.ac.uk/
-  photo: "" # optional path if you add assets/img
+  position: "Lecturer (Teaching) in Programming and Machine Learning"
+  research_areas:
+    - machine-learning-ai
+    - reinforcement-learning
+  profile_url: "https://profiles.ucl.ac.uk/81020-eduardo-pignatelli"
+  photo: ""
 
-Fake academic:
-  email: e.pignatelli@ucl.ac.uk
-  profile_url: https://www.ucl.ac.uk/
-  photo: "" # optional path if you add assets/img  
+Lalitha Ponnampalam:
+  email: l.ponnampalam@ucl.ac.uk
+  position: "EPSRC Fellow"
+  research_areas:
+    - photonics-optics
+    - optical-communications
+    - microwave-rf-thz
+  profile_url: "https://profiles.ucl.ac.uk/8414"
+  photo: ""
+
+Cyril Renaud:
+  email: c.renaud@ucl.ac.uk
+  position: "Professor of Photonics"
+  research_areas:
+    - photonics-optics
+    - optical-communications
+  profile_url: "https://profiles.ucl.ac.uk/10921"
+  photo: ""
+
+Miguel Rio:
+  email: miguel.rio@ucl.ac.uk
+  position: "Professor of Computer Networks"
+  research_areas:
+    - networking-security-iot
+  profile_url: "https://profiles.ucl.ac.uk/10726"
+  photo: ""
+
+Miguel Rodrigues:
+  email: m.rodrigues@ucl.ac.uk
+  position: "Professor of Information Theory and Processing"
+  research_areas:
+    - machine-learning-ai
+    - signal-processing
+  profile_url: "https://profiles.ucl.ac.uk/7661"
+  photo: ""
+
+Edward Romans:
+  email: e.romans@ucl.ac.uk
+  position: "Associate Professor"
+  research_areas:
+    - nanoelectronics-quantum
+    - semiconductors-materials-devices
+  profile_url: "https://profiles.ucl.ac.uk/7516"
+  photo: ""
+
+Alfonso Ruocco:
+  email: a.ruocco@ucl.ac.uk
+  position: "Associate Professor in Optical Communications & Networks"
+  research_areas:
+    - optical-communications
+    - photonics-optics
+  profile_url: "https://profiles.ucl.ac.uk/78584"
+  photo: ""
+
+David Selviah:
+  email: d.selviah@ucl.ac.uk
+  position: "Professor of Photonic Engineering"
+  research_areas:
+    - photonics-optics
+  profile_url: "https://profiles.ucl.ac.uk/4468"
+  photo: ""
+
+Sarah Spurgeon:
+  email: s.spurgeon@ucl.ac.uk
+  position: "Professor of Control Engineering"
+  research_areas:
+    - control-systems
+  profile_url: "https://profiles.ucl.ac.uk/56849"
+  photo: ""
+
+Taylor Stock:
+  email: t.stock@ucl.ac.uk
+  position: "Lecturer in Electronic Engineering"
+  research_areas:
+    - nanoelectronics-quantum
+    - semiconductors-materials-devices
+  profile_url: "https://profiles.ucl.ac.uk/54734"
+  photo: ""
+
+Mingchu Tang:
+  email: mingchu.tang@ucl.ac.uk
+  position: "Lecturer in Molecular Beam Epitaxy"
+  research_areas:
+    - semiconductors-materials-devices
+    - photonics-optics
+  profile_url: "https://profiles.ucl.ac.uk/37282"
+  photo: ""
+
+Michael Wale:
+  email: m.wale@ucl.ac.uk
+  position: "Professor of Integrated Photonics"
+  research_areas:
+    - photonics-optics
+    - semiconductors-materials-devices
+  profile_url: "https://profiles.ucl.ac.uk/69536"
+  photo: ""
+
+Paul Warburton:
+  email: p.warburton@ucl.ac.uk
+  position: "Professor of Nanoelectronics"
+  research_areas:
+    - nanoelectronics-quantum
+    - semiconductors-materials-devices
+  profile_url: "https://profiles.ucl.ac.uk/9778"
+  photo: ""
+
+Kit Wong:
+  email: kai-kit.wong@ucl.ac.uk
+  position: "Professor of Wireless Communications"
+  research_areas:
+    - wireless-communications
+    - signal-processing
+    - machine-learning-ai
+  profile_url: "https://profiles.ucl.ac.uk/2570"
+  photo: ""
+
+Yu Wu:
+  email: yu.wu.09@ucl.ac.uk
+  position: "Lecturer in Electronic Engineering"
+  research_areas:
+    - biomedical-electronics
+    - integrated-circuits-microelectronics
+  profile_url: "https://profiles.ucl.ac.uk/45781"
+  photo: ""
+
+Tongyang Xu:
+  email: tongyang.xu.11@ucl.ac.uk
+  position: "Lecturer in Communications Engineering and Signal Processing"
+  research_areas:
+    - wireless-communications
+    - signal-processing
+  profile_url: "https://profiles.ucl.ac.uk/40270-tongyang-xu"
+  photo: ""
+
+Bo Tan:
+  email: tan.bo@ucl.ac.uk
+  position: "Associate Professor in Communications Engineering and Signal Processing"
+  research_areas:
+    - wireless-communications
+    - signal-processing
+    - machine-learning-ai
+    - sensing-imaging
+  profile_url: "https://profiles.ucl.ac.uk/34739-bo-tan"
+  photo: ""
+
+Laura Toni:
+  email: l.toni@ucl.ac.uk
+  position: "Associate Professor"
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  profile_url: "https://profiles.ucl.ac.uk/55855"
+  photo: ""
