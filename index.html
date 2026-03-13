@@ -152,68 +152,97 @@ title: UCL EEE MSc Project Offers
       </section>
     {% endfor %}
   </main>
+<script>
+  (() => {
+    const q = document.getElementById('q');
+    const programme = document.getElementById('programme');
+    const researchArea = document.getElementById('researchArea');
+    const availableOnly = document.getElementById('availableOnly');
+    const sections = Array.from(document.querySelectorAll('.academic'));
 
-  <script>
-    (() => {
-      const q = document.getElementById('q');
-      const programme = document.getElementById('programme');
-      const researchArea = document.getElementById('researchArea');
-      const availableOnly = document.getElementById('availableOnly');
-      const sections = Array.from(document.querySelectorAll('.academic'));
+    function toSlug(value) {
+      return String(value || '')
+        .toLowerCase()
+        .trim()
+        .replace(/&/g, ' and ')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+    }
 
-      function matchesProject(card, term, selectedProgramme, availabilityRequired) {
-        const haystack = [
-          card.dataset.title || '',
-          card.dataset.desc || '',
-          card.dataset.prereq || ''
+    function parseProgrammes(value) {
+      return String(value || '')
+        .split(/[;,]/)
+        .map(item => toSlug(item))
+        .filter(Boolean);
+    }
+
+    function matchesProject(card, term, selectedProgramme, availabilityRequired) {
+      const haystack = [
+        card.dataset.title || '',
+        card.dataset.desc || '',
+        card.dataset.prereq || ''
+      ].join(' ');
+
+      const projectProgrammes = parseProgrammes(card.dataset.programmes);
+      const selectedProgrammeSlug = toSlug(selectedProgramme);
+      const isAvailable = String(card.dataset.available) !== 'false';
+
+      const matchesTerm = !term || haystack.includes(term);
+      const matchesProgramme =
+        !selectedProgrammeSlug || projectProgrammes.includes(selectedProgrammeSlug);
+      const matchesAvailability = !availabilityRequired || isAvailable;
+
+      return matchesTerm && matchesProgramme && matchesAvailability;
+    }
+
+    function applyFilters() {
+      const term = (q.value || '').trim().toLowerCase();
+      const selectedProgramme = programme.value;
+      const selectedResearchArea = researchArea.value;
+      const availabilityRequired = availableOnly.checked;
+
+      sections.forEach(section => {
+        const sectionText = [
+          section.dataset.supervisor || '',
+          section.dataset.position || ''
         ].join(' ');
 
-        const projectProgrammes = (card.dataset.programmes || '').split(',').filter(Boolean);
-        const isAvailable = String(card.dataset.available) !== 'false';
+        const sectionAreas = (section.dataset.researchAreas || '')
+          .split(',')
+          .map(item => item.trim())
+          .filter(Boolean);
 
-        const matchesTerm = !term || haystack.includes(term);
-        const matchesProgramme = !selectedProgramme || projectProgrammes.includes(selectedProgramme);
-        const matchesAvailability = !availabilityRequired || isAvailable;
+        const cards = Array.from(section.querySelectorAll('.card'));
 
-        return matchesTerm && matchesProgramme && matchesAvailability;
-      }
-
-      function applyFilters() {
-        const term = (q.value || '').trim().toLowerCase();
-        const selectedProgramme = programme.value;
-        const selectedResearchArea = researchArea.value;
-        const availabilityRequired = availableOnly.checked;
-
-        sections.forEach(section => {
-          const sectionText = [
-            section.dataset.supervisor || '',
-            section.dataset.position || ''
-          ].join(' ');
-          const sectionAreas = (section.dataset.researchAreas || '').split(',').filter(Boolean);
-          const cards = Array.from(section.querySelectorAll('.card'));
-
-          const visibleCards = cards.filter(card => {
-            const projectMatches = matchesProject(card, term, selectedProgramme, availabilityRequired);
-            const supervisorMatches = !term || sectionText.includes(term);
-            return projectMatches || supervisorMatches;
-          });
-
-          cards.forEach(card => {
-            card.hidden = !visibleCards.includes(card);
-          });
-
-          const matchesResearchArea = !selectedResearchArea || sectionAreas.includes(selectedResearchArea);
-          section.hidden = visibleCards.length === 0 || !matchesResearchArea;
+        const visibleCards = cards.filter(card => {
+          const projectMatches = matchesProject(
+            card,
+            term,
+            selectedProgramme,
+            availabilityRequired
+          );
+          const supervisorMatches = !term || sectionText.includes(term);
+          return projectMatches || supervisorMatches;
         });
-      }
 
-      [q, programme, researchArea, availableOnly].forEach(el => {
-        el.addEventListener('input', applyFilters);
-        el.addEventListener('change', applyFilters);
+        cards.forEach(card => {
+          card.hidden = !visibleCards.includes(card);
+        });
+
+        const matchesResearchArea =
+          !selectedResearchArea || sectionAreas.includes(selectedResearchArea);
+
+        section.hidden = visibleCards.length === 0 || !matchesResearchArea;
       });
+    }
 
-      applyFilters();
-    })();
-  </script>
+    [q, programme, researchArea, availableOnly].forEach(el => {
+      el.addEventListener('input', applyFilters);
+      el.addEventListener('change', applyFilters);
+    });
+
+    applyFilters();
+  })();
+</script>
 </body>
 </html>
