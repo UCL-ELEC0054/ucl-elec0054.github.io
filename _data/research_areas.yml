@@ -1,0 +1,59 @@
+control-systems:
+  label: "Control Systems"
+  description: "Control theory and engineering for dynamical systems, including fault diagnosis, fault-tolerant control, estimation, and robust control."
+
+signal-processing:
+  label: "Signal Processing"
+  description: "Methods for analysing, modelling, transforming, and optimising signals, including waveform design, compressed sensing, and digital signal processing."
+
+machine-learning-ai:
+  label: "Machine Learning & AI"
+  description: "Machine learning and AI methods, including statistical learning, intelligent systems, distributed ML, and AI-enabled engineering."
+
+reinforcement-learning:
+  label: "Reinforcement Learning & Decision Making"
+  description: "Sequential decision making, adaptive control, and reinforcement learning for agents interacting with complex environments."
+
+wireless-communications:
+  label: "Wireless Communications"
+  description: "Wireless systems and networks, including 5G/6G, massive MIMO, cognitive radio, full-duplex systems, and physical-layer security."
+
+networking-security-iot:
+  label: "Networking, Security & IoT"
+  description: "Computer networks, internet protocols, IoT systems, privacy, security, and internet measurement."
+
+photonics-optics:
+  label: "Photonics & Optics"
+  description: "Photonic and optical systems, including optoelectronic devices, liquid crystals, optical filters, holographic optics, and optical instrumentation."
+
+optical-communications:
+  label: "Optical Communications"
+  description: "Optical fibre and free-space communication systems, including transceivers, optical networks, and optical signal processing."
+
+microwave-rf-thz:
+  label: "Microwave, RF & THz"
+  description: "Microwave, radio-frequency, millimetre-wave, and terahertz systems, devices, circuits, and instrumentation."
+
+sensing-imaging:
+  label: "Sensing, Imaging & Instrumentation"
+  description: "Electronic and photonic sensing systems for measurement, imaging, spectroscopy, radar, and instrumentation."
+
+biomedical-electronics:
+  label: "Biomedical Electronics & Bioengineering"
+  description: "Electronic systems for biomedical, healthcare, wearable, assistive, and human-interfacing applications."
+
+integrated-circuits-microelectronics:
+  label: "Integrated Circuits & Microelectronics"
+  description: "Analogue, mixed-signal, CMOS, and microelectronic circuit design for electronic systems and embedded hardware."
+
+semiconductors-materials-devices:
+  label: "Semiconductors, Materials & Devices"
+  description: "Semiconductor materials, device physics, optoelectronic devices, photonic crystals, metasurfaces, and advanced fabrication."
+
+nanoelectronics-quantum:
+  label: "Nanoelectronics & Quantum Technologies"
+  description: "Nanoelectronic, superconducting, spintronic, and quantum devices for computation, sensing, and advanced electronic systems."
+
+neuromorphic-computing:
+  label: "Neuromorphic Computing & Emerging Memory"
+  description: "Memristive devices, unconventional memory technologies, and neuromorphic hardware for efficient computing."
