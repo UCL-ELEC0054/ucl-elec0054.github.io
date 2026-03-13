@@ -1,4 +1,59 @@
-- Integrated Machine Learning Systems
-- Internet Engineering
-- Telecommunications
-- Wireless and Optical Communications
+integrated-machine-learning-systems:
+  label: "Integrated Machine Learning Systems MSc"
+  degree: "MSc"
+  department: "Electronic & Electrical Engineering"
+  faculty: "Faculty of Engineering Sciences"
+  campus: "London, Bloomsbury"
+  study_modes:
+    - "Full-time"
+    - "Part-time"
+    - "Flexible"
+  duration:
+    full_time: "1 calendar year"
+    part_time: "2 calendar years"
+    flexible: "5 calendar years"
+  start: "September 2026"
+  description: "A programme focused on integrated machine learning systems, spanning data acquisition, analysis, infrastructure, storage, and security, with both hardware and software perspectives."
+  url: "https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/integrated-machine-learning-systems-msc"
+
+internet-engineering:
+  label: "Internet Engineering MSc"
+  degree: "MSc"
+  department: "Electronic & Electrical Engineering"
+  faculty: "Faculty of Engineering Sciences"
+  campus: "London, Bloomsbury"
+  study_modes:
+    - "Full-time"
+  duration:
+    full_time: "1 calendar year"
+  start: ""
+  description: "A programme covering internet technologies, architectures, applications, and security, with emphasis on modern IP-based networks and the design and management of future internet systems."
+  url: "https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/internet-engineering-msc"
+
+telecommunications:
+  label: "Telecommunications MSc"
+  degree: "MSc"
+  department: "Electronic & Electrical Engineering"
+  faculty: "Faculty of Engineering Sciences"
+  campus: "London, Bloomsbury"
+  study_modes:
+    - "Full-time"
+  duration:
+    full_time: "1 calendar year"
+  start: "September 2026"
+  description: "A programme on modern telecommunications systems, communications technologies, network design and planning, data networks and architectures, and next-generation telecoms."
+  url: "https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/telecommunications-msc"
+
+wireless-and-optical-communications:
+  label: "Wireless and Optical Communications MSc"
+  degree: "MSc"
+  department: "Electronic & Electrical Engineering"
+  faculty: "Faculty of Engineering Sciences"
+  campus: "London, Bloomsbury"
+  study_modes:
+    - "Full-time"
+  duration:
+    full_time: "1 calendar year"
+  start: "September 2026"
+  description: "A programme focused on broadband communication systems across wireless, optical, and photonic domains, from devices and fabrication to system architecture and design."
+  url: "https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/wireless-and-optical-communications-msc"
