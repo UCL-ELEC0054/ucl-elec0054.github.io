@@ -1,0 +1,203 @@
+---
+layout: null
+title: Project Detail — UCL EEE MSc Project Offers
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+</head>
+<body>
+  <div class="site-banner">
+    <div class="container">
+      <div class="lockup">
+        <div class="block" aria-hidden="true"></div>
+        <div class="dept">
+          <a href="https://www.ucl.ac.uk/engineering/electronic-electrical-engineering" target="_blank" rel="noopener">
+            UCL Electronic &amp; Electrical Engineering
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="page">
+    <div class="container" style="padding: 1rem;">
+      <a href="{{ "/" | relative_url }}" class="back-link">&#8592; All projects</a>
+    </div>
+  </header>
+
+  <main class="container" id="app" style="padding-top: 1.5rem;">
+    <div id="project-detail"></div>
+    <div id="not-found" hidden>
+      <p>Project not found. <a href="{{ "/" | relative_url }}">Return to all projects</a>.</p>
+    </div>
+  </main>
+
+<script>
+  /* Embedded data — generated at build time by Jekyll */
+  const PROJECTS = {
+    {% for project in site.data.projects %}
+    {{ project.id | jsonify }}: {
+      id: {{ project.id | jsonify }},
+      title: {{ project.title | jsonify }},
+      supervisor: {{ project.supervisor | jsonify }},
+      co_supervisors: {{ project.co_supervisors | jsonify }},
+      programmes: {{ project.programmes | jsonify }},
+      research_areas: {{ project.research_areas | jsonify }},
+      description: {{ project.description | jsonify }},
+      prerequisites: {{ project.prerequisites | jsonify }},
+      references: {{ project.references | jsonify }},
+      available: {% if project.available == false %}false{% else %}true{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+
+  const ACADEMICS = {
+    {% for entry in site.data.academics %}
+    {{ entry[0] | jsonify }}: {
+      position: {{ entry[1].position | jsonify }},
+      email: {{ entry[1].email | jsonify }},
+      profile_url: {{ entry[1].profile_url | jsonify }},
+      photo: {{ entry[1].photo | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+
+  const PROGRAMMES = {
+    {% for entry in site.data.programmes %}
+    {{ entry[0] | jsonify }}: {
+      label: {{ entry[1].label | jsonify }},
+      description: {{ entry[1].description | jsonify }},
+      url: {{ entry[1].url | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+
+  const RESEARCH_AREAS = {
+    {% for entry in site.data.research_areas %}
+    {{ entry[0] | jsonify }}: {
+      label: {{ entry[1].label | jsonify }},
+      description: {{ entry[1].description | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+
+  function escapeHtml(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function renderDetail(project) {
+    const academic = ACADEMICS[project.supervisor] || {};
+    const isAvailable = project.available !== false;
+
+    /* Title */
+    document.title = (project.title || '') + ' — UCL EEE MSc Project Offers';
+
+    /* Build supervisor block */
+    let supervisorHtml;
+    if (academic.profile_url) {
+      supervisorHtml = '<a href="' + escapeHtml(academic.profile_url) + '" target="_blank" rel="noopener">' + escapeHtml(project.supervisor) + '</a>';
+    } else {
+      supervisorHtml = escapeHtml(project.supervisor);
+    }
+    if (academic.position) {
+      supervisorHtml += '<div class="small">' + escapeHtml(academic.position) + '</div>';
+    }
+    if (academic.email) {
+      supervisorHtml += '<div class="small">Contact: <a href="mailto:' + escapeHtml(academic.email) + '">' + escapeHtml(academic.email) + '</a></div>';
+    }
+
+    /* Co-supervisors */
+    let coSupHtml = '';
+    if (project.co_supervisors && project.co_supervisors.length > 0) {
+      const names = project.co_supervisors.map(function(name) {
+        const coAcademic = ACADEMICS[name] || {};
+        if (coAcademic.profile_url) {
+          return '<a href="' + escapeHtml(coAcademic.profile_url) + '" target="_blank" rel="noopener">' + escapeHtml(name) + '</a>';
+        }
+        return escapeHtml(name);
+      });
+      coSupHtml = '<div class="detail-row"><span class="detail-label">Co-supervisor' + (project.co_supervisors.length > 1 ? 's' : '') + '</span><span class="detail-value">' + names.join(', ') + '</span></div>';
+    }
+
+    /* Programme badges */
+    let programmeBadges = '';
+    if (project.programmes && project.programmes.length > 0) {
+      programmeBadges = project.programmes.map(function(slug) {
+        const prog = PROGRAMMES[slug] || {};
+        const label = prog.label || slug;
+        const desc = prog.description ? ' title="' + escapeHtml(prog.description) + '"' : '';
+        if (prog.url) {
+          return '<a href="' + escapeHtml(prog.url) + '" target="_blank" rel="noopener" class="badge badge--programme"' + desc + '>' + escapeHtml(label) + '</a>';
+        }
+        return '<span class="badge badge--programme"' + desc + '>' + escapeHtml(label) + '</span>';
+      }).join('');
+    }
+
+    /* Research area badges */
+    let areaBadges = '';
+    if (project.research_areas && project.research_areas.length > 0) {
+      areaBadges = project.research_areas.map(function(slug) {
+        const area = RESEARCH_AREAS[slug] || {};
+        const label = area.label || slug;
+        const desc = area.description ? ' title="' + escapeHtml(area.description) + '"' : '';
+        return '<span class="badge badge--area"' + desc + '>' + escapeHtml(label) + '</span>';
+      }).join('');
+    }
+
+    /* Availability badge */
+    const availBadge = isAvailable
+      ? '<span class="badge badge--available">Available</span>'
+      : '<span class="badge badge--unavailable">Unavailable</span>';
+
+    /* References */
+    let referencesHtml = '';
+    if (project.references) {
+      referencesHtml = '<div class="detail-section"><h2 class="detail-section-title">References</h2><div class="detail-section-body">' + escapeHtml(project.references) + '</div></div>';
+    }
+
+    const html =
+      '<div class="project-detail">' +
+        '<div class="project-detail-header">' +
+          '<div class="project-meta-id">Project ' + escapeHtml(project.id) + '</div>' +
+          '<h1 class="project-detail-title">' + escapeHtml(project.title) + '</h1>' +
+          '<div class="badges badges--header">' + availBadge + programmeBadges + areaBadges + '</div>' +
+        '</div>' +
+
+        '<div class="detail-grid">' +
+          '<div class="detail-rows">' +
+            '<div class="detail-row"><span class="detail-label">Supervisor</span><span class="detail-value">' + supervisorHtml + '</span></div>' +
+            coSupHtml +
+          '</div>' +
+        '</div>' +
+
+        (project.description ? '<div class="detail-section"><h2 class="detail-section-title">Description</h2><div class="detail-section-body">' + escapeHtml(project.description) + '</div></div>' : '') +
+        (project.prerequisites ? '<div class="detail-section"><h2 class="detail-section-title">Prerequisites</h2><div class="detail-section-body">' + escapeHtml(project.prerequisites) + '</div></div>' : '') +
+        referencesHtml +
+      '</div>';
+
+    document.getElementById('project-detail').innerHTML = html;
+  }
+
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const project = id ? PROJECTS[id] : null;
+
+    if (project) {
+      renderDetail(project);
+    } else {
+      document.getElementById('not-found').hidden = false;
+    }
+  })();
+</script>
+</body>
+</html>

@@ -125,6 +125,10 @@ title: UCL EEE MSc Project Offers
             {% endif %}
             {% assign project_programmes = project.programmes | default: empty %}
 
+            <a
+              class="card-link"
+              href="{{ "/project/" | relative_url }}?id={{ project.id | uri_escape }}"
+            >
             <article
               class="card"
               data-title="{{ project.title | default: '' | downcase | escape }}"
@@ -160,6 +164,7 @@ title: UCL EEE MSc Project Offers
                 <p class="small"><strong>Prerequisites:</strong> {{ project.prerequisites }}</p>
               {% endif %}
             </article>
+            </a>
           {% endfor %}
         </div>
       </section>
@@ -208,11 +213,12 @@ title: UCL EEE MSc Project Offers
           .toLowerCase();
 
         const sectionAreas = parseList(section.dataset.researchAreas || '');
-        const cards = Array.from(section.querySelectorAll('.card'));
+        const cardLinks = Array.from(section.querySelectorAll('.card-link'));
 
         let anyVisible = false;
 
-        cards.forEach(card => {
+        cardLinks.forEach(link => {
+          const card = link.querySelector('.card');
           const cardText = [
             card.dataset.title || '',
             card.dataset.desc || '',
@@ -236,7 +242,7 @@ title: UCL EEE MSc Project Offers
           const matchesCard =
             matchesSearch && matchesProgramme && matchesAvailability;
 
-          card.hidden = !matchesCard;
+          link.hidden = !matchesCard;
 
           if (matchesCard) {
             anyVisible = true;
