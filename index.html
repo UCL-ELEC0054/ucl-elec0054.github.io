@@ -109,7 +109,11 @@ title: UCL EEE MSc Project Offers
 
         <div class="grid">
           {% for project in group.items %}
-            {% assign available = project.available | default: true %}
+            {% if project.available == false %}
+              {% assign available = false %}
+            {% else %}
+              {% assign available = true %}
+            {% endif %}
             {% assign project_programmes = project.programmes | default: empty %}
 
             <article
