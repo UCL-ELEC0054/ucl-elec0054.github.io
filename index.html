@@ -55,6 +55,15 @@ title: UCL EEE MSc Project Offers
           {% endfor %}
         </select>
 
+        <select id="academic">
+          <option value="">All academics</option>
+          {% assign sorted_academics = academics | sort %}
+          {% for academic_entry in sorted_academics %}
+            {% assign academic_name = academic_entry[0] %}
+            <option value="{{ academic_name | downcase | escape }}">{{ academic_name }}</option>
+          {% endfor %}
+        </select>
+
         <label class="small"><input id="availableOnly" type="checkbox" checked /> Available only</label>
       </div>
     </div>
@@ -161,6 +170,7 @@ title: UCL EEE MSc Project Offers
     const q = document.getElementById('q');
     const programme = document.getElementById('programme');
     const researchArea = document.getElementById('researchArea');
+    const academic = document.getElementById('academic');
     const availableOnly = document.getElementById('availableOnly');
     const sections = Array.from(document.querySelectorAll('.academic'));
 
@@ -184,6 +194,7 @@ title: UCL EEE MSc Project Offers
       const term = (q.value || '').trim().toLowerCase();
       const selectedProgramme = toSlug(programme.value);
       const selectedResearchArea = toSlug(researchArea.value);
+      const selectedAcademic = (academic.value || '').trim();
       const availabilityRequired = availableOnly.checked;
 
       sections.forEach(section => {
@@ -233,11 +244,14 @@ title: UCL EEE MSc Project Offers
         const matchesResearchArea =
           !selectedResearchArea || sectionAreas.includes(selectedResearchArea);
 
-        section.hidden = !anyVisible || !matchesResearchArea;
+        const matchesAcademic =
+          !selectedAcademic || (section.dataset.supervisor || '') === selectedAcademic;
+
+        section.hidden = !anyVisible || !matchesResearchArea || !matchesAcademic;
       });
     }
 
-    [q, programme, researchArea, availableOnly].forEach(el => {
+    [q, programme, researchArea, academic, availableOnly].forEach(el => {
       if (!el) return;
       el.addEventListener('input', applyFilters);
       el.addEventListener('change', applyFilters);
