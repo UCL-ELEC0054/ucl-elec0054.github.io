@@ -37,15 +37,6 @@ title: UCL EEE MSc Project Offers
       <div class="controls">
         <input id="q" type="search" placeholder="Search projects… (title, supervisor, description, prerequisites)" />
 
-        <select id="programme">
-          <option value="">All programmes</option>
-          {% for programme_entry in programmes %}
-            {% assign programme_slug = programme_entry[0] %}
-            {% assign programme = programme_entry[1] %}
-            <option value="{{ programme_slug }}">{{ programme.label }}</option>
-          {% endfor %}
-        </select>
-
         <select id="researchArea">
           <option value="">All research areas</option>
           {% for area_entry in research_areas %}
@@ -65,6 +56,15 @@ title: UCL EEE MSc Project Offers
         </select>
 
         <label class="small"><input id="availableOnly" type="checkbox" checked /> Available only</label>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Filter by programme">
+        <button class="tab tab--active" role="tab" data-programme="" aria-selected="true">All programmes</button>
+        {% for programme_entry in programmes %}
+          {% assign programme_slug = programme_entry[0] %}
+          {% assign programme = programme_entry[1] %}
+          <button class="tab" role="tab" data-programme="{{ programme_slug }}" aria-selected="false">{{ programme.label }}</button>
+        {% endfor %}
       </div>
     </div>
   </header>
@@ -168,11 +168,13 @@ title: UCL EEE MSc Project Offers
 <script>
   (() => {
     const q = document.getElementById('q');
-    const programme = document.getElementById('programme');
     const researchArea = document.getElementById('researchArea');
     const academic = document.getElementById('academic');
     const availableOnly = document.getElementById('availableOnly');
     const sections = Array.from(document.querySelectorAll('.academic'));
+    const tabButtons = Array.from(document.querySelectorAll('.tab'));
+
+    let activeProgramme = '';
 
     function toSlug(value) {
       return String(value || '')
@@ -192,7 +194,7 @@ title: UCL EEE MSc Project Offers
 
     function applyFilters() {
       const term = (q.value || '').trim().toLowerCase();
-      const selectedProgramme = toSlug(programme.value);
+      const selectedProgramme = activeProgramme;
       const selectedResearchArea = toSlug(researchArea.value);
       const selectedAcademic = (academic.value || '').trim();
       const availabilityRequired = availableOnly.checked;
@@ -250,6 +252,19 @@ title: UCL EEE MSc Project Offers
         section.hidden = !anyVisible || !matchesResearchArea || !matchesAcademic;
       });
     }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => {
+          b.classList.remove('tab--active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('tab--active');
+        btn.setAttribute('aria-selected', 'true');
+        activeProgramme = btn.dataset.programme || '';
+        applyFilters();
+      });
+    });
 
     [q, programme, researchArea, academic, availableOnly].forEach(el => {
       if (!el) return;
