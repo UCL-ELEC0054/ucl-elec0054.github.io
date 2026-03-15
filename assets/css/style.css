@@ -114,9 +114,10 @@ select:focus-visible {
 }
 
 .ucl-logo-img {
-  height: 34px;
-  width: auto;
+  height: 9.25rem;
+  width: 19rem;
   display: block;
+  padding: 2.18rem 0 1.75rem;
 }
 
 .ucl-brand-sep {
