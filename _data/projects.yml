@@ -569,3 +569,1141 @@
     infrastructure, IoT security, and experimental evaluation.
   prerequisites: "Python, Network fundamentals"
   available: false
+
+  - id: proj-021
+  title: "Designing Robust DNS Threat Intelligence Systems for Accurate Internet Blocking"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+    - machine-learning-ai
+  description: >
+    This project explores how DNS threat intelligence systems can be redesigned to provide more
+    accurate, robust, and trustworthy blocking decisions. We study how longitudinal DNS
+    observations and automated content classification can reduce false positives and improve
+    confidence in blocking decisions. The work involves: (1) analysing live and longitudinal DNS
+    threat intelligence data to understand infrastructure reuse, evasion, and drift (2) designing
+    and evaluating automated classification mechanisms that distinguish malicious services from
+    legitimate shared infrastructure (3) evaluating how confidence scoring and ML assisted
+    decisions can reduce false positives and collateral damage. This project is suitable for MSc
+    students interested in DNS security, threat intelligence, and applied machine learning for
+    security systems.
+  prerequisites: "Python, Networking fundamentals, Machine learning"
+  available: false
+
+- id: proj-022
+  title: "Modelling Adversary Persistence and Attack Evolution in Network Environments"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+    - machine-learning-ai
+  description: >
+    This project focuses on modelling how network adversaries persist and evolve their behaviour
+    over time by combining large scale DNS telemetry with honeypot observations. The goal is to
+    move beyond static indicators and model adversary behaviour as an evolving process across
+    infrastructure and attack phases. The work involves (1) constructing longitudinal models of
+    adversary infrastructure reuse and attack progression (2) applying machine learning based drift
+    detection to identify behavioural changes over time (3) exploring adversarial machine learning
+    techniques to study how attackers may adapt to and evade behaviour based detection models. This
+    project is suitable for students interested in adversary behaviour, web security, and machine
+    learning for adaptive and resilient security systems.
+  prerequisites: "Python, Machine learning"
+  available: false
+
+- id: proj-023
+  title: "Exploring Consumer IoT Device Behaviour During Large-Scale Cloud Outages"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - telecommunications
+    - internet-engineering
+  research_areas:
+    - networking-security-iot
+    - machine-learning-ai
+  description: |
+    This project investigates how consumer Internet of Things (IoT) devices behave during large-scale service outages, with a focus on resilience, dependency, and failure modes. Using the 2025 AWS and Cloudflare outages as case studies, the project will analyse real-world network measurement data from IoT devices across a range of manufacturers.
+    The work involves: (1) pre-processing and structuring existing network datasets capturing IoT device traffic before, during, and after outage events. (2) applying machine learning and statistical techniques to identify and classify device behavioural responses (e.g. retry patterns, fallback mechanisms, traffic suppression, or anomalous signalling) and (3) comparative analysis across device classes and cloud dependencies, examining which behaviours are consistent and which vary by manufacturer, service dependency, or device function.
+    This is a programming- and data-driven project, suitable for students interested in IoT systems, networked embedded devices, cloud dependence, and applied machine learning for real-world infrastructure analysis.
+  prerequisites: "Python, basic machine learning techniques, familiarity with networking concepts"
+  available: false
+
+- id: proj-024
+  title: "Analysis of IoT Battery Depletion Caused by Malicious Network Activity"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+  description: |
+    Internet of Things (IoT) devices are increasingly deployed in resource-constrained environments where battery longevity is a critical design requirement. While significant research has focused on network-level security threats such as denial-of-service (DoS) attacks, less attention has been given to energy-depletion attacks, where malicious or abnormal network traffic deliberately accelerates battery drain.
+    Such attacks can render devices unavailable without triggering traditional security alarms, posing risks to smart homes, industrial IoT, and critical infrastructure. This research aims to quantify and analyze the impact of specific malicious traffic patterns on the battery consumption of low-power IoT devices.
+  prerequisites: "python, networks"
+  available: false
+
+- id: proj-025
+  title: "Enhancing a Wearable Medical Device Communication Prototype Using Galvanic Coupling"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - biomedical-electronics
+    - networking-security-iot
+    - integrated-circuits-microelectronics
+  description: >
+    This project aims to extend and enhance an existing prototype that demonstrates an alternative
+    short-range communication method for wearable devices. The work involves (1) adapting the
+    existing hardware setup to support galvanic coupling, (2) characterizing the communication
+    performance under different conditions (signal stability, transmission quality, simple noise
+    tests), and (3) evaluating the reliability of the upgraded prototype. This is an applied,
+    hands-on prototyping project suitable for students interested in embedded systems, IoMT,
+    biomedical devices, and experimental evaluation.
+  prerequisites: "Python, C, C++, basic embedded systems knowledge (preferred)"
+  available: false
+
+- id: proj-026
+  title: "Cybersecurity Evaluation of Bluetooth Low Energy (BLE) for Wearable Devices"
+  supervisor: "Anna Maria Mandalari"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+    - biomedical-electronics
+    - wireless-communications
+  description: >
+    This project focuses on performing a controlled cybersecurity assessment of Bluetooth Low
+    Energy (BLE) using an available testbed. The student will investigate passive attacks (e.g.
+    traffic sniffing, advertisement monitoring) and active attacks (e.g. basic man-in-the-middle
+    tests or denial-of-service attempts) using standard, publicly available tools in a safe
+    laboratory environment. This is a research-driven project with a strong experimental component,
+    suitable for students interested in IoMT security, wireless communication, and penetration
+    testing.
+  prerequisites: "Python, C, C++, familiarity with networking concepts (preferred)"
+  available: false
+
+- id: proj-027
+  title: "FPGA-accelerated Physics-informed Neural Networks for Optical Fibre Communications"
+  supervisor: "Filipe Ferreira"
+  co_supervisors:
+    - "Fabio Aparacido"
+  programmes:
+    - integrated-machine-learning-systems
+    - telecommunications
+    - wireless-and-optical-communications
+    - internet-engineering
+  research_areas:
+    - machine-learning-ai
+    - optical-communications
+    - integrated-circuits-microelectronics
+  description: |
+    Objectives/Aims:
+    The primary objective of this project is to develop and implement Physics-Informed Neural Networks (PINNs) on Field-Programmable Gate Arrays (FPGAs) to model and simulate the propagation of optical signals in fibre-optic communication systems. The project aims to leverage the computational efficiency of FPGAs to accelerate the training and inference processes of PINNs.
+
+    Methodology:
+    The project will be divided into the following key phases:
+    Literature Review and Problem Formulation:
+    o Conduct an extensive review of existing methods for modelling optical fibre propagation using PINNs and FPGA acceleration.
+    o Define the specific challenges in simulating non-linear Schrödinger equations (NLSE) and their relevance to fibre-optic communications.
+    Model Development:
+    o Develop a physics-informed neural network framework tailored to the NLSE governing optical fibre propagation.
+    o Implement the PINN architecture in a hardware description language (HDL) suitable for FPGA deployment.
+    Validation and Testing:
+    o Validate the FPGA-accelerated PINN model against standard numerical methods and experimental data.
+    o Evaluate the model's performance in simulating various fibre propagation scenarios.
+
+    Engineering/Scientific Novelty:
+    The scientific novelty of this project is two-fold, it is the use of physics-informed neural networks and the use of FPGA technology to model complex optical phenomena in fibre communication systems. While PINNs have gained attention in modelling physical systems, their application in high-speed, real-time environments like optical fibre communications is still relatively underexplored. Additionally, leveraging FPGA acceleration offers a novel approach to overcoming the computational challenges typically associated with PINNs.
+  prerequisites: "programming experience; python / matlab / vivado / verilog"
+  available: false
+
+- id: proj-028
+  title: "FPGA-based Real-time Digital Signal Processing for Optical Fibre Communications"
+  supervisor: "Filipe Ferreira"
+  co_supervisors:
+    - "Fabio Aparacido"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - optical-communications
+    - signal-processing
+    - integrated-circuits-microelectronics
+  description: |
+    Objectives/Aims
+
+    The primary objective of this project is to design, implement, and benchmark real-time digital signal processing (DSP) algorithms for coherent optical fibre communication systems using Field-Programmable Gate Arrays (FPGAs). The project will focus on key receiver-side DSP functions, such as phase recovery, carrier phase estimation, and channel equalisation, with the aim of evaluating their performance, latency, computational complexity, and power efficiency when deployed on reconfigurable hardware.
+
+    Methodology
+
+    The project will be structured around the following key phases:
+
+    Literature Review and Problem Definition
+
+     - Conduct a comprehensive review of DSP algorithms used in coherent optical receivers, including phase equalisation (e.g. Viterbi–Viterbi, blind phase search) and channel equalisation techniques (e.g. LMS, RLS, frequency-domain equalisation).
+     - Review existing FPGA-based implementations of optical DSP, identifying trade-offs in precision, latency, throughput, and power consumption.
+     - Define representative transmission scenarios (modulation formats, symbol rates, impairments) relevant to modern optical fibre systems.
+
+    Algorithm Development and Benchmarking Framework
+
+     - Select and implement multiple DSP algorithms for phase recovery and channel equalisation in a high-level simulation environment (e.g. MATLAB or Python).
+     - Define benchmarking metrics, including bit error rate (BER), convergence speed, hardware resource utilisation, latency, and energy efficiency.
+     - Establish fixed-point models suitable for FPGA implementation, analysing numerical precision and quantisation effects.
+
+    FPGA Implementation
+
+     - Implement selected DSP algorithms using hardware description languages (HDL) or high-level synthesis (HLS) tools for FPGA deployment.
+     - Optimise architectures for real-time operation, focusing on pipelining, parallelism, and memory efficiency.
+     - Integrate the DSP blocks into a modular receiver chain suitable for high-speed optical signals.
+     - Validation and Performance Evaluation
+     - Validate FPGA-based DSP implementations against floating-point software models.
+     - Benchmark different algorithms under varying channel conditions and modulation formats.
+     - Evaluate scalability and suitability for future high-capacity optical transceivers.
+
+    Engineering/Scientific Novelty
+
+    The novelty of this project lies in its systematic, hardware-aware benchmarking of optical DSP algorithms on FPGAs, bridging the gap between theoretical algorithm design and practical real-time implementation. While many DSP techniques for optical communications are well established, their comparative performance on reconfigurable hardware, considering latency, power efficiency, and implementation complexity, remains insufficiently explored.
+  prerequisites: "programming experience; pythong / matlab / verilog / vivado"
+  available: false
+
+- id: proj-029
+  title: "A flexible bit-rate controller for beyond 5G high-speed digital fronthaul"
+  supervisor: "Nathan Gomes"
+  co_supervisors:
+    - "Martyn Fice"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - optical-communications
+    - wireless-communications
+    - signal-processing
+  description: >
+    5G has started to make extensive use of multiple antenna techniques (i.e. transmit/receive
+    multiple signals from multiple antennas at the same time) and multiple radio access
+    technologies (RATs), for example WiFi cooperation with 5G. To accommodate large numbers of
+    signals, destined to multiple antennas and/or multiple RATs, new Radio Access Network (RAN)
+    functional splits have been defined, which enable bit-rate reductions compared to the transport
+    of sampled time-domain radio waveforms, as was the case in traditional fronthaul using the
+    Common Public Radio Interface (CPRI) industry standard. Indeed, the CPRI corporation has
+    specified new transport interfaces in its eCPRI evolution. A number of the new interfaces will
+    also permit statistical multiplexing gains for improved bandwidth/bit-rate efficiency over the
+    fronthaul. As such interfaces proliferate, and with ever-increasing bit-rate requirements for
+    future systems, techniques that are able to make use of these efficiency gains are needed. In
+    this project, the use of flexible multiplexing of sub-channels to create variable bit-rate
+    Physical layer transport streams will be investigated using MATLAB. The sub-channels operate
+    with rates compatible with FlexE calendar mechanisms. The approaches of maintaining bandwidth or
+    maintaining spectral efficiency will be compared, while energy consumption minimisation is an
+    important target. Previous work using an integer linear programming optimiser for the assignment
+    of sub-channels will be built on, but with more rigorous testing of assumptions for energy
+    efficiency. Testing will involve the use of an optical communications link simulator (VPI
+    TransmissionMaker) which can co-simulate with MATLAB.
+  prerequisites: >
+    (Preferred) Good MATLAB programming skills, or very strong interest in learning these.
+    Knowledge of signal processing for digital communications (IFFT, OFDM), and optical communications.
+  available: false
+
+- id: proj-030
+  title: "Machine learning for nonlinear equalisation of subcarrier multiplexed analogue optical links"
+  supervisor: "Nathan Gomes"
+  co_supervisors:
+    - "Filipe Ferreira"
+  programmes:
+    - integrated-machine-learning-systems
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - machine-learning-ai
+    - optical-communications
+    - signal-processing
+  description: >
+    5G is making extensive use of multiple antenna techniques (i.e. transmit/receive multiple
+    signals from multiple antennas at the same time). To accommodate large numbers of signals
+    (these will be OFDM signals as is the case with current 4G/LTE), the use of analogue
+    subcarrier multiplexed transport is a good candidate. However, analogue transmission suffers
+    from nonlinear effects. Therefore, methods of reducing nonlinearity-induced effects will be
+    important for 5G and beyond 5G analogue fronthaul transport. Previous work has involved using
+    digital predistortion, simplifying by using predistortion coefficients for groups of channels,
+    only, rather than individual channels, and not using combined nonlinear and memory coefficients
+    (in what is termed a memory polynomial nonlinear model for the link). In this project, the aim
+    will be to find nonlinear coefficients using machine learning, with feature selection enabling
+    decisions on the numbers of coefficients necessary. The work can commence with pre-existing
+    MATLAB code that generates/receives OFDM-type signals and will transmit/receive these signals
+    through an optical link using a MATLAB-VPI co-simulation environment (VPI is a photonics
+    simulation platform). The aim then is to use machine learning to replace the previously used
+    predistortion training techniques.
+  prerequisites: >
+    Good MATLAB programming skills, or very strong interest in learning these. Probably, very good
+    Python programming skills. Knowledge of (and/or very strong interest in) machine learning
+    algorithms. (Preferable:) Knowledge of signal processing for digital communications (IFFT,
+    OFDM), RF/microwave and optical communications.
+  available: false
+
+- id: proj-031
+  title: "5G and beyond open fronthaul virtualisation using hardware offloading"
+  supervisor: "Nathan Gomes"
+  co_supervisors:
+    - "Chin-Pang Liu"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - optical-communications
+    - integrated-circuits-microelectronics
+    - signal-processing
+  description: >
+    5G has started to make extensive use of multiple antenna techniques (i.e. transmit/receive
+    multiple signals from multiple antennas at the same time) and multiple radio access
+    technologies (RATs), for example WiFi cooperation with 5G. To accommodate the increasingly
+    large numbers of signals (these will be OFDM signals as is the case with current 4G/LTE)
+    destined to multiple antennas and/or multiple RATs, the use of analogue radio-over-fibre (RoF)
+    transport and the use of digital domain multiplexing and de-multiplexing of the signals, are
+    promising approaches. The project will build on previous projects that have already implemented
+    OFDM/DMT signal Tx/Rx and simple multiplexing functions in the Xilinx Vivado development
+    environment. This enables download to a powerful, high-speed Virtex-7 Ultrascale FPGA board.
+    However, the multiplexing/demultiplexing needs to be flexible, and for experimental
+    demonstration further functions are required to enable continuous operation and to allow the
+    FPGA board to communicate with external data generators and analysers. The project can use
+    other work conducted in MATLAB for guidance on some of the new functionality to be added. The
+    Vitis Model Composer in the Vivado environment allows Simulink simulation. Beyond simulation,
+    the link can be tested by connecting two FPGA boards using a coaxial cable with adequate BW, or
+    by connecting the transmitter and receiver on one board in a loop-back arrangement. Time
+    permitting, options for further analogue/RF processing may be investigated (e.g. using external
+    DAC/ADC boards).
+  prerequisites: >
+    Good MATLAB/Simulink skills. Previous experience or very strong interest in FPGA programming.
+    (Preferable:) Knowledge of signal processing for digital communications (IFFT, OFDM),
+    RF/microwave and optical communications.
+  available: false
+
+- id: proj-032
+  title: "Neural network based digital predistortion (DPD) for the high efficient radio frequency (RF) power amplifier"
+  supervisor: "Bo Tan"
+  co_supervisors:
+    - "Christos Masouros"
+  programmes:
+    - wireless-and-optical-communications
+  research_areas:
+    - machine-learning-ai
+    - microwave-rf-thz
+    - signal-processing
+  description: >
+    Today, ICT, particularly pervasive wireless and mobile networks, has become an essential and
+    critical infrastructure driving the growth, development, and digital transformation of every
+    vertical. However, studies by Nokia and McKinsey reveal that surging energy consumption in
+    mobile networks and associated CO2 emissions account for up to 50% of mobile network operating
+    expense (OPEX), with large operators experiencing energy cost increases outpacing sales growth
+    by more than 50% in recent years. McKinsey's analysis drills down into radio access network
+    (RAN) energy use, revealing that only 15% of energy is spent on data transmission, while 85%
+    is wasted due to heat loss in radio power amplifiers, idle equipment, and inefficiencies in
+    system design. This project focuses on developing a lightweight neural network-based digital
+    compensation (pre-distortion) method together with the crest factor reduction (CFR) techniques
+    to balance the communication efficiency and energy efficiency of the RF power amplifier.
+  prerequisites: >
+    Programming skill: Good MATLAB or Python, or very strong motivation to learn programming.
+    Knowledge: signal processing, essential knowledge on the machine learning, basic knowledge on
+    the analog front end of radio frequency system
+  available: false
+
+- id: proj-033
+  title: "Interplay of distributed machine learning (AI) and wireless network"
+  supervisor: "Bo Tan"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - telecommunications
+  research_areas:
+    - machine-learning-ai
+    - wireless-communications
+    - networking-security-iot
+  description: >
+    Traditional centralized machine learning (ML) approaches often face significant challenges in
+    terms of data privacy, communication overhead, and energy efficiency, particularly in wireless
+    environments where bandwidth and computing resources are scarce. Decentralized ML (including
+    federated learning) enables distributed model training and inference across distributed edge
+    devices without sharing the raw data. The performance of these decentralized ML systems
+    presents dependence on the underlying wireless network conditions, such as latency, link
+    failure, interference, and asynchronous and unbalanced distribution of spectral and computing
+    resources. This MSc project aims to investigate the interaction between distributed machine
+    learning and wireless networks. The research will involve developing adaptive bandwidth and
+    computing resource allocation, as well as communication-efficient and robust model aggregation
+    or distribution strategies. Techniques such as gradient compression, quantization, and adaptive
+    scheduling will be explored to reduce communication costs while maintaining model accuracy. In
+    addition, the privacy-preserving measures (e.g., differential privacy) for the distributed ML
+    system will be also in the scope of this project.
+  prerequisites: >
+    Programming skill: Experience on NS-3, MATLAB or Python experience, or very strong motivation
+    to learn programming. Knowledge: basic and essential knowledge on the machine learning,
+    distributed system, wireless network
+  available: false
+
+- id: proj-034
+  title: "Simulation Evaluation of Hybrid RF/FSO Transmission"
+  supervisor: "Bo Tan"
+  co_supervisors:
+    - "Izzat Darwazeh"
+  programmes:
+    - wireless-and-optical-communications
+  research_areas:
+    - wireless-communications
+    - optical-communications
+    - signal-processing
+  description: >
+    Hybrid Radio Frequency / Free-Space Optical (RF/FSO) communication has emerged as a promising
+    solution for high-capacity and reliable wireless links by combining the complementary strengths
+    of RF and FSO transmissions. This MSc project focuses on the simulation-based performance
+    evaluation of hybrid RF/FSO links under realistic channel conditions. The project will develop
+    a point-to-point and network simulation framework to model key impairments affecting RF and FSO
+    links, including atmospheric attenuation, turbulence, weather effects, fading, and link
+    switching or selection strategies. Performance metrics such as bit error rate (BER), outage
+    probability, and throughput will be analysed and compared against standalone RF and FSO
+    systems. The student will gain knowledge in wireless channel modelling, Monte-Carlo simulation,
+    and performance analysis of next-generation communication systems, with relevance to 5G/6G.
+  prerequisites: >
+    Programming skill: Good MATLAB or Python, or very strong motivation to learn programming.
+    Knowledge: wireless communications modelling, signal processing
+  available: false
+
+- id: proj-035
+  title: "Combining computer vision and electro-optical actuators to enable whole-brain functional imaging in freely moving animals"
+  supervisor: "Dai Jiang"
+  co_supervisors:
+    - "Yu Wu"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - biomedical-electronics
+    - sensing-imaging
+    - control-systems
+  description: |
+    Background:
+    A key goal of neurotechnology is to monitor and control the neural activity underlying behaviour – but most recording and manipulation techniques either rely on the subject being held stationary, or require invasive implants, both limiting and perturbing the subject’s behaviour. The ‘all-optical’ approach to neurotechnology in particular holds great promise due to its cellular resolution and low invasiveness. The larval zebrafish, a vertebrate model system with a small optically transparent brain is emerging as a promising test case for hardware and algorithms controlling neural activity across a whole brain. Currently, these techniques require the fish to be held stationary under large immovable microscopes.
+
+    Project description:
+    This project aims to build a ‘moving microscope’ that utilizes predictive control circuits and fast electro-optic actuators to enable brain-wide imaging of neural activity in freely moving animals. This prototype would establish an open-source platform that can be upgraded with future miniature microscopes capable of monitoring and controlling neural activity during naturalistic behaviour. The project is part of a research project to combine computer vision and real-time control of electro-optical actuators for all-optical interrogation of brain-wide neural activity during naturalistic behaviour. If successful, it would pave the way towards all-optical interrogation of brain-wide neural activity in unrestrained subjects, accelerating efforts to build minimally invasive neural interfaces that are precise and scalable.
+
+    The objectives of the MSc project includes:
+    1) Cancel lateral motion with high-speed stage controlled by IR-spectrum computer vision;
+    2) Cancel axial motion with an electro-tuneable lens controlled by focusing neural network;
+    3) Reduce the latency of motion cancellation via model predictive control.
+
+    This project is in collaboration with UCL Department of Neuroscience, Physiology and Pharmacology and UCL Laboratory for Molecular Cell Biology
+  prerequisites: "N/A"
+  available: false
+
+- id: proj-036
+  title: "Electrical impedance-based sensing and imaging for personalised cell therapy"
+  supervisor: "Dai Jiang"
+  co_supervisors:
+    - "Yu Wu"
+  programmes:
+    - wireless-and-optical-communications
+    - integrated-machine-learning-systems
+  research_areas:
+    - biomedical-electronics
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+  description: |
+    Background:
+    Cell therapies are emerging as treatments for major health burdens in regenerative medicine, oncology, neurology and immunology. However, their clinical translation is restricted by limitations in upstream bioprocessing. A critical challenge is the intrinsic heterogeneity of patient-derived starting material. Autologous cells vary widely in composition, proliferative capacity and metabolic state due to age, disease status, and prior treatments. These factors alter expansion kinetics and functional potency, creating uncertainty in manufacturing timelines, release criteria and ultimately therapeutic consistency.
+    Current culture platforms do not address this variability. Most small-scale and bench-top bioreactors provide only bulk environmental control (e.g., temperature, pH, dissolved oxygen) and rely on low-frequency sampling to assess critical quality attributes. These assays are labour-intensive, low temporal resolution and can disturb the culture. This lack of in-line, high-resolution tools to detect deviations early, adjust conditions dynamically or link culture conditions to product quality is a key barrier for personalised and small-batch cell therapy manufacturing.
+
+    Project description:
+    As part of an on-going research project, this MSc project addresses this need by advancing a miniaturised analytical platform that integrates real-time impedance biosensing with controllable ultrasound stimulation. The project aims to achieve impedance-based continuous cell monitoring by utilising our miniaturised bioreactor prototype with advanced multi-frequency, multi-channel electrical impedance measurement capacity. Impedance monitoring can allow label-free quantitative readouts of proliferation dynamics, cell coverage, membrane integrity, and barrier formation.
+
+    The objectives of the MSc project includes:
+    1) Implement auto-calibration and auto-gain control for adaptive impedance measurement;
+    2) Optimising scan pattern and imaging reconstruction algorithms to accurately map cell proliferation;
+    3) Investigating impedance sensing with optically transparent electrodes to allow complementary microscopy.
+
+    This project is in collaboration with UCL Departments of Medical Physics and Mechanical Engineering
+  prerequisites: "Matlab/Python, FPGA programming desireable but not essential."
+  available: false
+
+- id: proj-037
+  title: "Self-powered Smart Insoles for Walking Gait and Mobility Monitoring Using Multi-Channel Piezoelectric Nano-Yarn Fibre Sensors and Energy Harvesters"
+  supervisor: "Dai Jiang"
+  co_supervisors:
+    - "Yu Wu"
+  programmes:
+    - integrated-machine-learning-systems
+    - telecommunications
+  research_areas:
+    - biomedical-electronics
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+  description: |
+    Background and Rationale:
+    Quantitative assessment of walking gait is critical for monitoring mobility, neurological and musculoskeletal disorders, rehabilitation outcomes, and fall risk. Conventional gait analysis systems are constrained by laboratory dependence, rigid hardware, and limited long-term wearability. Textile-based wearables, particularly socks, provide a highly compliant and unobtrusive interface for capturing foot–ground interaction during natural walking.
+    Recent advances in piezoelectric nano-yarn fibre sensors and multi-channel fibre-based sensing architectures enable distributed, self-powered sensing directly within fabrics. By weaving multiple piezoelectric fibre channels into a smart insole pad, it is possible to achieve spatially resolved, high-density gait sensing without compromising comfort or flexibility.
+
+    Aim:
+    The aim of this project is to develop self-powered smart insoles incorporating multi-channel piezoelectric nano-yarn fibre sensors woven into fabric structures for real-time, continuous monitoring of walking gait and lower-limb mobility.
+
+    Project Plan:
+    The proposed device will design, fabricate and integrate a pair of wearable soles embedded with piezoelectric nanofibre-based pressure sensors and energy harvesters developed in house. Nanoyarn pressure sensors will be woven into the fabric to form multi-channel sensing networks. Each fibre channel will act as an independent sensing element, enabling spatial mapping of plantar pressure and dynamic deformation during gait. A control circuit will integrate the sensors, energy harvester and capacitor into an insole-like device. The close-loop smart insoles are anticipated with enhanced sensitivity to subtle gait changes and asymmetries and improved monitoring of rehabilitation progress and early mobility decline,
+    Key technical components include:
+    • Design and fabricate piezoelectric-nanofibre pressure sensors and energy harvesters using flexible electrode fabrication and electrospinning technique.
+    • Characterise multi-channel fibre sensor networks woven into insole-like textile and 3D printed architectures at the heel, midfoot and forefoot.
+    • Distributed piezoelectric sensing for detection of heel strike, toe-off, load transfer, and foot motion
+    • Self-powered signal generation, minimizing energy requirements for continuous monitoring
+    • Multiplexed signal acquisition electronics to manage multi-channel outputs with minimal cross-talk
+    • Data processing and machine-learning algorithms to extract spatiotemporal gait parameters, symmetry, variability, and mobility indices
+    Prototype sensor insoles will be validated in controlled walking trials and real-world conditions, with benchmarking against reference gait metrics.
+
+    This project is in collaboration with UCL Centre for Biomaterials in Surgical Reconstruction and Regeneration, Division of Surgery and Interventional Science. It will be co-supervised by Dr Xinzhao Xu and Prof. Wenhui Song.
+  prerequisites: "Analogue electronic circuits, micro-controller"
+  available: false
+
+- id: proj-038
+  title: "Multi-Impedance Sensing Cell Culture Platform for Real-Time Assessment of Engineered T-Cell Cytotoxicity Against Solid Tumour Cells"
+  supervisor: "Dai Jiang"
+  co_supervisors:
+    - "Andreas Demosthenous"
+  programmes:
+    - wireless-and-optical-communications
+    - internet-engineering
+  research_areas:
+    - biomedical-electronics
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+  description: |
+    Background and Rationale:
+    Engineered T-cell therapies, including CAR-T and TCR-modified T cells, have shown remarkable success in haematological malignancies but remain significantly less effective in solid tumours. A key challenge in their development is the lack of real-time, functional in vitro platforms capable of quantitatively assessing T-cell–tumour interactions, tumour cell killing dynamics, and heterogeneity of responses under physiologically relevant conditions.
+    Current cytotoxicity assays rely heavily on endpoint measurements, fluorescent labelling, or bulk biochemical readouts, which fail to capture the temporal evolution of tumour cell killing and T-cell engagement. Electrical impedance sensing provides a label-free, non-invasive method to continuously monitor cell adhesion, morphology, and viability, making it ideally suited for dynamic evaluation of T-cell–mediated cytotoxicity.
+
+    Aim:
+    The aim of this project is to develop a multi-site impedance sensing cell culture device that enables real-time, parallel monitoring of engineered T-cell killing of solid tumour cells in vitro. This project will deliver a robust, label-free high-content platform for dynamic assessment of engineered T-cell function against solid tumours without disrupting cell–cell interactions.
+
+    Project plan:
+    We propose to engineer a multi-electrode impedance sensing platform integrated into a standardised cell culture format (e.g., multi-well plate or microfluidic chamber). Tumour cells will be cultured on microfabricated electrode arrays, forming a confluent, adherent layer that generates a stable baseline impedance signal. Introduction of engineered T cells will induce tumour cell detachment, apoptosis, and lysis, which will be captured as time-resolved changes in impedance.
+    Key features of the proposed system include:
+    • Design and fabricate multi-channel electrode array for multiple impedance sensing sites for a multiple well plate
+    • Collect quantitative, and time-resolved profiles of T-cell–mediated tumour killing per well for spatially resolved monitoring of tumour cell viability and killing heterogeneity
+    • Multiplexed signal acquisition electronics to manage multi-channel outputs with minimal cross-talk
+    The system will be validated using established solid tumour models and TCR-T cell developed in house, with impedance readouts correlated to conventional cytotoxicity assays and imaging-based confirmation.
+
+    This project is in collaboration with UCL Centre for Biomaterials in Surgical Reconstruction and Regeneration, Division of Surgery and Interventional Science. The project will be co-supervised by Dr Xinzhao Xu, Dr Yuan Chen, and Prof Wenhui Song.
+  prerequisites: "electronic circuits"
+  available: false
+
+- id: proj-039
+  title: "Multiplexed Sensing Platform for Real-Time Monitoring Metabolic Activity in Live Muscle Models"
+  supervisor: "Dai Jiang"
+  co_supervisors:
+    - "Andreas Demosthenous"
+  programmes:
+    - wireless-and-optical-communications
+  research_areas:
+    - biomedical-electronics
+    - sensing-imaging
+    - integrated-circuits-microelectronics
+  description: |
+    Background and Rationale:
+    Glucose uptake and metabolism are central to skeletal muscle physiology and are critically altered in metabolic disorders such as insulin resistance and type 2 diabetes. Conventional glucose assays in cell culture rely on endpoint sampling or bulk measurements, which lack temporal resolution and disrupt the culture environment. There is a clear unmet need for a non-invasive, real-time, and high-throughput glucose monitoring system compatible with standard multi-well culture formats to enable dynamic assessment of muscle cell metabolism.
+
+    Aim:
+    This project aims to develop a multiplexed glucose sensing device integrated with a multi-well live muscle cell culture plate, enabling continuous and parallel monitoring of glucose dynamics during muscle cell growth, differentiation, and stimulation, supporting drug screening and metabolic phenotyping in muscle models.
+
+    Project plan:
+    The project aims to develop a multi-sensor array platform in which miniaturized glucose sensors are integrated into, or interfaced with, each well of a standard multiple well plate. The sensing strategy will be based on enzymatic (e.g., glucose oxidase) electrochemical glucose detection, implemented using microfabricated electrodes or printable conductive materials compatible with cell culture conditions.
+    Key features include:
+    • Design and fabricate electrochemical electrode arrays and glucose sensors for parallel sensing across all wells (n=48 and 98) for high-throughput metabolic analysis;
+    • Integrate glucose sensor arrays with potentiostat module, and test, calibrate the performance of the electrochemical measurements. Real-time, continuous glucose monitoring without media extraction;
+    • Optimise multiplexed readout electronics for simultaneous signal acquisition with minimal cross-talk;
+    • Demonstrate real-time, continuous glucose monitoring of muscle cell metabolic activity during growth and differentiation
+    The platform will be validated using cultured optogenetic skeletal muscle cells (e.g., mouse myoblasts or iPSC-derived myotubes), assessing glucose consumption during growth, differentiation, and light stimulation. The proposed system will enable time-resolved profiling of muscle glucose metabolism with unprecedented throughput.
+
+    This platform is expected to:
+    • Provide new insights into dynamic glucose uptake and metabolic heterogeneity across culture conditions
+    • Support drug screening and metabolic phenotyping in muscle models
+    • Reduce reliance on destructive biochemical assays and improve experimental reproducibility
+
+    This project is in collaboration with UCL Centre for Biomaterials in Surgical Reconstruction and Regeneration, Division of Surgery and Interventional Science. The project will be co-supervised by Dr Xinzhao Xu, and Prof Wenhui Song.
+  prerequisites: "Electronic circuits"
+  available: false
+
+- id: proj-040
+  title: "Kinetic Control of the Non-Inductive Fusion Plasma Current"
+  supervisor: "Francesca Boem"
+  co_supervisors:
+    - "Sarah Spurgeon"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - control-systems
+    - signal-processing
+  description: >
+    Nuclear fusion — the process that powers the Sun — offers the potential for a nearly limitless
+    source of clean energy. To achieve fusion on Earth, fuel must be heated to extreme
+    temperatures, forming plasma: a superheated, electrically charged gas. One of the biggest
+    challenges is not just creating plasma, but keeping it stable and controlled long enough to
+    generate power. The Spherical Tokamak for Energy Production (STEP) is the UK’s flagship fusion
+    programme, aiming to build a prototype power plant by the 2040s. Unlike conventional
+    experimental machines, STEP cannot rely on a transformer to drive current within the plasma.
+    Instead, it must use a range of highly non-linear external microwave actuators, which makes
+    control far more complex and particularly so during the task of ramping the plasma current to
+    its target operating level. This project explores how advanced control engineering can meet
+    this challenge. The focus is on developing a multi-objective, MIMO controller to track and
+    regulate key plasma quantities during the crucial non-inductive current ramp-up phase. The
+    controller will be designed and tested using RAPTOR (RApid Plasma simulaTOR), a cutting-edge
+    MATLAB-based simulation tool that models how plasma behaves inside a tokamak. By combining
+    modern control methods with realistic plasma simulations, this project aims to contribute to
+    one of the most ambitious engineering goals of our time: making fusion energy a practical
+    reality. The work will be carried out in collaboration with the UK Atomic Energy Authority.
+  prerequisites: "Background in Control Engineering and Optimisation, MATLAB"
+  available: true
+
+  - id: proj-041
+  title: "Fusion Plasma State Estimation"
+  supervisor: "Francesca Boem"
+  co_supervisors:
+    - "Sarah Spurgeon"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - control-systems
+    - signal-processing
+  description: >
+    Nuclear fusion — the same process that powers the Sun — offers the potential for an abundant
+    and sustainable source of clean energy on Earth. To achieve this, fuel must be heated to
+    extreme temperatures, forming plasma: a superheated, electrically charged gas. One of the
+    biggest challenges is not only creating plasma but also being able to observe and control it
+    reliably, even in conditions too harsh for conventional sensors. The Spherical Tokamak for
+    Energy Production (STEP) is the UK’s flagship fusion programme, with the goal of delivering a
+    prototype power plant by the 2040s. Unlike existing experimental tokamaks, STEP will be
+    equipped with very few direct plasma measurements due to design constraints and the intense
+    neutron radiation environment. This project explores how advanced state estimation methods can
+    compensate for the lack of measurements by reconstructing key plasma quantities from limited
+    signals. The estimators will be developed and tested using two complementary simulation tools.
+    RAPTOR (RApid Plasma simulaTOR) is a MATLAB-based code designed for fast, real-time–capable
+    simulations of plasma dynamics, making it well-suited for testing control and estimation
+    strategies. In parallel, JINTRAC/JETTO provides a more comprehensive, physics-rich framework
+    for integrated modelling of plasma behaviour, offering higher fidelity at the cost of
+    computational speed. Together, these tools allow both rapid prototyping and detailed validation
+    of the estimator design. By combining modern state estimation techniques with these advanced
+    simulation platforms, the project aims to address one of the key challenges in enabling fusion
+    power: controlling plasmas in environments where measurements are scarce or unavailable. The
+    work will be carried out in collaboration with the UK Atomic Energy Authority.
+  prerequisites: "Background and expertise in Control Engineering, MATLAB"
+  available: true
+
+- id: proj-042
+  title: "Machine Learning Surrogate of MHD Equilibria for Control-Oriented Tokamak Simulations"
+  supervisor: "Francesca Boem"
+  co_supervisors:
+    - "Sarah Spurgeon"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - control-systems
+    - machine-learning-ai
+  description: >
+    Nuclear fusion promises a virtually inexhaustible supply of clean energy. In a tokamak,
+    achieving this requires the confinement of plasma by intense magnetic fields, with precise
+    knowledge of the magnetic equilibrium playing a central role in plasma performance, stability,
+    and control. The RApid Plasma Transport simulatOR (RAPTOR) is a cutting-edge tool that models
+    the real-time evolution of plasma profiles in a tokamak. To run accurately, RAPTOR relies on
+    detailed geometric quantities derived from magnetohydrodynamic (MHD) equilibrium codes such as
+    CHEASE. However, computing equilibria repeatedly using CHEASE is computationally expensive,
+    limiting its use for fast control-oriented simulations and real-time applications. This project
+    explores how surrogate modelling can address this challenge. The focus is on developing a
+    machine-learning-based surrogate of CHEASE that predicts the quantities required by RAPTOR with
+    high fidelity but at a fraction of the computational cost. The surrogate will be trained on a
+    set of equilibria generated with CHEASE. By combining equilibrium physics with modern surrogate
+    modelling techniques in MATLAB, this project contributes to bridging the gap between accurate
+    equilibrium calculations and real-time plasma control. The work will be carried out in
+    collaboration with the UK Atomic Energy Authority.
+  prerequisites: "Background and expertise in Control Engineering"
+  available: true
+
+- id: proj-043
+  title: "Quantum Key Distribution for Terahertz Communications Systems"
+  supervisor: "Michael Wale"
+  co_supervisors:
+    - "Martyn Fice"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - nanoelectronics-quantum
+    - microwave-rf-thz
+    - optical-communications
+  description: |
+    In order to accommodate ever-increasing demands for communications bandwidths and data rates, radio systems are moving to higher and higher operating frequencies, including the Terahertz (THz) region. UCL is pursuing pioneering work in the development of photonics-enabled THz systems (see for example [1], [2]). It would be highly advantageous for THz links to be secured by quantum communications principles such as quantum key distribution (QKD), which can deliver a provably secure link. Continuous-variable QKD techniques are particularly attractive as they can employ technology that is familiar from classical coherent transmission systems. QKD has been in development for some time and the first commercial systems operating at fibre optic wavelengths are now emerging. Use of QKD at THz frequencies has been explored theoretically but, as far as we are aware, has not been demonstrated experimentally. There are many challenges, not least due to the very low photon energy in the THz region of the spectrum. This IP will examine the practical challenges in implementing QKD at THz frequencies, propose technology routes based on PIC technology and estimate the system performance through simulation. The aim will be to understand the fundamental limits in such a system and to establish a route to experimental verification.
+
+    [1] Fice, M. et al., "Photonically Generated Millimetre-Wave and THz Links for Wireless Fronthaul and Backhaul." 2021 International Topical Meeting on Microwave Photonics (MWP). IEEE, 2021. https://doi.org/10.1109/MWP53341.2021.9639415
+    [2] Belio-Apaolaza, I. et al., High-performance Terahertz optoelectronic receivers enabled by monolithic integration of SBDs and UTC-PDs: modelling and design." 2023 48th International Conference on Infrared, Millimeter, and Terahertz Waves (IRMMW- THz). IEEE, 2023.
+  prerequisites: "Interest in photonics, high frequency engineering, device technology, communications systems."
+  available: false
+
+- id: proj-044
+  title: "Limits to speed and efficiency in electro-optic modulation for communications"
+  supervisor: "Michael Wale"
+  co_supervisors:
+    - "Lalitha Ponnampalam"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - photonics-optics
+    - optical-communications
+    - semiconductors-materials-devices
+  description: >
+    The internet depends on wide-bandwidth fibre optic links, now operating at 400Gbit/s and above
+    per optical carrier, often with multiple carrier wavelengths, reaching overall capacities of
+    several tens of Tbit/s per fibre, over distances up to thousands of km. The demand for higher
+    bandwidth is increasing and we are now reaching the point where fundamental physical limits
+    become important. The project will examine the design and realization of electro-optic
+    modulators and photonic integrated circuits for direct and coherent transmission at data rates
+    above 200GBaud (>2 Tbit/s per wavelength using advanced modulation schemes), in platforms
+    including III-V quantum dots on silicon, InP and lithium niobate on insulator, and will
+    elucidate the role of fundamental physical processes in setting the limits for bandwidth and
+    modulation efficiency. It will involve theoretical and possibly also experimental work
+    addressing the design of leading-edge devices and circuits, including their integration with
+    electronic circuits and systems. The project provides great scope for innovation and
+    creativity, as well as for critical scientific thinking. It will allow the student to develop
+    advanced skills in semiconductor integrated photonics and advanced integration concepts, as
+    well as developing simulation strategies and techniques. It is well suited to students with a
+    background in electrical/electronic engineering or in physics. The topic is of major
+    industrial importance, and we anticipate collaboration with companies in the field.
+  prerequisites: >
+    Interest in optical devices, photonic integration, physical principles, theoretical modelling,
+    communications systems. Background in device physics desirable.
+  available: false
+
+- id: proj-045
+  title: "Novel Electronic-Photonic Co-Design Approaches for High Efficiency, High Capacity Optical Communications"
+  supervisor: "Michael Wale"
+  co_supervisors:
+    - "Lalitha Ponnampalam"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - photonics-optics
+    - optical-communications
+    - semiconductors-materials-devices
+  description: >
+    In order to provide high capacity and spectral efficiency, modern optical communications
+    systems increasingly employ complex modulation schemes, where a data stream is encoded on an
+    optical carrier using its amplitude and phase, each of which can take multiple values. For
+    example, a 64-QAM (quadrature amplitude modulation) format can carry 6 bits of information per
+    symbol (and hence per unit bandwidth) compared with a binary format. With two orthogonal
+    optical polarization states, a further doubling of capacity can be achieved. On the other hand,
+    as the number of bits per symbol increases, the signal to noise ratio and the linearity of the
+    signal chain become more critical. These requirements, along with continual increases in speed,
+    lead to increased electrical power demands and significant challenges in thermal management in
+    compact, high-density systems. As the power demands of the internet (and data centres in
+    particular) are already giving rise to significant environmental concerns, it is timely to look
+    at ways in which the efficiency of these systems can be improved. Coherent optical systems
+    today generally employ an electro-optic modulator (e.g. a Mach-Zehnder modulator, often in an
+    in-phase and quadrature configuration) with an associated digital-analog converter (DAC) and
+    electronic drive amplifier. This approach has inherent challenges in terms of linearity and
+    power budget. We would like to study an alternative approach, in which the multi-bit encoding
+    is accomplished in the optical device itself, rather than in the electronics, thereby
+    improving linearity and efficiency. Alternative device configurations will be studied,
+    performance modelled and outline defined designs. Alternatively, or in addition, the project
+    could address the design of ultra-high-speed optical transmitters based on travelling-wave
+    modulators employing segmented electrode structures, in which a combined electronic-photonic
+    approach could alleviate design constraints and allow very high bandwidths (>100GHz) to be
+    achieved with high power efficiency. Further improvements in power efficiency may be achievable
+    using novel circuit configurations suggested by the co-design approach. Within the project, the
+    student will examine alternative design strategies and component architectures and will model
+    the performance of candidate designs. The performance of these designs will be studied in
+    systems context using appropriate simulation tools. An important outcome of the research will
+    be an understanding of the limits to the performance of such a system, given the
+    characteristics of available semiconductor photonic integrated circuit (PIC) technologies
+    (e.g. InP, GaAs, lithium niobate, silicon). In addition, the research will identify and
+    analyze promising device and circuit concepts and elucidate practical implementation issues.
+    The project is of great interest to industry. We are in contact with several companies and
+    anticipate opportunities for close collaboration.
+  prerequisites: "Interest in photonics, electronics and communications systems."
+  available: false
+
+- id: proj-046
+  title: "Case Law Intelligence: An LLM-Enabled Pipeline for Monitoring, Extracting, and Structuring UK Judicial Decisions"
+  supervisor: "Miguel Rodrigues"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: |
+    A. Project Overview
+    UK case law develops continuously across courts and tribunals, shaping legal obligations and practical guidance for employers, employees, regulators, insurers, and advisory teams. Decisions are published across multiple sources, vary in format and length, and contain dense legal reasoning that makes systematic monitoring difficult. Stakeholders often need rapid answers to: What is the case about? What issues were decided? What did the court rule? What is the practical takeaway?
+    This MSc project will build an end-to-end case law monitoring and intelligence pipeline for the UK. The system will continuously gather newly published judgments, use large language models (LLMs) and NLP methods to extract key legal issues and associated rulings/holdings, and then structure them into stakeholder-ready outputs (dashboards, briefings, alerts, or searchable records). The project can be scoped broadly across UK case law or narrowed to a high-value domain such as employment law (e.g., discrimination, unfair dismissal, worker status, restrictive covenants, holiday pay, whistleblowing).
+
+    B. Your Mission
+    You will design, implement, and evaluate a system that supports:
+    1) Continuous Case Law Monitoring (Acquisition Layer):
+    • Identify and monitor relevant publishing sources (e.g., court/tribunal portals, official repositories, and established legal databases where permissible).
+    • Implement robust ingestion for HTML/PDF documents, including scheduling, deduplication, change detection, and provenance (date, court, neutral citation, parties, links to the original text).
+    • Maintain a reliable “new decisions” feed that can be filtered by domain (e.g., employment), court level, or keywords.
+    2) Issue & Ruling Extraction (Understanding Layer):
+    • Use LLMs to extract structured data from judgments, such as: Key issues (legal questions in dispute, statutory tests, points of principle); Rulings/holdings linked to each issue (what the court decided); Outcome (allowed/dismissed, remedies, orders); Authorities relied on (statutes, leading cases); Key factual context (limited, non-sensitive summary aligned with stakeholder needs)
+    • Design prompts and/or hybrid models that keep extraction grounded in the text (e.g., evidence-linked snippets for every extracted issue/ruling pair).
+
+    3) Structuring for Stakeholder Use (Intel Layer):
+    • Define a schema for “issue → ruling → evidence → impact”, suitable for downstream use: searchable knowledge base (e.g., JSON records / relational tables); stakeholder briefs (1-page case summaries); alerts and digests (“new ruling on worker status test”); trend analytics (issues over time, courts driving change)
+    • Include a clear traceability mechanism: every structured claim must point to the specific paragraph(s) supporting it.
+  prerequisites: |
+    1. What we’re looking for? We’re looking for an MSc candidate with interest in applied NLP/LLMs and real-world information systems, ideally with:
+    • Strong Python and data pipeline skills (scraping/APIs, scheduling, parsing PDFs/HTML).
+    • Practical NLP/LLM experience: extraction, summarisation, grounding/citations, evaluation.
+    • Engineering discipline: testing, observability, error analysis, reproducibility.
+
+    2. Why Join?
+    • Work on a technically rich and societally relevant problem at the intersection of ML engineering, NLP, and law.
+    • Build a portfolio-grade system: monitoring → extraction → structured knowledge base → stakeholder delivery.
+    • Produce outcomes suitable for publication: datasets/benchmarks for issue–holding extraction, methods for grounded summarisation, and design patterns for reliable legal AI pipelines.
+  available: false
+
+- id: proj-047
+  title: "The AI Lawyer: Transforming Contract Negotiation with Intelligent Agentic Systems"
+  supervisor: "Miguel Rodrigues"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: |
+    The rise of AI agentic systems, driven by cutting-edge generative AI technologies, is reshaping professional industries—from finance and insurance to legal services. Imagine a world where contract negotiations, a historically tedious and time-intensive process, can be streamlined through intelligent, autonomous agents. This MSc project invites you to be at the forefront of this revolution, developing AI-powered systems to redefine how legal agreements are negotiated.
+
+    Project Overview
+    This project focuses on harnessing AI agentic systems to automate and optimize contract negotiation workflows, with a particular emphasis on loan agreements. Leveraging advanced frameworks like Microsoft’s AutoGen, the project aims to design, implement, and evaluate a fully autonomous, multi-agent system capable of negotiating contracts on behalf of opposing parties.
+
+    Your Mission
+    You will create an AI-driven negotiation ecosystem encompassing:
+    Two Parties, Two AI Teams: One set of agents represents the lender (e.g., "associate" and "partner" roles). Another set represents the borrower (mirroring the structure of the lender’s team).
+    Negotiation Dynamics: Each party’s agents will receive high-level instructions reflecting the goals and preferences of their respective client. For example: the lender seeks secure terms such as guarantees or high interest rates; the borrower prioritizes favorable conditions like lower interest rates or flexible repayment terms.
+    Autonomous Decision-Making: Agents will autonomously negotiate terms, exchanging rounds of proposals until they reach mutually acceptable terms. These negotiations may include critical variables like: loan amounts, interest rates, guarantees and securities, borrower disclosures (e.g., salary, assets, liabilities)
+    Optimization Focus: You will explore innovative ways to enhance the negotiation process, ensuring it delivers efficient, fair, and satisfactory outcomes for both parties.
+  prerequisites: |
+    1. What we’re looking for? We’re looking for a motivated MSc candidate who is:
+    • Passionate about artificial intelligence and its transformative applications.
+    • Skilled in machine learning, generative AI, and natural language processing.
+    • Experienced in coding with Python, as well as frameworks like TensorFlow or PyTorch.
+
+    2. Why Join?
+    • Work under the mentorship of leading experts, Prof Miguel Rodrigues (Faculty of Engineering) and Professor Carsten Gerner-Beuerle (UCL Faculty of Law).
+    • Gain hands-on experience with state-of-the-art technologies like Microsoft AutoGen.
+    • Be part of a trailblazing project that bridges the gap between AI innovation and real-world legal applications, with potential for impactful publications too.
+  available: false
+
+- id: proj-048
+  title: "Graph-Grounded LLM Reasoning: Combining Knowledge Graphs and LLMs for More Reliable, Auditable Answer"
+  supervisor: "Miguel Rodrigues"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: |
+    A. Project Overview
+    Large language models (LLMs) are strong at reading and generating text, but they can be unreliable when asked to perform multi-step reasoning, maintain consistency across answers, or justify claims with verifiable evidence. Knowledge graphs (KGs)—structured representations of entities and relationships—offer a complementary strength: explicit, queryable facts with clear provenance. This project explores hybrid approaches that integrate LLMs + KGs to improve reasoning quality, factual reliability, and auditability.
+    The work will focus on a domain where a KG can be built or extracted with relatively low friction. A strong candidate domain is UK public procurement and tender notices (e.g., Contracts Finder, Find a Tender, and related public-sector award data), where entities (buyers, suppliers, contract lots), relationships (awarded-to, value, dates), and identifiers are structured or semi-structured and can be turned into a high-quality KG. The resulting system will answer stakeholder questions (e.g., “Which suppliers dominate category X in region Y?” “What changed in award patterns after policy Z?”) using KG-backed retrieval and reasoning, with evidence-linked outputs.
+
+    B. Your Mission
+    You will design, implement, and evaluate a system that supports:
+    1) Knowledge Graph Construction (Data & Representation Layer)
+    • Select a narrow but rich domain with accessible structured/semi-structured data (default: UK procurement/tenders; alternatives could include clinical trial registries, research funding awards, or parliamentary Q&A).
+    • Build an ETL pipeline to extract entities, attributes, and relations into a KG (e.g., RDF or property graph).
+    • Define a schema/ontology (core entity types, relations, identifiers, time, geography) and implement entity resolution (e.g., supplier name variants).
+    2) LLM + KG Hybrid Reasoning (Retrieval & Inference Layer)
+    • Implement a question-answering workflow where the LLM: translates natural-language questions into KG queries (e.g., SPARQL/Cypher); retrieves supporting subgraphs and aggregates; generates an answer grounded in retrieved graph evidence; and produces a “reasoning trace” that cites KG nodes/edges (and, where applicable, the original source documents).
+    • Explore reliability patterns: constrained decoding, tool-use function calling, verification loops, and “self-check” via KG consistency constraints.
+    3) Reliability & Evaluation (Assurance Layer)
+    • Define evaluation tasks aligned with stakeholder use: factual QA (entity/relationship correctness); compositional queries (multi-hop reasoning); temporal reasoning (before/after comparisons); robustness to ambiguous or underspecified questions.
+    • Measure: answer correctness, citation accuracy, failure detection (knowing when it doesn’t know), and sensitivity to KG incompleteness.
+    • Compare baselines: LLM-only RAG over documents vs. LLM+KG vs. KG-only query templates.
+  prerequisites: |
+    1. What we’re looking for? We’re looking for an MSc candidate who is interested in ML systems endowed with structured reasoning, with:
+    • Strong Python and data engineering skills (ETL, APIs, parsing, data modelling).
+    • Strong experience with LLM orchestration (prompting, tool-use, evaluation).
+    • Interest in knowledge representation: schemas/ontologies, graph databases, querying.
+
+    2. Why Join?
+    • Build a modern hybrid reasoning system that is both technically deep and practically valuable.
+    • Work with “real” structured data and produce a reusable knowledge graph asset.
+    • Generate publishable outcomes: benchmark tasks for KG-grounded LLM reasoning, methods for evidence-linked answers, and design patterns for reliable LLM systems.
+  available: false
+
+- id: proj-049
+  title: "Certifying Vision–Language Foundation Models: Scalable, Trustworthy Evaluation for Multimodal Safety and Reliability"
+  supervisor: "Miguel Rodrigues"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - sensing-imaging
+  description: |
+    A. Project Overview
+    Foundation models are increasingly deployed in settings where mistakes can be costly. While there is growing interest in certifying language models—providing credible evidence that harmful or incorrect behaviour occurs below an acceptable threshold—this becomes even more challenging for Vision–Language Models (VLMs), which must interpret images, screenshots, charts, and documents in addition to text.
+    This MSc project focuses on extending our existing work on reliable certification of foundation models from LLMs to VLMs. The goal is to develop a practical evaluation and certification workflow that can scale to large test sets while remaining trustworthy: producing stakeholder-ready evidence about model performance, identifying where the model fails, and providing transparent summaries of risk levels across different content types and scenarios.
+    The project will emphasise high-level certification outcomes (what we can claim, with what confidence, and under what conditions), rather than building new model architectures.
+
+    B. Your Mission
+    You will design, implement, and evaluate a certification pipeline for VLMs involving various elements including
+
+    1) Defining Certification Targets for VLMs
+    Examples include: Visual factuality: does the model make incorrect claims about what is in an image? Safety compliance: does it respond safely to image+text prompts involving sensitive or disallowed content? Refusal behaviour: does it refuse appropriately, and answer when it should? Robustness: how does performance change across image types (photos, diagrams, charts, memes, screenshots) and conditions (blur, low-light, occlusion)?
+
+    2) Building/Curating an Evaluation Suite
+    This involves (1) Construction of a structured test set of images and prompts aligned with the targets above and (2) Creation of clear annotation guidelines and a smaller “gold” subset labelled by humans
+
+    3) Develop Scalable Assessment & Reporting
+    This involves (1) creation of an evaluation workflow that can run continuously as models change (2) Production of stakeholder-facing outputs: risk summaries, failure taxonomies, example-based evidence packs, and trend reports over time (3) Production of traceability functionality: every headline finding should be backed by concrete examples and source records.
+  prerequisites: |
+    D. What we’re looking for? We’re looking for an MSc candidate with interest in applied ML evaluation and responsible deployment, with:
+    (1) Strong Python skills and comfort building evaluation pipelines
+    (2) Familiarity with LLM/VLM prompting and benchmarking practices
+    (3) A careful mindset about measurement, bias, and dataset design
+    (4) Interest in responsible AI, especially multimodal safety and reliability.
+
+    E. Why Join?
+    • Work on an urgent, high-impact problem: how to credibly evaluate and certify multimodal foundation models.
+    • Build a portfolio-worthy evaluation system used for continuous model assessment.
+    • Produce reusable assets: a multimodal certification suite, annotation guidelines, and stakeholder reporting templates.
+    • Contribute to a research direction with clear publication potential and real-world relevance.
+  available: false
+
+- id: proj-050
+  title: "Scientific Policy Intel: Building an LLM-Enabled Monitoring & Insight Pipeline for Science Policy and Scientific Diplomacy"
+  supervisor: "Miguel Rodrigues"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: |
+    A. Project Overview
+    Science policy and scientific diplomacy are evolving rapidly across major jurisdictions (e.g., the USA, UK, and key EU countries). Governments, parliaments, research councils, and international bodies continuously publish strategy papers, consultation calls, legislative proposals, funding announcements, and diplomatic statements – often scattered across heterogeneous websites and formats.
+    This MSc project will develop an end-to-end, machine-learning-driven data acquisition, montoring, and intelligence pipeline that continuously monitors relevant sources, extracts structured signals from unstructured text, and produces stakeholder-ready insights. The core technical challenge is to combine reliable web monitoring with LLM-based information extraction and analysis, turning policy “noise” into actionable “intel” while maintaining traceability, quality, and responsible AI practices.
+
+    B. Your Mission
+    You will design, implement, and evaluate a system that supports:
+
+    1) Continuous Source Monitoring (Acquisition Layer):
+    • Identify and track key publishers: ministries, parliamentary portals, regulatory agencies, funding bodies, international organisations, and science diplomacy outlets.
+    • Implement robust ingestion across formats (HTML, PDF, press releases, consultations, reports), with scheduling, change detection, deduplication, and provenance logging.
+
+    2) LLM-Powered Extraction (Understanding Layer):
+    • Use large language models to convert documents into structured records, e.g.: policy topic(s), instrument type (bill, consultation, strategy, funding call, diplomatic statement, regulation), geography and institutions involved; timelines, deadlines, budget signals, and stakeholders; risks/opportunities and expected impact (research, innovation, security, industry)
+    o
+
+    3) Intelligence & Stakeholder Outputs (Insight Layer):
+    • Create summarisation and “what changed” briefs, plus thematic digests (weekly/monthly).
+    • Implement alerting and prioritisation (e.g., “high relevance to stakeholder X”, “deadline within 30 days”).
+    • Produce interpretable outputs: evidence-linked summaries, confidence signals, and source citations for every claim.
+  prerequisites: |
+    D. What we’re looking for? We’re looking for an MSc candidate who is interested in applied ML systems and policy-facing intelligence, and who has:
+    • Strong Python skills and comfort with data pipelines (APIs, scraping, queues, scheduling).
+    • NLP/LLM experience: prompting, evaluation, retrieval, and structured extraction.
+    • Practical ML engineering mindset (testing, monitoring, reproducibility, error analysis).
+
+    E. Why Join?
+    • Work on a highly interdisciplinary problem at the intersection of machine learning, information retrieval, and public policy.
+    • Build a portfolio-ready system: ingestion → extraction → analytics → stakeholder delivery.
+    • Opportunity for publishable outcomes (datasets/benchmarks for policy extraction; methods for reliable LLM-based monitoring).
+    • Real-world relevance: the system can be extended to new countries, domains, and stakeholder needs after the project ends.
+  available: false
+
+- id: proj-051
+  title: "Partial Packet Forwarding"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - telecommunications
+    - internet-engineering
+  research_areas:
+    - networking-security-iot
+    - signal-processing
+  description: >
+    At UCL we are developing a way of trimming packets in case of congestion. This avoids loosing
+    all the information and the need to synchronise prioritization queues across all the domains.
+    In order for PPF to be useful, data needs to be encoded in the packets in a way that early bits
+    are more important (have more information). This project will research how to implement PFF in
+    routers and how to encode the most important data streams (video, audio, ML, etc) in a PPF
+    friendly way.
+  prerequisites: "none"
+  available: false
+
+- id: proj-052
+  title: "Multi-agent Reinforcement Learning for Network Routing"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - reinforcement-learning
+    - networking-security-iot
+    - machine-learning-ai
+  description: |
+    Multi-agent reinforcement learning is am exciting paradigm to model decentralized networks. This project will research a new paradigm where routers are just given a reward function (a mix of monetary cost and quality of experience) and through MARL are capable of learning what are the best routes for every destination.
+
+    Tools:
+    Python, RL framework (eg: gym, pettingzoo, etc)
+  prerequisites: "python"
+  available: false
+
+- id: proj-053
+  title: "Default-off Routing"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+  description: >
+    Currently the internet is default-on. Every nodes can send to every other node node. This
+    makes fighting denial-of-service very hard. This project will research a new paradigm where
+    some destinations indicate that there are in default-off mode and only authorised nodes can
+    send data. This will involve a new BGP attribute and a new way of filtering packets at the edge
+    of the network.
+  prerequisites: "none"
+  available: false
+
+- id: proj-054
+  title: "Implementation of DNS++"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+  description: |
+    At UCL, we are developing an upgrade to DNS++ with 3 main features: information is dynamically updated to clients, information has localisation associated with it, so that it only reaches who needs it and queries are privately encrypted with homomorphic encryption in order not significantly increase user privacy. This project will implement DNS++.
+  prerequisites: "none"
+  available: false
+
+- id: proj-055
+  title: "PocketDNS"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+  description: |
+    This project will research how feasible it is (or when it will be) to have all the DNS send to all the devices. This would have a massive impact on user privacy and on query response time. This project will involve DNS measurements.
+  prerequisites: "none"
+  available: false
+
+- id: proj-056
+  title: "Sentinel"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+    - machine-learning-ai
+  description: |
+    Sentinel is a content rating system being developed at UCL in order to fight misinformation and information safety without censorship. Sentinel requires several sub-systems: a browser extension, a mobile app, a storage system. This project will implement the Sentinel system.
+  prerequisites: "none"
+  available: false
+
+- id: proj-057
+  title: "Session migration"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+  description: |
+    The capability of moving a service computation to another machine whilst keeping client state would allow for a significant increase in reliability. This project will implement a session migration system, ideally where the application does not need to be changed and the move is transparent.
+  prerequisites: "none"
+  available: false
+
+- id: proj-058
+  title: "QoE app and ML"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+    - machine-learning-ai
+  description: |
+    Machine leaning is being used a lot in training networks but we do struggle with the lack of data. This app will actively collect QoE data in the real world and transmit of to an open source portal.
+  prerequisites: "none"
+  available: false
+
+- id: proj-059
+  title: "Web based network simulator"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+  description: |
+    This project will develop a web based network simulator in order for people to practice network management. It will allow a user to define a network visually and then “login” into each router, configure interfaces and routing protocols and animate the simulation. It should allow to remove links in real-time (to emulate link failures) and see how the network behaves.
+  prerequisites: "none"
+  available: false
+
+- id: proj-060
+  title: "Coding schemes for mitigation of turbulent fading in free-space optical links"
+  supervisor: "Martyn Fice"
+  co_supervisors:
+    - "Nathan Gomes"
+  programmes:
+    - telecommunications
+    - internet-engineering
+    - wireless-and-optical-communications
+  research_areas:
+    - optical-communications
+    - wireless-communications
+    - signal-processing
+  description: |
+    Free-space optical (FSO) links are of increasing interest for high-speed wireless communication systems spanning distances ranging from metres (e.g. in-room) to hundreds or even thousands of kilometres (e.g. ground-to-satellite or intersatellite). Longer outdoor ground-to-ground, ground-to-aerial-vehicle, or ground-to-satellite FSO links involve propagation through the turbulent atmosphere, resulting in signal fading due to scintillation or beam wander. Under conditions of high turbulence, this can lead to deep fades, resulting in an increase in errors in the received data or even complete link outage.
+
+    This project will investigate techniques for mitigating the impact of atmospheric fading on FSO systems by coding the transmitted data. To start, a literature survey of coding schemes proposed and employed to date will be carried out, before moving on to model the performance of selected techniques (e.g. using MATLAB) under simulated turbulent atmospheric conditions. Experiments to test the schemes will be designed for and, if time allows, implemented in a laboratory based testbed which emulates atmospheric turbulence.
+  prerequisites: "None"
+  available: false
