@@ -9,8 +9,8 @@
   --ucl-ink: #1a1a1a;
 
   /* UCL official brand colours (2025) */
-  --ucl-purple: #361a54;
-  --ucl-purple-dark: #2a1440;
+  --ucl-purple: #500778;
+  --ucl-purple-dark: #3d0063;
   --ucl-purple-bright: #993bff;
   --ucl-purple-mid: #ba82ff;
   --ucl-purple-pale: #ddbdff;
@@ -50,6 +50,7 @@ body {
 
 body {
   font-family:
+    "Barlow",
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
@@ -300,11 +301,16 @@ main.container {
 .tabs {
   display: flex;
   gap: 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding: 0;
   border-bottom: 1px solid var(--border);
   margin-top: 0.6rem;
   overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.tabs::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 .tab {
