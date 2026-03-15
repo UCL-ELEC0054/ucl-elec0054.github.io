@@ -1,5 +1,5 @@
 integrated-machine-learning-systems:
-  label: "Integrated Machine Learning Systems MSc"
+  label: "Integrated Machine Learning Systems"
   degree: "MSc"
   department: "Electronic & Electrical Engineering"
   faculty: "Faculty of Engineering Sciences"
@@ -17,7 +17,7 @@ integrated-machine-learning-systems:
   url: "https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/integrated-machine-learning-systems-msc"
 
 internet-engineering:
-  label: "Internet Engineering MSc"
+  label: "Internet Engineering"
   degree: "MSc"
   department: "Electronic & Electrical Engineering"
   faculty: "Faculty of Engineering Sciences"
@@ -31,7 +31,7 @@ internet-engineering:
   url: "https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/internet-engineering-msc"
 
 telecommunications:
-  label: "Telecommunications MSc"
+  label: "Telecommunications"
   degree: "MSc"
   department: "Electronic & Electrical Engineering"
   faculty: "Faculty of Engineering Sciences"
@@ -45,7 +45,7 @@ telecommunications:
   url: "https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/telecommunications-msc"
 
 wireless-and-optical-communications:
-  label: "Wireless and Optical Communications MSc"
+  label: "Wireless and Optical Communications"
   degree: "MSc"
   department: "Electronic & Electrical Engineering"
   faculty: "Faculty of Engineering Sciences"

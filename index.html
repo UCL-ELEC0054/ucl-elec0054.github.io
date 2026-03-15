@@ -8,6 +8,9 @@ title: UCL EEE MSc Project Offers
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>{{ page.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 <body>
@@ -134,24 +137,11 @@ title: UCL EEE MSc Project Offers
               data-available="{{ available }}"
             >
               <h3>{{ project.title }}</h3>
-
-              <div class="badges">
-                {% for programme_slug in project_programmes %}
-                  {% assign programme = programmes[programme_slug] %}
-                  {% if programme %}
-                    <span class="badge badge--programme" title="{{ programme.description }}">{{ programme.label }}</span>
-                  {% else %}
-                    <span class="badge badge--programme">{{ programme_slug }}</span>
-                  {% endif %}
-                {% endfor %}
-
-                {% if available %}
-                  <span class="badge badge--available">Available</span>
-                {% else %}
+              {% unless available %}
+                <div class="badges">
                   <span class="badge badge--unavailable">Unavailable</span>
-                {% endif %}
-              </div>
-
+                </div>
+              {% endunless %}
             </article>
             </a>
           {% endfor %}
@@ -261,7 +251,7 @@ title: UCL EEE MSc Project Offers
       });
     });
 
-    [q, programme, researchArea, academic, availableOnly].forEach(el => {
+    [q, researchArea, academic, availableOnly].forEach(el => {
       if (!el) return;
       el.addEventListener('input', applyFilters);
       el.addEventListener('change', applyFilters);
