@@ -570,7 +570,7 @@
   prerequisites: "Python, Network fundamentals"
   available: false
 
-  - id: proj-021
+- id: proj-021
   title: "Designing Robust DNS Threat Intelligence Systems for Accurate Internet Blocking"
   supervisor: "Anna Maria Mandalari"
   co_supervisors:
@@ -1173,7 +1173,7 @@
   prerequisites: "Background in Control Engineering and Optimisation, MATLAB"
   available: true
 
-  - id: proj-041
+- id: proj-041
   title: "Fusion Plasma State Estimation"
   supervisor: "Francesca Boem"
   co_supervisors:
@@ -1708,7 +1708,7 @@
   prerequisites: "None"
   available: false
 
-  - id: proj-061
+- id: proj-061
   title: "External cavity laser based on thin-film lithium niobate PIC"
   supervisor: "Martyn Fice"
   co_supervisors:
@@ -2195,7 +2195,7 @@
     the departments GPUs
   available: false
 
-  - id: proj-081
+- id: proj-081
   title: "Diffusion Models for Autonomous Game Agents"
   supervisor: "Laura Toni"
   co_supervisors:
