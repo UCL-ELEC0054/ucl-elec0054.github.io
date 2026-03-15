@@ -1707,3 +1707,490 @@
     This project will investigate techniques for mitigating the impact of atmospheric fading on FSO systems by coding the transmitted data. To start, a literature survey of coding schemes proposed and employed to date will be carried out, before moving on to model the performance of selected techniques (e.g. using MATLAB) under simulated turbulent atmospheric conditions. Experiments to test the schemes will be designed for and, if time allows, implemented in a laboratory based testbed which emulates atmospheric turbulence.
   prerequisites: "None"
   available: false
+
+  - id: proj-061
+  title: "External cavity laser based on thin-film lithium niobate PIC"
+  supervisor: "Martyn Fice"
+  co_supervisors:
+    - "Alfonso Ruocco"
+  programmes:
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - photonics-optics
+    - semiconductors-materials-devices
+    - optical-communications
+  description: >
+    Thin-film lithium niobate (TFLN) is an exciting new platform for photonic integrated circuits
+    (PICs), thanks to the wide range of electro-optic and other properties exhibited by lithium
+    niobate itself and the compact and small-bend-radius waveguides enabled by placing it as a thin
+    layer between silicon dioxide cladding layers. However, lithium niobate cannot generate or
+    detect light, so to provide a full range of photonic functionality it must be combined with
+    other materials (e.g. III-V semiconductors) in a hybrid integrated form. The EU Horizon
+    project PATTERN, in which UCL is a partner, is investigating techniques for hybrid integration
+    of III-V semiconductor gain and detector elements, and silicon drive circuits, on TFLN, and
+    developing a process design kit (PDK) and an assembly design kit (ADK) to simplify and speed up
+    the design and packaging of full-functionality PICs based on TFLN.
+
+    An essential component in many optical sub-systems is a single-frequency, narrow-linewidth and,
+    ideally, tuneable laser. Within the PATTERN project, it is proposed to develop laser building
+    blocks for the TFLN PDK based on III-V semiconductor gain blocks (either butt coupled or
+    micro-transfer printed) combined with extended and frequency selective external cavities on the
+    TFLN material itself. The objective of this project is to characterise an experimental prototype
+    laser and to analyse and model its design, with the view to developing improved laser designs
+    for the TFLN platform.
+
+    A previously designed and fabricated laser assembly (combining a TFLN PIC designed by PATTERN
+    partner CSEM and a butt-coupled III-V gain block from partner HHI, assembled by partner PHIX)
+    is available for testing and analysis. The main activity of the project will be the
+    experimental evaluation of the laser assembly in the lab to confirm its functionality and
+    determine its characteristics. In parallel, it will be required to understand the individual
+    components used in the design (directional coupler, Sagnac loop mirror, micro-ring resonator)
+    and model the characteristics of these components and the overall laser assembly, in order to
+    compare with the experimental results.
+  prerequisites: "Interest in developing practical experimental skills"
+  available: true
+
+- id: proj-062
+  title: "Modelling optical injection locking"
+  supervisor: "Martyn Fice"
+  co_supervisors:
+    - "Michael Wale"
+  programmes:
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - photonics-optics
+    - optical-communications
+    - semiconductors-materials-devices
+  description: >
+    Optical injection locking (OIL) is a technique that allows one laser (the tracking laser) to
+    be phase locked to another (the reference laser). It has numerous potential uses in optical
+    communication systems. A small amount of light from the reference laser injected into the
+    tracking laser is enough to cause the phase of the tracking laser to follow that of the
+    reference laser, provided the free-running frequencies of the lasers differ by only a small
+    amount.
+
+    Optical comb frequency generators (OFCGs) produce a set of optical frequencies with
+    well-defined frequency and phase relationships, which makes them useful in many applications,
+    for example very dense WDM optical communication systems. However, the power in each comb line
+    is often quite low and filtering out individual lines, for instance to allow them to be
+    modulated, can be difficult if the comb lines are closely spaced. OIL can address both these
+    issues, acting as an amplifying filter with very narrow bandwidth. However, the performance of
+    OIL when injected with the multi-line output of an OFCG can be complex, so is deserving of
+    further study.
+
+    There are two main tasks in this project. First, to investigate techniques for modelling OIL,
+    and then to apply them to comb-line filtering. Initially, commercial optical device modelling
+    software such as OptSim will be investigated for these purposes, but if they prove unsuitable
+    it may be necessary to model OIL by solving the laser rate equations using custom-written code
+    in MATLAB or another programming language.
+    The objective will be to calculate the residual phase error between two lines selected from a
+    comb using OIL, under different conditions of injected power level, number of OFCG lines,
+    comb-line spacing, etc., in order to better understand the capabilities and limitations of
+    using OIL in this application.
+  prerequisites: "Interest in semiconductor laser modelling"
+  available: false
+
+- id: proj-063
+  title: "EEG based human/patient monitoring"
+  supervisor: "Arsam Nasrollahy Shiraz"
+  co_supervisors:
+    - "Dai Jiang"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - biomedical-electronics
+    - machine-learning-ai
+    - sensing-imaging
+  description: |
+    The brainwaves manifesting themselves as EEG signal on human sculp may contain a wealth of information on mental state and brain related pathology. In this project we explore challenges and opportunities in detecting these automatically using machine learning techniques by designing and developing the associated software. For example, EEG can be used to monitor seizure events in epilepsy patients or it can be used to detect drowsiness in drivers. There is a wealth of publicly available datasets which can be used in this project.
+
+    Potential reading:
+    Sudhakar, J. Goldwyn, and Konguvel Elango. "A Comprehensive Review of EEG-Based Seizure Detection Techniques." IEEE Access (2025).
+    Balam, Venkata Phanikrishna. "Systematic review of single-channel EEG-based drowsiness detection methods." IEEE Transactions on Intelligent Transportation Systems (2024).
+  prerequisites: "Fundamentals of machine learning and its implementation"
+  available: false
+
+- id: proj-064
+  title: "Brain computer interfaces for silent/imagined speech"
+  supervisor: "Arsam Nasrollahy Shiraz"
+  co_supervisors:
+    - "Dai Jiang"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - biomedical-electronics
+    - machine-learning-ai
+  description: |
+    Human intention to carry out specific tasks may be detected using EEG recording before a person acting on the intention. This provides a unique opportunity to communicate using imagined/silent speech. EEG being a low resolution recording modality of the brain activity, detection of imagined speech using this modality is challenging. In this project we investigate the challenges and opportunities in EEG based communication and aim to design and develop a silent speech software based on machine learning techniques to investigate this field.
+    Lopez-Bernal, Diego, et al. "A state-of-the-art review of EEG-based imagined speech decoding." Frontiers in human neuroscience 16 (2022): 867281.
+    Alzahrani, Salwa, Haneen Banjar, and Rsha Mirza. "Systematic review of EEG-based imagined speech classification methods." Sensors 24.24 (2024): 8168.
+    Rahman, Nimra, et al. "Advances in brain-computer interface for decoding speech imagery from EEG signals: a systematic review." Cognitive Neurodynamics 18.6 (2024): 3565-3583.
+  prerequisites: "Fundamentals of machine learning and its implementation"
+  available: false
+
+- id: proj-065
+  title: "Computer vision based heart monitoring"
+  supervisor: "Arsam Nasrollahy Shiraz"
+  co_supervisors:
+    - "Yu Wu"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - biomedical-electronics
+    - machine-learning-ai
+    - sensing-imaging
+  description: |
+    Monitoring heart without connecting devices and electrodes to a person has a wide range of applications including emotion monitoring or in other cases when it is not possible/desirable to use wearable devices. Video based heart function monitoring techniques including rPPG can provide such an opportunity in which video recording of the face can be used to detect heart rate amongst other attributes. In this project we design an develop such software based on machine learning techniques to further investigate challenges and opportunities in this field.
+
+    Potential reading:
+    Ahmed, Soha G., et al. "AI Innovations in rPPG Systems for Driver Monitoring: Comprehensive Systematic Review and Future Prospects." Ieee Access (2025).
+    Lee, Ru Jing, Saaveethya Sivakumar, and King Hann Lim. "Review on remote heart rate measurements using photoplethysmography." Multimedia Tools and Applications 83.15 (2024): 44699-44728.
+  prerequisites: "Fundamentals of machine learning and its implementation"
+  available: false
+
+- id: proj-066
+  title: "Hardware-in-the-Loop and Bench Validation of RL-Based Active EMI Filtering"
+  supervisor: "Boli Chen"
+  co_supervisors:
+    - "Yukun Hu"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - integrated-circuits-microelectronics
+    - signal-processing
+  description: |
+    Modern electrified and intelligent vehicles rely on high-frequency power electronics such as electric drive units, DC–DC converters, and on-board chargers. These switching systems inevitably generate electromagnetic interference (EMI), which can degrade sensing accuracy, disrupt communication, and compromise reliability and safety. Conventional passive EMI filters are widely used but are often bulky, inefficient, and unable to adapt to time-varying operating conditions.
+
+    Active EMI filters (AEFs) offer a more compact and flexible solution by injecting compensating signals to suppress noise. Our recent research proposes an intelligent self-tuning AEF based on reinforcement learning, enabling automatic real-time adaptation to changing EMI environments. Based at our joint lab - Dynamic Systems Lab, this project aims to design and experimentally validate a hardware prototype of the proposed system, providing practical evidence of its performance and robustness for automotive power-electronic applications.
+
+    Key tasks will include:
+    • Develop the experimental platform: design and assemble a 10 kHz bench-scale active EMI filtering rig, including the interference source, sensing modules, injection circuitry, and safe laboratory operation.
+    • Characterise EMI behaviour: measure and analyse conducted noise using oscilloscope and FFT-based spectral methods, and establish repeatable performance metrics (e.g., attenuation in dB, ripple reduction).
+    • Design and integrate intelligent control: implement a RL based self-tuning controller to adapt filter parameters in real time using measured EMI features.
+    • Evaluate and report performance: benchmark all methods under varying operating conditions, analyse robustness and stability, and document results suitable for academic publication.
+
+    The project offers valuable interdisciplinary experience in embedded systems, AI, and clean energy technology. It is ideal for students interested in real-time embedded AI, sustainable engineering, or smart infrastructure applications.
+
+    Further reading
+    • “Reinforcement Learning: An Introduction (2nd ed.)”, Sutton & Barto, http://incompleteideas.net/book/RLbook2020.pdf
+    • “Active EMI filters to reduce size and cost of EMI filters in automotive systems”, Yongbin Chu, Yogesh Ramadass, 2021 https://www.ti.com/lit/an/slyt812/slyt812.pdf?ts=1769091222637&ref_url=https%253A%252F%252Fwww.google.com%252F
+    • “Effects of Common-Mode Active Filtering in Induction Motor Drives for Electric Vehicles”, Maria Carmela Di Piazza et al, https://doi.org/10.1109/TVT.2010.2047661
+  prerequisites: >
+    Fundamental electronics lab skills, experience with MATLAB or Python, and basic understanding
+    of signals, machine learning and control systems.
+  available: false
+
+- id: proj-067
+  title: "Modelling liquid crystals in photonic devices (2 projects)"
+  supervisor: "Sally Day"
+  co_supervisors:
+    - "David Selviah"
+    - "Martyn Fice"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - photonics-optics
+    - semiconductors-materials-devices
+  description: |
+    A Fabry-Perot filter is a high Q optical filter, made by forming a cavity between two high reflectivity mirrors, which is also of course the basis of a laser system as well. There are two areas of interest in this type of device,
+    (i) one is for the application of a tunable resonant optical filter, which has applications in optical telecom networks and in gas sensors.
+    (ii) The second is to use a type of liquid crystal, called cholesteric, which has an inherent twist to the liquid crystal, which gives strong selective reflection over a band of wavelengths. This cholesteric liquid crystal can have laser dye included in the material, and the strong reflection provides the feedback in the material structure to give lasing action.
+
+    Both the Fabry Perot Filter and the Cholesteric laser system can be modelled using the fundamental electromagnetic equations describing light
+    propagation through anisotropic media, including loss and gain. Both projects would involve using an existing Python program to simulate the optical properties of either or both Fabry Perot filter and the cholesteric laser. The areas of interest are to study the polarisation sensitivity of the output from the filter and the laser as well as considering the off-axis performance and the wavelength tuning range of both systems. The
+    performance can then be assessed in terms of the requirements for potential applications.
+
+    An interest in modelling optics (electromagnetic waves) is necessary, but the methods used will be learned at the start of the project, so no specific knowledge of liquid crystals or detailed knowledge for the devices is required at the start of the project
+  prerequisites: "An interest in modelling optics, but no specific knowledge is required."
+  available: false
+
+- id: proj-068
+  title: "Adaptive Data Rate and Duty-Cycle Optimisation in LoRaWAN-Based Agricultural IoT Networks"
+  supervisor: "Temitope Odedeyi"
+  co_supervisors:
+    - "Tongyang Xu"
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+    - integrated-machine-learning-systems
+    - internet-engineering
+  research_areas:
+    - networking-security-iot
+    - wireless-communications
+    - machine-learning-ai
+  description: >
+    Can context-aware, predictive adaptive data rate (ADR) and duty-cycle control strategies
+    improve scalability, reliability, and energy efficiency compared to standard LoRaWAN ADR in
+    heterogeneous agricultural IoT deployments under dynamic traffic and channel conditions?
+  prerequisites: >
+    Strong technical student with programming skills (Python/C++), interest in ML + networking
+  available: false
+
+- id: proj-069
+  title: "Techno-Economic and Performance Analysis of Non-Terrestrial Networks for Agricultural IoT Applications"
+  supervisor: "Temitope Odedeyi"
+  co_supervisors:
+    - "Clive Poole"
+  programmes:
+    - telecommunications
+  research_areas:
+    - networking-security-iot
+    - wireless-communications
+  description: >
+    Under what traffic, coverage, and cost conditions do LEO satellite IoT networks become
+    competitive with terrestrial LPWAN technologies for agricultural monitoring, and how do hybrid
+    terrestrial–NTN architectures perform in terms of latency, reliability, and cost-efficiency
+    under realistic deployment scenarios?
+  prerequisites: >
+    TwB or Telecoms student with strong analytical skills, comfortable with modeling and basic
+    scripting (Python), have networking fundamentals, and willing to learn and apply network
+    simulation tools such as LoRaSim and ns-3.
+  available: false
+
+- id: proj-070
+  title: "Digital Twin using AI for network simulation"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+  research_areas:
+    - machine-learning-ai
+    - networking-security-iot
+  description: >
+    This project will develop a digital town for networking simulation using AI. It will use
+    Docker containers and a controller that uses generative AI to generate realistic scenarios to
+    be simulated.
+  prerequisites: "none"
+  available: false
+
+- id: proj-071
+  title: "Post-training of LLMs for online therapy"
+  supervisor: "Miguel Rio"
+  co_supervisors:
+    - "Anna Maria Mandalari"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: >
+    This project will use an open source LLM and, through the creation of of questions and answers
+    will do the post-training to enable online therapy. The important part is to create good enough
+    guard rails for the service to be safe
+  prerequisites: "knowledges of LLMs"
+  available: false
+
+- id: proj-072
+  title: "Proving that Options Can Address Temporal Credit Assignment"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  description: |
+    A key capability behind successful reinforcement learning (RL) is assigning credit: understanding how an agent’s past decisions contributed to outcomes such as winning, losing, or triggering a valuable event. In many environments, these outcomes depend on decisions made far in the past, creating long-term dependencies. Learning to associate distant actions with delayed consequences is known as the temporal credit assignment problem (CAP).
+
+    Options—temporally extended, “macro” actions—are a natural candidate solution. Rather than selecting low-level moves (e.g., left/right/up/down), an agent can select higher-level behaviours (e.g., “find the key”, “open the door”), shortening the effective decision horizon and potentially improving credit propagation.
+
+    Despite their intuitive appeal, there is no definitive empirical demonstration showing that options reliably mitigate temporal CAP in a challenging, unsolved setting.
+
+    In this project, we aim to provide strong evidence. We will use NetHack, a notoriously difficult long-horizon RL benchmark. We will define a set of meaningful high-level options (e.g., “reach the next level”, “acquire a critical item”), hard-code their execution (i.e., how each option is carried out at the action level), and train a policy over options rather than primitive actions. The core goal is to test whether option-level control yields stronger, more sample-efficient policies than standard action-level RL.
+  prerequisites: >
+    Excellent Reinforcement Learning theory; solid Deep Learning foundations; prior implementation
+    of at least one deep RL algorithm; excellent coding skills.
+  available: false
+
+- id: proj-073
+  title: "Future-conditional Large Language Models"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: |
+    Large Language Models (LLMs) represent knowledge through natural language by autoregressively predicting the next token from a fixed vocabulary. Recently, “reasoning-style” approaches—explicit decomposition into sequential subtasks and plans—have significantly improved performance on long-horizon, agentic tasks.
+
+    This project explores a complementary hypothesis: long-term intentions can be encoded directly in token representations. Instead of treating the vocabulary as fixed, we aim to learn token embeddings that capture longer-range dependencies by conditioning not only on the past context but also on future context.
+
+    Concretely, we will start from a standard Transformer language-model architecture (e.g., GPT-2–style) and a large text corpus (e.g., Wikipedia). After tokenisation, we will train an embedding/encoder model that predicts the current token given both a window of preceding tokens and a window of subsequent tokens (a future-conditional objective). The aim is to learn embeddings that better reflect long-term structure and “intent” in text, and to evaluate whether these embeddings improve downstream modelling or planning-like behaviour.
+  prerequisites: >
+    Excellent Deep Learning theory; good understanding of LLMs/Transformers; prior implementation
+    of at least one deep learning model; excellent coding skills.
+  available: false
+
+- id: proj-074
+  title: "Unsupervised options discovery in Reinforcement Learning"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  description: |
+    A central challenge in RL is temporal credit assignment: outcomes often depend on decisions made far in the past, and the agent must learn which decisions were responsible. Options—temporally extended actions—can help by operating at a higher level of abstraction (e.g., “navigate to a room” rather than “move left”).
+
+    However, hand-designing options is costly, highly domain-dependent, and hard to generalise across tasks. This project investigates whether useful options can be discovered without action labels.
+
+    We will collect actionless demonstrations—sequences of states or frames with no annotated actions (e.g., videos). The student will train a latent action model that predicts the transition between a past context and a future context, learning discrete or continuous latent “actions” that explain what happened in between. The resulting latent action space can be interpreted as a learned set of options or macro-actions, ideally capturing long-term effects.
+
+    The goal is to assess (1) whether such latent actions are learnable from actionless data, and (2) whether they encode temporally extended structure that transfers to RL control.
+  prerequisites: >
+    Excellent Reinforcement Learning theory; solid Deep Learning foundations; prior implementation
+    of at least one deep RL algorithm; excellent coding skills.
+  available: false
+
+- id: proj-075
+  title: "Learning jumpy world models: taking many actions at once"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  description: |
+    Long-horizon RL tasks often feature sparse and delayed rewards, making credit assignment difficult. In model-based RL, agents typically learn one-step dynamics models that predict the next state from the current state and action. While effective in some settings, one-step prediction forces long-horizon reasoning to be built from many short steps, which can make learning and planning brittle.
+
+    This project studies jumpy world models that skip intermediate steps. Given a current state and a sequence of actions, the model predicts the state after executing the entire sequence—without explicitly generating intermediate states. The policy chooses how long to “jump” via a termination mechanism: the probability of emitting an EOS (end-of-sequence) action is tied to an action-gap signal, e.g., the difference between the best action-value and the runner-up (or an average baseline). Intuitively, the model takes longer jumps when decisions are easy and stops when the agent reaches a decision bottleneck.
+
+    The student will implement jumpy models in simple environments, compare them to standard one-step models, and explore how they can support planning and policy learning under sparse/delayed rewards.
+  prerequisites: >
+    Excellent Reinforcement Learning theory; solid Deep Learning foundations; prior implementation
+    of at least one deep RL algorithm; excellent coding skills.
+  available: false
+
+- id: proj-076
+  title: "Learning jumpy policies: taking many actions at once"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  description: |
+    Standard RL agents act one step at a time and learn from short transitions. In long-horizon problems with sparse or delayed rewards, this makes temporal credit assignment especially hard: it’s unclear which individual steps contributed to the final outcome.
+
+    This project explores a different control interface: the policy outputs a variable-length sequence of actions from a single observation, which is executed open-loop (without observing intermediate states). As in jumpy world models, termination is governed by an EOS token, with probability linked to an action-gap signal (e.g., the value difference between the best and second-best actions). The underlying idea is to compress “easy” stretches into longer open-loop segments and reserve feedback/decision-making for bottlenecks.
+
+    In practice, the student will design and implement sequence policies, train them in simple RL environments, and compare them to step-by-step baselines—focusing on sample efficiency, robustness, and performance under sparse/delayed rewards.
+  prerequisites: >
+    Excellent Reinforcement Learning theory; solid Deep Learning foundations; prior implementation
+    of at least one deep RL algorithm; excellent coding skills.
+  available: false
+
+- id: proj-077
+  title: "Unsupervised goal discovery via relative advantage"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  description: |
+    This project investigates whether “decision bottlenecks” can be detected and used as unsupervised goals. The setup combines (1) a policy-gradient method with a critic, and (2) a binary classifier that learns to flag bottleneck states.
+
+    The binary model is trained on a signal derived from the critic: if the maximum advantage gap among available actions in a state exceeds a threshold, the label is 1; otherwise 0. The intuition is that when an agent reaches a state where one choice is much better than all others, the environment is presenting a meaningful decision point—often corresponding to an intermediate objective being reached or a critical choice being required.
+
+    The student will implement the method, test whether detected bottlenecks correlate with interpretable subgoals, and evaluate whether these discovered goals can improve exploration or hierarchical learning.
+  prerequisites: >
+    Excellent Reinforcement Learning theory; solid Deep Learning foundations; prior implementation
+    of at least one deep RL algorithm; excellent coding skills.
+  available: false
+
+- id: proj-078
+  title: "earning Easy Optimal Policies"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - reinforcement-learning
+    - machine-learning-ai
+  description: |
+    Among optimal policies, some are more robust than others: in many states, multiple actions may be near-equally good, meaning the agent does not need to execute a brittle, highly specific sequence to succeed. Such policies are “easier” to follow and more tolerant to noise, approximation error, or small distribution shifts.
+
+    This project formalises and targets that notion of ease. The objective is to learn policies that (1) achieve high return, while (2) exhibiting low variance in the advantage distribution within a state—i.e., avoiding states where the policy must pick a single precise action to remain optimal.
+
+    In practice, the student will modify RL objectives or regularisers to encourage robust action sets, evaluate robustness and performance across environments, and compare against standard maximum-return baselines.
+  prerequisites: >
+    Excellent Reinforcement Learning theory; solid Deep Learning foundations; prior implementation
+    of at least one deep RL algorithm; excellent coding skills.
+  available: false
+
+- id: proj-079
+  title: "Latent Action Modelling for 3D Molecule Generation"
+  supervisor: "Eduardo Pignatelli"
+  co_supervisors:
+    - "Miguel Rio"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - reinforcement-learning
+  description: |
+    Language-model-inspired approaches to molecular generation have shown strong results in 1D representations (e.g., SMILES). Extending these ideas to 3D molecular structures is substantially harder because atomic coordinates are continuous, making modelling and optimisation in molecule space more challenging—especially when applying reinforcement learning (RL) or search-based refinement.
+
+    This project explores discrete latent action modelling for 3D molecule generation: instead of directly predicting continuous coordinate updates, the model learns a set of discrete latent “actions” that represent meaningful structural transformations in 3D (e.g., local geometric adjustments, fragment movements, conformational changes). These latent actions can then be optimised using RL-style objectives to improve properties of interest.
+
+    The student will prototype latent-action generators for 3D molecules and investigate how well RL can optimise in this discrete latent action space compared to continuous baselines.
+  prerequisites: >
+    Solid Deep Learning foundations; excellent Reinforcement Learning knowledge; prior
+    implementation of at least one deep RL algorithm; excellent coding skills.
+  available: false
+
+- id: proj-080
+  title: "Energy Optimization for future mobile networks using RAN Digital Twins"
+  supervisor: "Christos Masouros"
+  co_supervisors:
+    - "nishita.hathi@uclmail.net"
+  programmes:
+    - integrated-machine-learning-systems
+    - internet-engineering
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - machine-learning-ai
+    - wireless-communications
+  description: |
+    1. Abstract
+    As mobile networks evolve into critical utilities, the primary challenge shifts from increasing peak bit rates to reducing operational expenditure (OpEx), specifically energy consumption. This project proposes the development and validation of AI-driven energy optimization algorithms within a high-fidelity Network Digital Twin (NDT). By leveraging the NVIDIA Aerial Omniverse Digital Twin framework, the research will simulate a realistic urban RAN environment. The project aims to demonstrate how AI models can facilitate "Less ON, More OFF" strategies to achieve cost reductions without compromising Quality of Service (QoS).
+
+    2. Background and Motivation
+    Mobile networks are often criticized for their high energy footprint, largely due to "always-on" signaling requirements. 6G is envisioned as AI-native, meaning that while data formats and interfaces are standardized, the optimization logic remains proprietary and intelligent.
+    There is a growing industry consensus that 6G should not merely be "5G on steroids" but a move toward sustainability and cost-efficiency. Energy is the single largest OpEx for operators; The motivation for this project is to move beyond static, rule-based power saving to predictive, contextual optimization enabled by AI.
+
+    3. Aims and Objectives
+    The primary aim is to evaluate the effectiveness of AI-driven energy optimization leveraging digital twin environment.
+    •
+    Objective 1: To set up a functional Radio Access Network (RAN) digital twin of a specific using NVIDIA Omniverse and Aerial.
+    •
+    Objective 2: To analyze current energy-saving algorithms
+    •
+    Objective 3: To implement and test at least one AI-based optimization algorithm within the digital twin.
+    •
+    Objective 4: To quantify the trade-off between energy savings and network performance (latency/throughput) through comparative simulation.
+  prerequisites: >
+    This will require learning of NVIDIA's Aerial Omniverse Digital Twin platform and access to
+    the departments GPUs
+  available: false
