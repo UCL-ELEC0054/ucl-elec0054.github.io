@@ -1,7 +1,6 @@
 /* UCL-inspired theme — single source of truth */
 :root {
   --gap: 0.75rem;
-  --radius: 8px;
 
   --ucl-black: #000000;
   --ucl-white: #fafafa; /* UCL brand: off-white for screens */
@@ -70,7 +69,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 3px solid rgba(15, 94, 168, 0.22);
+  outline: 3px solid rgba(80, 7, 120, 0.22);
   outline-offset: 2px;
 }
 
@@ -80,69 +79,92 @@ select:focus-visible {
   margin: 0 auto;
 }
 
-/* UCL banner */
-.site-banner {
-  background: var(--ucl-purple);
-  color: var(--ucl-white);
-}
-
-.site-banner .container {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.5rem 1rem;
-}
-
-.site-banner .lockup {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
-
-.site-banner .lockup .block {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 22px;
-  background: var(--ucl-white);
-  border-radius: 2px;
-  font-size: 0.7rem;
-  font-weight: 900;
-  color: var(--ucl-purple);
-  letter-spacing: 0.04em;
-  font-style: italic;
-  flex-shrink: 0;
-}
-
-.site-banner .lockup .dept {
-  font-size: 0.82rem;
-  line-height: 1.2;
-}
-
-.site-banner a {
-  color: var(--ucl-white);
-}
-
-/* Page header */
-header.page {
+/* ===== UCL Site Header ===== */
+.ucl-site-header {
+  background: #fff;
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-header.page .container {
-  padding: 0.6rem 1rem 0;
+.ucl-header-top {
+  padding: 0.6rem 0;
 }
 
-header.page h1 {
-  font-size: 1.2rem;
-  color: var(--ucl-black);
+.ucl-header-top .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.ucl-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-shrink: 0;
+}
+
+.ucl-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.ucl-logo-img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+.ucl-brand-sep {
+  display: block;
+  width: 1px;
+  height: 22px;
+  background: var(--border-strong);
+  flex-shrink: 0;
+}
+
+.ucl-dept-link {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ucl-purple);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.ucl-dept-link:hover {
+  text-decoration: underline;
+}
+
+/* Search box in header (top-right) */
+.ucl-header-search {
+  flex: 1;
+  max-width: 480px;
+}
+
+.ucl-header-search input[type="search"] {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Horizontal rule below brand row */
+.ucl-header-rule {
+  height: 1px;
+  background: var(--border);
+  margin: 0;
+}
+
+/* Navigation row: tabs + filter controls */
+.ucl-header-nav {
+  background: #fff;
+}
+
+.ucl-header-nav .container {
+  padding: 0 1rem;
 }
 
 .controls {
@@ -150,14 +172,14 @@ header.page h1 {
   gap: 0.5rem;
   flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 0.6rem;
+  padding: 0.5rem 0;
 }
 
 select,
 input[type="search"] {
   padding: 0.38rem 0.65rem;
   border: 1px solid var(--border-strong);
-  border-radius: 6px;
+  border-radius: 0;
   min-width: 180px;
   background: var(--surface);
   color: var(--text);
@@ -167,7 +189,7 @@ input[type="search"] {
 
 select:hover,
 input[type="search"]:hover {
-  border-color: var(--ucl-blue);
+  border-color: var(--ucl-purple);
 }
 
 /* Main */
@@ -223,9 +245,8 @@ main.container {
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: 0.75rem;
-  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -297,14 +318,14 @@ main.container {
   color: #8f1d14;
 }
 
-/* Tabs — GitHub-style underline */
+/* Tabs — UCL-style underline */
 .tabs {
   display: flex;
   gap: 0;
   flex-wrap: nowrap;
   padding: 0;
   border-bottom: 1px solid var(--border);
-  margin-top: 0.6rem;
+  margin-top: 0;
   overflow-x: auto;
   scrollbar-width: none; /* Firefox */
 }
@@ -314,9 +335,9 @@ main.container {
 }
 
 .tab {
-  padding: 0.45rem 0.85rem;
+  padding: 0.5rem 0.9rem;
   border: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 4px solid transparent;
   border-radius: 0;
   background: none;
   cursor: pointer;
@@ -327,12 +348,13 @@ main.container {
   white-space: nowrap;
   transition:
     color 0.12s ease,
+    background-color 0.12s ease,
     border-color 0.12s ease;
 }
 
 .tab:hover {
-  color: var(--text);
-  border-bottom-color: var(--border-strong);
+  color: var(--ucl-purple);
+  background: var(--ucl-purple-light);
 }
 
 .tab--active {
@@ -493,12 +515,12 @@ main.container {
 }
 
 .card-link:hover .card {
-  border-color: var(--ucl-blue);
-  box-shadow: 0 4px 16px rgba(15, 94, 168, 0.14);
+  border-color: var(--ucl-purple);
+  background: #faf9fc;
 }
 
 .card-link:focus-visible .card {
-  outline: 3px solid rgba(15, 94, 168, 0.22);
+  outline: 3px solid rgba(80, 7, 120, 0.22);
   outline-offset: 2px;
 }
 
