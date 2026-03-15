@@ -16,55 +16,61 @@ title: UCL EEE MSc Project Offers
   {% assign research_areas = site.data.research_areas %}
   {% assign grouped = site.data.projects | group_by: "supervisor" %}
 
-  <div class="site-banner">
-    <div class="container">
-      <div class="lockup">
-        <div class="block" aria-hidden="true">UCL</div>
-        <div class="dept">
-          <a href="https://www.ucl.ac.uk/engineering/electronic-electrical-engineering" target="_blank" rel="noopener">
-            UCL Electronic &amp; Electrical Engineering
+  <header class="ucl-site-header">
+    <div class="ucl-header-top">
+      <div class="container">
+        <div class="ucl-brand">
+          <a href="https://www.ucl.ac.uk/" target="_blank" rel="noopener" class="ucl-logo-link">
+            <img src="https://cdn.ucl.ac.uk/logos/ucl/ucl-logo--primary.svg"
+                 alt="UCL"
+                 class="ucl-logo-img"
+                 width="114" height="34">
           </a>
+          <span class="ucl-brand-sep" aria-hidden="true"></span>
+          <a href="{{ "/" | relative_url }}" class="ucl-dept-link">UCL-ELEC0054</a>
+        </div>
+        <div class="ucl-header-search">
+          <input id="q" type="search"
+                 placeholder="Search projects… (title, supervisor, description, prerequisites)"
+                 aria-label="Search projects" />
         </div>
       </div>
     </div>
-  </div>
 
-  <header class="page">
-    <div class="container">
-      <h1 style="margin:0 0 0.15rem;font-size:1.2rem">{{ site.title }}</h1>
-      <p class="small" style="margin:0 0 0.5rem">{{ site.description }}</p>
+    <div class="ucl-header-rule" role="separator"></div>
 
-      <div class="controls">
-        <input id="q" type="search" placeholder="Search projects… (title, supervisor, description, prerequisites)" />
-
-        <select id="researchArea">
-          <option value="">All research areas</option>
-          {% for area_entry in research_areas %}
-            {% assign area_slug = area_entry[0] %}
-            {% assign area = area_entry[1] %}
-            <option value="{{ area_slug }}">{{ area.label }}</option>
+    <div class="ucl-header-nav">
+      <div class="container">
+        <div class="tabs" role="tablist" aria-label="Filter by programme">
+          <button class="tab tab--active" role="tab" data-programme="" aria-selected="true">All programmes</button>
+          {% for programme_entry in programmes %}
+            {% assign programme_slug = programme_entry[0] %}
+            {% assign programme = programme_entry[1] %}
+            <button class="tab" role="tab" data-programme="{{ programme_slug }}" aria-selected="false">{{ programme.label }}</button>
           {% endfor %}
-        </select>
+        </div>
 
-        <select id="academic">
-          <option value="">All academics</option>
-          {% assign sorted_academics = academics | sort %}
-          {% for academic_entry in sorted_academics %}
-            {% assign academic_name = academic_entry[0] %}
-            <option value="{{ academic_name | downcase | escape }}">{{ academic_name }}</option>
-          {% endfor %}
-        </select>
+        <div class="controls">
+          <select id="researchArea">
+            <option value="">All research areas</option>
+            {% for area_entry in research_areas %}
+              {% assign area_slug = area_entry[0] %}
+              {% assign area = area_entry[1] %}
+              <option value="{{ area_slug }}">{{ area.label }}</option>
+            {% endfor %}
+          </select>
 
-        <label class="small"><input id="availableOnly" type="checkbox" checked /> Available only</label>
-      </div>
+          <select id="academic">
+            <option value="">All academics</option>
+            {% assign sorted_academics = academics | sort %}
+            {% for academic_entry in sorted_academics %}
+              {% assign academic_name = academic_entry[0] %}
+              <option value="{{ academic_name | downcase | escape }}">{{ academic_name }}</option>
+            {% endfor %}
+          </select>
 
-      <div class="tabs" role="tablist" aria-label="Filter by programme">
-        <button class="tab tab--active" role="tab" data-programme="" aria-selected="true">All programmes</button>
-        {% for programme_entry in programmes %}
-          {% assign programme_slug = programme_entry[0] %}
-          {% assign programme = programme_entry[1] %}
-          <button class="tab" role="tab" data-programme="{{ programme_slug }}" aria-selected="false">{{ programme.label }}</button>
-        {% endfor %}
+          <label class="small"><input id="availableOnly" type="checkbox" checked /> Available only</label>
+        </div>
       </div>
     </div>
   </header>
