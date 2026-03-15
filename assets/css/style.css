@@ -49,16 +49,7 @@ body {
 }
 
 body {
-  font-family:
-    "Barlow",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
+  font-family: "UCL Sans", Arial, sans-serif;
   font-size: 0.9rem;
   margin: 0;
   background: var(--ucl-warm-grey);
@@ -189,6 +180,11 @@ main.container {
   margin-top: 1.25rem;
 }
 
+.academic + .academic {
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
 .academic h2 {
   margin: 0 0 0.2rem;
   font-size: 1.05rem;
@@ -221,6 +217,7 @@ main.container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: var(--gap);
+  align-items: stretch;
 }
 
 .card {
@@ -229,6 +226,9 @@ main.container {
   border-radius: var(--radius);
   padding: 0.75rem;
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card h3 {
@@ -489,6 +489,7 @@ main.container {
   display: block;
   color: inherit;
   text-decoration: none;
+  height: 100%;
 }
 
 .card-link:hover .card {
@@ -511,111 +512,4 @@ footer {
   background: var(--surface);
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ucl-warm-grey: #0f1114;
-    --ucl-ink: #f3f4f6;
 
-    --surface: #15181d;
-    --surface-muted: #1a1e24;
-
-    --border: #2b3139;
-    --border-strong: #3a424d;
-
-    --text: #f3f4f6;
-    --text-muted: #b6bcc6;
-
-    --ucl-blue-soft: #13263d;
-    --ucl-green-soft: #102820;
-    --ucl-red-soft: #34191a;
-
-    --shadow: none;
-  }
-
-  body {
-    background: var(--ucl-warm-grey);
-    color: var(--text);
-  }
-
-  header.page {
-    background: rgba(15, 18, 22, 0.94);
-    border-color: var(--border);
-  }
-
-  .card,
-  footer,
-  select,
-  input[type="search"] {
-    background: var(--surface);
-    border-color: var(--border);
-    color: var(--text);
-  }
-
-  .academic h2 a,
-  .card h3 {
-    color: var(--ucl-white);
-  }
-
-  .badge {
-    background: var(--surface-muted);
-    border-color: var(--border);
-    color: var(--text);
-  }
-
-  .badge--area {
-    background: var(--ucl-blue-soft);
-    border-color: #29496c;
-    color: #cfe4ff;
-  }
-
-  .badge--programme {
-    background: #241d42;
-    border-color: #45357a;
-    color: #ddd6ff;
-  }
-
-  .badge--available {
-    background: var(--ucl-green-soft);
-    border-color: #275746;
-    color: #b9f0dc;
-  }
-
-  .badge--unavailable {
-    background: var(--ucl-red-soft);
-    border-color: #6c2a2d;
-    color: #ffcecb;
-  }
-
-  .btn.disabled {
-    background: #2a2f36;
-    color: #9aa3ae;
-    border-color: #3a424d;
-  }
-
-  .tab {
-    color: var(--text-muted);
-    border-color: transparent;
-  }
-
-  .tab:hover {
-    color: var(--text);
-    border-bottom-color: var(--border-strong);
-  }
-
-  .tab--active {
-    color: var(--ucl-purple-mid);
-    border-bottom-color: var(--ucl-purple-mid);
-    background: none;
-  }
-
-  .tab--active:hover {
-    color: var(--ucl-purple-mid);
-    border-bottom-color: var(--ucl-purple-mid);
-    background: none;
-  }
-
-  .project-detail-title {
-    color: var(--ucl-white);
-  }
-}
