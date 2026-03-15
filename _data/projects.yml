@@ -2194,3 +2194,219 @@
     This will require learning of NVIDIA's Aerial Omniverse Digital Twin platform and access to
     the departments GPUs
   available: false
+
+  - id: proj-081
+  title: "Diffusion Models for Autonomous Game Agents"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Cedric Goubard (Sony AI)"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - reinforcement-learning
+  description: >
+    This project investigates whether DiffusionPolicy, a diffusion-based action-generation model
+    from robotics, can be adapted to control video-game characters. Students will train a model
+    that takes RGB frames as input and outputs short trajectories of controller actions (joystick
+    movements, triggers, and button presses). The work involves adapting the DiffusionPolicy
+    architecture to gamepad action spaces, and evaluating how well the agent performs navigation or
+    interaction tasks. The goal is to evaluate how diffusion models perform, compared to standard
+    imitation-learning baselines
+  prerequisites: >
+    strong coding skills, strong knoweldge of deep learning and general understanding of diffusion
+    models.
+  available: true
+
+- id: proj-082
+  title: "Language-Augmented Game Understanding with Vision-Language Models and Knowledge Retrieval"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Dafni Antotsiou"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - sensing-imaging
+  description: |
+    This project aims to build an intelligent system that combines vision-language models (VLMs) with retrieval-augmented generation (RAG) to enhance understanding and reasoning in video game environments. The system will generate semantic descriptions of game scenes using VLMs and enrich these with relevant information retrieved from a curated knowledge base, such as game manuals or FAQs. By integrating visual perception with external textual knowledge, the project will demonstrate how language-driven context can improve an agent’s ability to interpret game states and reason about objectives and strategies. The outcome will showcase a novel approach to creating more interpretable and context-aware game AI, highlighting the potential of multimodal learning and knowledge integration in interactive environments.
+  prerequisites: >
+    strong coding skills, strong knoweldge of deep learning and general understanding of diffusion
+    models.
+  available: true
+
+- id: proj-083
+  title: "Diversity-Driven Exploration for Post-Training Large Language Models"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - reinforcement-learning
+  description: |
+    Large Language Models (LLMs) are typically trained in three stages: supervised pre-training on internet text, post-training via reinforcement learning (e.g. PPO, DPO, GRPO), and inference-time compute for improving generation quality. While post-training methods such as RLHF and reinforcement learning with verifiable rewards have proven effective for alignment and task-specific optimisation, they largely focus on exploiting a learned reward signal rather than encouraging exploration.
+    In contrast, exploration and intrinsic motivation have played a central role in reinforcement learning, with methods such as count-based bonuses, random network distillation (RND), and intrinsic curiosity modules enabling agents to discover novel behaviours in sparse-reward environments (Bellemare et al., Burda et al., Pathak et al.). However, these techniques have not been directly adapted to the post-training of LLMs, where the action space is combinatorial.
+    The goal of this project is to investigate diversity-driven intrinsic reward methods in the post-training phase of LLMs to understand how different levels of diversity and forms of exploration impact the emergence of novel behaviours and capabilities beyond the base LLM model.
+
+    Research Objectives
+    Intrinsic Rewards for LLM Post-Training. Adapt classical intrinsic reward mechanisms—such as count-based exploration, random network distillation, and prediction-error-based curiosity—to the LLM post-training setting, accounting for sequence generation and high-dimensional action spaces.
+    Impact of the level of diversity. Study how varying the level of diversity imposed by intrinsic rewards affects response diversity, learning stability, and task performance during post-training.
+    Empirical Evaluation in Post-Training Regimes. Evaluate the proposed intrinsic reward methods within standard post-training frameworks measuring their impact on exploration, sample efficiency, and the acquisition of novel behaviours.
+
+    References
+    Marc Bellemare, Sriram Srinivasan, Georg Ostrovski, Tom Schaul, David Saxton, and Remi Munos. Unifying count-based exploration and intrinsic motivation. Advances in Neural Information Processing Systems, 29,2016.
+    Yuri Burda, Harrison Edwards, Amos Storkey, and Oleg Klimov. Exploration by random network distillation. arXiv preprint arXiv:1810.12894, 2018.
+    Deepak Pathak, Pulkit Agrawal, Alexei A Efros, and Trevor Darrell. Curiosity-driven exploration by self-supervised prediction. In International Conference on Machine Learning, pages 2778–2787. PMLR, 2017.
+  prerequisites: "Excellent Python programming skills, very solid foundations of deep learning."
+  available: false
+
+- id: proj-084
+  title: "Understanding Attention Perturbations in Graph Diffusion Models"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: |
+    Diffusion-based generative models have recently achieved strong performance in graph generation tasks, successfully modeling complex global structures such as community organization, connectivity, and spectral properties [1,2]. These models typically rely on attention-based graph transformers to parameterize the reverse denoising process, producing categorical distributions over node and edge types at each diffusion step. While their empirical performance is well studied, the internal mechanisms by which such models capture different structural properties of graphs remain poorly understood.
+
+    In parallel, recent work in image generation has shown that deliberately perturbing attention computations during diffusion sampling can reveal and control latent inductive biases of the model [3]. In particular, perturbations applied at different locations and granularities (e.g., layer-level vs head-level) lead to qualitatively distinct generation behaviors, and selective perturbation of specific attention heads enables fine-grained control over model outputs without retraining [3]. This raises a natural but unexplored question:
+    Can attention perturbation be used as a principled tool to probe and control structural inductive biases in graph diffusion models?
+
+    Unlike images, graphs do not admit obvious visual notions of “style.” However, graph generators implicitly encode preferences over structural properties, such as degree distributions, clustering, motif formation, community strength, and global connectivity. Attention heads in graph transformers are known to specialize over different structural scales and node roles [4,5], suggesting that perturbing them may selectively influence distinct aspects of graph structure rather than superficial appearance.
+    This project aims to transfer and adapt perturbation-guided sampling to discrete graph diffusion models, such as DiGress [1], and systematically study how perturbations to attention heads affect the generated graph structure. By intervening directly in the attention mechanisms of the denoising network during sampling, the project will treat perturbation guidance as a causal probe into the graph generator, rather than as a purely performance-driven heuristic.
+
+    Empirical evaluation will be conducted on standard graph generation benchmarks, comparing unguided sampling with perturbation-guided variants. Beyond potential improvements in generation quality, the primary outcome of this project is a deeper mechanistic understanding of how graph diffusion models construct structure, and whether their inductive biases can be selectively manipulated at inference time without retraining.
+  prerequisites: >
+    Excellent Python programming skills, solid foundations of Deep Learning, knowledge of graph
+    Transformers, familiarity with diffusion models and / or flow-based generative models
+    (desired).
+  available: false
+
+- id: proj-085
+  title: "Transfer Learning for Pharmacodynamic Parameter Extraction from Scientific Literature"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Academic from School of Pharmacy"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: >
+    This project builds on PKPDai’s existing NLP pipeline for automated extraction of
+    pharmacokinetic parameters from biomedical literature. Using state-of-the-art relation
+    extraction and entity-linking models, the student will apply transfer learning to adapt these
+    algorithms to identify and extract pharmacodynamic parameters such as IC/EC₅₀, Emax, and MIC,
+    along with their experimental context. The work will involve curating PD-specific training
+    data, fine-tuning transformer-based models, and evaluating performance across diverse
+    therapeutic areas. The outcome will extend PKPDai’s capabilities toward a unified ML-driven
+    system for PK/PD knowledge extraction.
+
+    This project will be carried out in collaboration with School of Pharmacy.
+  prerequisites: "strong coding skills, strong knoweldge of deep learning and generative models"
+  available: false
+
+- id: proj-086
+  title: "Causal Inference and Generative Models in Dynamic Processes to Analyze and Enhance Resilience in Complex Networks"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Francesca Boem"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+  description: >
+    Many critical infrastructure and environmental systems—such as water distribution networks,
+    power grids, and climate systems—are best understood as dynamic processes evolving on complex
+    networks. Existing machine learning approaches can predict system behaviour but often fail to
+    explain why events occur, limiting their usefulness for robust decision-making. This MSc
+    project will explore the foundations of causal inference and generative modelling on networks
+    to analyse resilience in dynamic systems. The focus will be on developing and evaluating
+    methods that (i) infer likely causal sources of observed events in networks and (ii) simulate
+    future system behaviour under hypothetical interventions. Using synthetic networked data as a
+    first step, the project will assess how causal and generative approaches can improve
+    interpretability and support resilience-oriented analysis, laying the groundwork for
+    applications in infrastructure and environmental systems.
+  prerequisites: >
+    strong coding skills, strong knoweldge of deep learning and general understanding of diffusion
+    models and statistical learning.
+  available: false
+
+- id: proj-087
+  title: "An Autonomous Reasoning Agent for Black-Box Optimization"
+  supervisor: "Laura Toni"
+  co_supervisors:
+    - "Eduardo Pignatelli"
+  programmes:
+    - integrated-machine-learning-systems
+  research_areas:
+    - machine-learning-ai
+    - reinforcement-learning
+  description: |
+    Many real-world optimisation problems—such as those arising in sustainable energy systems, including power grid management—can be formulated as black-box optimisation tasks, where the objective function is expensive to evaluate and poorly understood. However, most existing approaches rely on blind search strategies and lack an explicit understanding of the underlying optimisation landscape.
+    This MSc project will investigate the design of intelligent optimisation agents that build internal “world models” of black-box functions. The focus will be on exploring how surrogate modelling, hypothesis-driven exploration, and Bayesian reasoning can be combined to infer properties such as smoothness, curvature, or modality of an unknown objective function. Using synthetic benchmarks, the project will evaluate whether reasoning about the function space can improve sample efficiency and robustness, providing a foundation for more adaptive optimisation methods.
+  prerequisites: >
+    strong coding skills, strong knoweldge of deep learning and RL. Initial understanding of
+    agents
+  available: true
+
+- id: proj-090
+  title: "Peak-to-Average-Power Ratio (PAPR) Reduction Technique for Multicarrier Signal over Fibre Transmission"
+  supervisor: "Chin-Pang Liu"
+  co_supervisors: []
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - optical-communications
+    - signal-processing
+    - microwave-rf-thz
+  description: >
+    Optical fibre can be used to deliver radio cellular and WIFI signals in order to improve indoor
+    wireless coverage. However, multicarrier signals such as the OFDM can have a rather large
+    peak-to-average power-ratio (PAPR) which can easily drive a directly modulated semiconductor
+    laser diode, an external Mach Zehnder Modulator (MZM) or a microwave amplifier into the
+    nonlinear region, resulting in signal distortion. Clipping is seen as the simplest technique to
+    forcibly limit the maximum amplitude a signal can have but such a nonlinear process produces
+    distortion products both inside the signal bandwidth as well as outside. Although the
+    out-of-band distortion can be filtered out after signal transmission, the in-band distortion
+    cannot be filtered out without removing the original signal at the same time. The objective of
+    this project is therefore to investigate a novel PAPR reduction technique which will only
+    retain the out-of-band distortion product. The effectiveness of such a PAPR reduction technique
+    will be assessed by simulation using OFDM signals and verified experimentally.
+  prerequisites: ""
+  available: false
+
+- id: proj-091
+  title: "Digitised RF over fibre"
+  supervisor: "Chin-Pang Liu"
+  co_supervisors: []
+  programmes:
+    - telecommunications
+    - wireless-and-optical-communications
+  research_areas:
+    - optical-communications
+    - signal-processing
+    - microwave-rf-thz
+  description: >
+    Radio-over-fibre (RoF) technology refers to the transmission of wireless signals over optical
+    fibre in their respective passbands. Conventionally, different wireless signals having
+    different operating frequencies are combined together before directly modulating a laser diode
+    and transmission over fibre. Because of the analogue nature of the technique, the noise and
+    nonlinearity of the semiconductor laser diode as well as the dispersion in the fibre can have a
+    great impact on the quality of the transmitted wireless signals. More recently, it has been
+    proposed that the wireless signals are first digitally sampled or digitised, and only the
+    sampled data are sent over fibre in order to reduce the detrimental effects on the signals due
+    to the above-mentioned imperfections. However, employing analogue-to-digital converters (ADCs)
+    and digital-to-analogue converters (DACs) for digitising and reconstructing the wireless
+    signals bring about a new set of limitations such as the phase noise or clock jitters,
+    quantisation noise, nonlinearity and non-flat frequency response 60 due to the zero-order-hold
+    effect from the DACs. In this project, the student will simulate the aforementioned effects on
+    the digitised wireless signals such as 16-QAM and establish a quantitative relationship between
+    these effects and the quality of the 16-QAM.
+  prerequisites: ""
+  available: false
