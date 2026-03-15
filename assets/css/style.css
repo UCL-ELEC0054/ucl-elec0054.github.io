@@ -4,12 +4,17 @@
   --radius: 8px;
 
   --ucl-black: #000000;
-  --ucl-white: #ffffff;
+  --ucl-white: #fafafa; /* UCL brand: off-white for screens */
   --ucl-warm-grey: #f6f5f3;
   --ucl-ink: #1a1a1a;
 
-  --ucl-navy: #002147;
-  --ucl-navy-dark: #001530;
+  /* UCL official brand colours (2025) */
+  --ucl-purple: #361a54;
+  --ucl-purple-dark: #2a1440;
+  --ucl-purple-bright: #993bff;
+  --ucl-purple-mid: #ba82ff;
+  --ucl-purple-pale: #ddbdff;
+  --ucl-purple-light: #eedeff;
 
   --ucl-blue: #0f5ea8;
   --ucl-blue-dark: #0c4f8d;
@@ -85,7 +90,7 @@ select:focus-visible {
 
 /* UCL banner */
 .site-banner {
-  background: var(--ucl-navy);
+  background: var(--ucl-purple);
   color: var(--ucl-white);
 }
 
@@ -114,7 +119,7 @@ select:focus-visible {
   border-radius: 2px;
   font-size: 0.7rem;
   font-weight: 900;
-  color: var(--ucl-navy);
+  color: var(--ucl-purple);
   letter-spacing: 0.04em;
   font-style: italic;
   flex-shrink: 0;
@@ -325,15 +330,15 @@ main.container {
 }
 
 .tab--active {
-  color: var(--ucl-navy);
-  border-bottom-color: var(--ucl-navy);
+  color: var(--ucl-purple);
+  border-bottom-color: var(--ucl-purple);
   font-weight: 600;
   background: none;
 }
 
 .tab--active:hover {
-  color: var(--ucl-navy);
-  border-bottom-color: var(--ucl-navy);
+  color: var(--ucl-purple);
+  border-bottom-color: var(--ucl-purple);
   background: none;
 }
 
@@ -516,7 +521,6 @@ footer {
     --text-muted: #b6bcc6;
 
     --ucl-blue-soft: #13263d;
-    --ucl-blue-hover: #7db8f7;
     --ucl-green-soft: #102820;
     --ucl-red-soft: #34191a;
 
@@ -594,14 +598,14 @@ footer {
   }
 
   .tab--active {
-    color: var(--ucl-blue-hover);
-    border-bottom-color: var(--ucl-blue-hover);
+    color: var(--ucl-purple-mid);
+    border-bottom-color: var(--ucl-purple-mid);
     background: none;
   }
 
   .tab--active:hover {
-    color: var(--ucl-blue-hover);
-    border-bottom-color: var(--ucl-blue-hover);
+    color: var(--ucl-purple-mid);
+    border-bottom-color: var(--ucl-purple-mid);
     background: none;
   }
 

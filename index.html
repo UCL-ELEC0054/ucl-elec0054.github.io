@@ -97,10 +97,6 @@ title: UCL EEE MSc Project Offers
               <div class="small">Contact: <a href="mailto:{{ meta.email }}">{{ meta.email }}</a></div>
             {% endif %}
           </div>
-
-          {% if meta and meta.photo != blank %}
-            <img class="academic-photo" src="{{ meta.photo | relative_url }}" alt="Photo of {{ sup }}" />
-          {% endif %}
         </div>
 
         {% if area_slugs.size > 0 %}
