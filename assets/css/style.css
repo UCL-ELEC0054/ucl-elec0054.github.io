@@ -40,7 +40,7 @@
   --search-border: #bcb7ac;
   --search-background: #f2f2f1;
   --search-hover-border: #9b8f84;
-  --search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='currentColor' d='m13.71 12.29-2.51-2.5a4.5 4.5 0 1 0-1.42 1.42l2.5 2.51a1 1 0 0 0 1.42-1.43ZM5.5 8.5a3 3 0 1 1 6 0a3 3 0 0 1-6 0'/%3E%3C/svg%3E");
+  --search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%235c5c5c' d='m13.71 12.29-2.51-2.5a4.5 4.5 0 1 0-1.42 1.42l2.5 2.51a1 1 0 0 0 1.42-1.43ZM5.5 8.5a3 3 0 1 1 6 0a3 3 0 0 1-6 0'/%3E%3C/svg%3E");
 
   --badge-border: #d8d5cf;
   --badge-background: #e8e6e3;
@@ -169,7 +169,6 @@ select:focus-visible {
   background-repeat: no-repeat;
   background-size: 16px 16px;
   background-image: var(--search-icon);
-  color: var(--text-muted);
 }
 
 .ucl-header-search input[type="search"] {
@@ -368,7 +367,7 @@ main.container {
 }
 
 .tab {
-  padding: 0.8rem 1rem 0.65rem;
+  padding: 0.75rem 1rem 0.75rem;
   border: none;
   border-bottom: 6px solid transparent;
   border-radius: 0;
