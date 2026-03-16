@@ -40,7 +40,7 @@
   --search-border: #bcb7ac;
   --search-background: #f2f2f1;
   --search-hover-border: #9b8f84;
-  --search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' d='m13.71 12.29-2.51-2.5a4.5 4.5 0 1 0-1.42 1.42l2.5 2.51a1 1 0 0 0 1.42-1.43ZM5.5 8.5a3 3 0 1 1 6 0a3 3 0 0 1-6 0'/%3E%3C/svg%3E");
+  --search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='m13.71 12.29-2.51-2.5a4.5 4.5 0 1 0-1.42 1.42l2.5 2.51a1 1 0 0 0 1.42-1.43ZM5.5 8.5a3 3 0 1 1 6 0a3 3 0 0 1-6 0'/%3E%3C/svg%3E");
 
   --badge-border: #d8d5cf;
   --badge-background: #e8e6e3;
@@ -92,7 +92,8 @@ select:focus-visible {
 /* ===== UCL Site Header ===== */
 .ucl-site-header {
   background: #fff;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 20;
 }
 
@@ -321,7 +322,7 @@ main.container {
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   line-height: 1.1;
@@ -376,7 +377,7 @@ main.container {
 .tab {
   padding: 0.75rem 1rem 0.75rem;
   border: none;
-  border-bottom: 6px solid transparent;
+  border-bottom: 5px solid transparent;
   border-radius: 0;
   background: none;
   cursor: pointer;
