@@ -36,6 +36,8 @@
   --text: var(--ucl-ink);
   --text-muted: #5c5c5c;
   --shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+
+  --search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23333333' d='m13.71 12.29-2.51-2.5a4.5 4.5 0 1 0-1.42 1.42l2.5 2.51a1 1 0 0 0 1.42-1.43ZM5.5 8.5a3 3 0 1 1 6 0a3 3 0 0 1-6 0'/%3E%3C/svg%3E");
 }
 
 * {
@@ -117,6 +119,12 @@ select:focus-visible {
   display: block;
 }
 
+@media (max-width: 640px) {
+  .ucl-logo-img {
+    height: 36px;
+  }
+}
+
 .ucl-brand-sep {
   display: none;
 }
@@ -153,7 +161,7 @@ select:focus-visible {
   transform: translateY(-50%);
   background-repeat: no-repeat;
   background-size: 16px 16px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23333333' d='m13.71 12.29-2.51-2.5a4.5 4.5 0 1 0-1.42 1.42l2.5 2.51a1 1 0 0 0 1.42-1.43ZM5.5 8.5a3 3 0 1 1 6 0a3 3 0 0 1-6 0'/%3E%3C/svg%3E");
+  background-image: var(--search-icon);
 }
 
 .ucl-header-search input[type="search"] {
