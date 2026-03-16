@@ -3,8 +3,8 @@
   --gap: 0.75rem;
 
   --ucl-black: #000000;
-  --ucl-white: #fafafa; /* UCL brand: off-white for screens */
-  --ucl-warm-grey: #f6f5f3;
+  --ucl-white: #ffffff;
+  --ucl-warm-grey: #f6f6f5;
   --ucl-ink: #1a1a1a;
 
   /* UCL official brand colours (2025) */
@@ -29,9 +29,9 @@
   --ucl-red-soft: #fdecea;
 
   --surface: #ffffff;
-  --surface-muted: #fbfbfa;
-  --border: #d9d9d6;
-  --border-strong: #bdbdb8;
+  --surface-muted: #f6f6f5;
+  --border: #d6d2c4;
+  --border-strong: #bdb7ab;
 
   --text: var(--ucl-ink);
   --text-muted: #5c5c5c;
@@ -51,7 +51,7 @@ body {
   font-family: "UCL Sans", Arial, sans-serif;
   font-size: 0.9rem;
   margin: 0;
-  background: var(--ucl-warm-grey);
+  background: var(--ucl-white);
   color: var(--text);
   line-height: 1.5;
 }
@@ -82,14 +82,12 @@ select:focus-visible {
 /* ===== UCL Site Header ===== */
 .ucl-site-header {
   background: #fff;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 20;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .ucl-header-top {
-  padding: 0.6rem 0;
+  padding: 0.9rem 0;
 }
 
 .ucl-header-top .container {
@@ -114,25 +112,22 @@ select:focus-visible {
 }
 
 .ucl-logo-img {
-  height: 34px;
+  height: 48px;
   width: auto;
   display: block;
 }
 
 .ucl-brand-sep {
-  display: block;
-  width: 1px;
-  height: 22px;
-  background: var(--border-strong);
-  flex-shrink: 0;
+  display: none;
 }
 
 .ucl-dept-link {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--ucl-purple);
+  color: var(--ucl-black);
   white-space: nowrap;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -142,16 +137,35 @@ select:focus-visible {
 
 /* Search box in header (top-right) */
 .ucl-header-search {
+  position: relative;
   flex: 1;
-  max-width: 480px;
+  max-width: 420px;
+  margin-left: auto;
+}
+
+.ucl-header-search::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23333333' d='m13.71 12.29-2.51-2.5a4.5 4.5 0 1 0-1.42 1.42l2.5 2.51a1 1 0 0 0 1.42-1.43ZM5.5 8.5a3 3 0 1 1 6 0a3 3 0 0 1-6 0'/%3E%3C/svg%3E");
 }
 
 .ucl-header-search input[type="search"] {
   width: 100%;
   min-width: 0;
+  padding-left: 40px;
+  height: 42px;
+  border-color: #bcb7ac;
+  background: #f2f2f1;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
-/* Horizontal rule below brand row */
 .ucl-header-rule {
   height: 1px;
   background: var(--border);
@@ -164,7 +178,7 @@ select:focus-visible {
 }
 
 .ucl-header-nav .container {
-  padding: 0 1rem;
+  padding: 0.25rem 1rem 0.5rem;
 }
 
 .controls {
@@ -172,16 +186,16 @@ select:focus-visible {
   gap: 0.5rem;
   flex-wrap: wrap;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 0.35rem 0 0.6rem;
 }
 
 select,
 input[type="search"] {
-  padding: 0.38rem 0.65rem;
+  padding: 0.45rem 0.65rem;
   border: 1px solid var(--border-strong);
   border-radius: 0;
   min-width: 180px;
-  background: var(--surface);
+  background: var(--surface-muted);
   color: var(--text);
   font: inherit;
   font-size: 0.85rem;
@@ -189,7 +203,7 @@ input[type="search"] {
 
 select:hover,
 input[type="search"]:hover {
-  border-color: var(--ucl-purple);
+  border-color: #9b8f84;
 }
 
 /* Main */
@@ -243,13 +257,14 @@ main.container {
 }
 
 .card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--surface-muted);
+  border: 1px solid var(--surface-muted);
   border-radius: 0;
   padding: 0.75rem;
   display: flex;
   flex-direction: column;
   height: 100%;
+  box-shadow: none;
 }
 
 .card h3 {
@@ -284,37 +299,39 @@ main.container {
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
-  font-size: 0.72rem;
-  line-height: 1;
-  padding: 0.28rem 0.5rem;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface-muted);
-  color: var(--text);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  padding: 0.32rem 0.55rem;
+  border-radius: 0;
+  border: 1px solid #d8d5cf;
+  background: #e8e6e3;
+  color: #2c2c2c;
   white-space: nowrap;
 }
 
 .badge--area {
-  background: var(--ucl-blue-soft);
-  border-color: #c9dcf3;
-  color: #0b3f70;
+  background: #e9eff8;
+  border-color: #d2dfef;
+  color: #0d3d66;
 }
 
 .badge--programme {
-  background: #f2f0ff;
-  border-color: #d7d0ff;
-  color: #4b3ca7;
+  background: #efe8f6;
+  border-color: #d9cde9;
+  color: #3c2d4f;
 }
 
 .badge--available {
-  background: var(--ucl-green-soft);
-  border-color: #bfe7d9;
+  background: #e9f3ee;
+  border-color: #cde3d6;
   color: #0b5b45;
 }
 
 .badge--unavailable {
-  background: var(--ucl-red-soft);
-  border-color: #f5c2bd;
+  background: #f6e9e7;
+  border-color: #e5c9c3;
   color: #8f1d14;
 }
 
@@ -325,7 +342,7 @@ main.container {
   flex-wrap: nowrap;
   padding: 0;
   border-bottom: 1px solid var(--border);
-  margin-top: 0;
+  margin: 0.15rem 0 0;
   overflow-x: auto;
   scrollbar-width: none; /* Firefox */
 }
@@ -335,39 +352,37 @@ main.container {
 }
 
 .tab {
-  padding: 0.5rem 0.9rem;
+  padding: 0.8rem 1rem 0.65rem;
   border: none;
-  border-bottom: 4px solid transparent;
+  border-bottom: 6px solid transparent;
   border-radius: 0;
   background: none;
   cursor: pointer;
   font: inherit;
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  font-size: 0.9rem;
+  color: #2b2b2b;
+  font-weight: 600;
   margin-bottom: -1px;
   white-space: nowrap;
   transition:
     color 0.12s ease,
-    background-color 0.12s ease,
     border-color 0.12s ease;
 }
 
 .tab:hover {
   color: var(--ucl-purple);
-  background: var(--ucl-purple-light);
+  background: #f6f6f5;
 }
 
 .tab--active {
-  color: var(--ucl-purple);
+  color: var(--ucl-black);
   border-bottom-color: var(--ucl-purple);
-  font-weight: 600;
+  font-weight: 700;
   background: none;
 }
 
 .tab--active:hover {
-  color: var(--ucl-purple);
-  border-bottom-color: var(--ucl-purple);
-  background: none;
+  color: var(--ucl-black);
 }
 
 /* Text helpers */
@@ -516,7 +531,7 @@ main.container {
 
 .card-link:hover .card {
   border-color: var(--ucl-purple);
-  background: #faf9fc;
+  background: #efe8f6;
 }
 
 .card-link:focus-visible .card {
@@ -533,5 +548,3 @@ footer {
   font-size: 0.82rem;
   background: var(--surface);
 }
-
-
