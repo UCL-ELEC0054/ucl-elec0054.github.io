@@ -28,6 +28,12 @@
   --ucl-red: #b42318;
   --ucl-red-soft: #fdecea;
 
+  /* Header brand colours aligned to UCL site */
+  --ucl-brand-bg: #fafafa;
+  --ucl-brand-border: #d9d9d9;
+  --ucl-brand-text: #361a54;
+  --ucl-brand-accent: #9a3bff;
+
   --surface: #ffffff;
   --surface-muted: #fbfbfa;
   --border: #d9d9d6;
@@ -75,13 +81,25 @@ select:focus-visible {
 
 /* Layout */
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /* ===== UCL Site Header ===== */
 .ucl-site-header {
-  background: #fff;
+  background: var(--ucl-brand-bg);
   position: sticky;
   top: 0;
   z-index: 20;
@@ -89,7 +107,8 @@ select:focus-visible {
 }
 
 .ucl-header-top {
-  padding: 0.6rem 0;
+  padding: 0;
+  background: var(--ucl-brand-bg);
 }
 
 .ucl-header-top .container {
@@ -98,6 +117,7 @@ select:focus-visible {
   justify-content: space-between;
   gap: 1rem;
   padding: 0 1rem;
+  min-height: 4rem;
 }
 
 .ucl-brand {
@@ -114,10 +134,10 @@ select:focus-visible {
 }
 
 .ucl-logo-img {
-  height: 9.25rem;
-  width: 19rem;
+  height: 4rem;
+  width: 9rem;
   display: block;
-  padding: 2.18rem 0 1.75rem;
+  padding: 0.93rem 0 0.57rem;
 }
 
 .ucl-brand-sep {
@@ -131,7 +151,7 @@ select:focus-visible {
 .ucl-dept-link {
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--ucl-purple);
+  color: var(--ucl-brand-text);
   white-space: nowrap;
   letter-spacing: -0.01em;
   text-decoration: none;
@@ -144,28 +164,59 @@ select:focus-visible {
 /* Search box in header (top-right) */
 .ucl-header-search {
   flex: 1;
-  max-width: 480px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ucl-search-field {
+  position: relative;
+  width: 100%;
+  max-width: 16rem;
+}
+
+.ucl-search-icon {
+  position: absolute;
+  left: 0.65rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ucl-white);
+  font-size: 0.9rem;
 }
 
 .ucl-header-search input[type="search"] {
   width: 100%;
   min-width: 0;
+  height: 2.25rem;
+  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  background: var(--ucl-brand-accent);
+  color: var(--ucl-white);
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.ucl-header-search input[type="search"]::placeholder {
+  color: var(--ucl-white);
+  opacity: 0.9;
 }
 
 /* Horizontal rule below brand row */
 .ucl-header-rule {
-  height: 1px;
-  background: var(--border);
-  margin: 0;
+  display: none;
 }
 
 /* Navigation row: tabs + filter controls */
 .ucl-header-nav {
-  background: #fff;
+  background: var(--ucl-brand-bg);
+  border-top: 1px solid var(--ucl-brand-border);
+  border-bottom: 1px solid var(--ucl-brand-border);
 }
 
 .ucl-header-nav .container {
-  padding: 0 1rem;
+  padding: 0.75rem 1rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .controls {
@@ -534,5 +585,3 @@ footer {
   font-size: 0.82rem;
   background: var(--surface);
 }
-
-

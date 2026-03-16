@@ -30,9 +30,13 @@ title: UCL EEE MSc Project Offers
           <a href="{{ "/" | relative_url }}" class="ucl-dept-link">UCL-ELEC0054</a>
         </div>
         <div class="ucl-header-search">
-          <input id="q" type="search"
-                 placeholder="Search projects… (title, supervisor, description, prerequisites)"
-                 aria-label="Search projects" />
+          <label class="sr-only" for="q">Search projects</label>
+          <div class="ucl-search-field">
+            <span class="ucl-search-icon" aria-hidden="true">🔍</span>
+            <input id="q" type="search"
+                   placeholder="Search projects… (title, supervisor, description, prerequisites)"
+                   aria-label="Search projects" />
+          </div>
         </div>
       </div>
     </div>
