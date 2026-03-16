@@ -37,7 +37,14 @@
   --text-muted: #5c5c5c;
   --shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 
-  --search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23333333' d='m13.71 12.29-2.51-2.5a4.5 4.5 0 1 0-1.42 1.42l2.5 2.51a1 1 0 0 0 1.42-1.43ZM5.5 8.5a3 3 0 1 1 6 0a3 3 0 0 1-6 0'/%3E%3C/svg%3E");
+  --search-border: #bcb7ac;
+  --search-background: #f2f2f1;
+  --search-hover-border: #9b8f84;
+  --search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='currentColor' d='m13.71 12.29-2.51-2.5a4.5 4.5 0 1 0-1.42 1.42l2.5 2.51a1 1 0 0 0 1.42-1.43ZM5.5 8.5a3 3 0 1 1 6 0a3 3 0 0 1-6 0'/%3E%3C/svg%3E");
+
+  --badge-border: #d8d5cf;
+  --badge-background: #e8e6e3;
+  --badge-text: #2c2c2c;
 }
 
 * {
@@ -162,6 +169,7 @@ select:focus-visible {
   background-repeat: no-repeat;
   background-size: 16px 16px;
   background-image: var(--search-icon);
+  color: var(--text-muted);
 }
 
 .ucl-header-search input[type="search"] {
@@ -169,8 +177,8 @@ select:focus-visible {
   min-width: 0;
   padding-left: 40px;
   height: 42px;
-  border-color: #bcb7ac;
-  background: #f2f2f1;
+  border-color: var(--search-border);
+  background: var(--search-background);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
@@ -211,7 +219,7 @@ input[type="search"] {
 
 select:hover,
 input[type="search"]:hover {
-  border-color: #9b8f84;
+  border-color: var(--search-hover-border);
 }
 
 /* Main */
@@ -313,9 +321,9 @@ main.container {
   line-height: 1.1;
   padding: 0.32rem 0.55rem;
   border-radius: 0;
-  border: 1px solid #d8d5cf;
-  background: #e8e6e3;
-  color: #2c2c2c;
+  border: 1px solid var(--badge-border);
+  background: var(--badge-background);
+  color: var(--badge-text);
   white-space: nowrap;
 }
 
