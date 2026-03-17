@@ -51,6 +51,7 @@
 @font-face {
   font-family: "UCL Sans";
   src: url("fonts/UCLSans-Regular.otf") format("opentype"),
+    url("fonts/UCLSans-Regular.ttf") format("truetype");
 }
 
 * {
