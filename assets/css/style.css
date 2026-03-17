@@ -48,6 +48,11 @@
   --tab-text: #2b2b2b;
 }
 
+@font-face {
+  font-family: "UCL Sans";
+  src: url("fonts/UCLSans-Regular.otf") format("opentype"),
+}
+
 * {
   box-sizing: border-box;
 }
